@@ -189,6 +189,8 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
 .fonts-loaded .main-title-text {font-family:FiraSans, sans-serif}
 .main-title-text span {display:block; margin:5px 0 0 0; font-weight:300; font-size:16px; line-height:24px; color:#646464}
 .fonts-loaded .main-title-text span {font-family:Inter, sans-serif}
+.main-title-btn {float:right; margin:69px 0 0 0}
+.main-title-btn .btn {font-size:12px; line-height:18px; padding:11px 15px}
 
 .main-what {margin:39px 0 0 0}
 .main-what-container::after {content:""; display:block; clear:both}
@@ -239,6 +241,8 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
 .main-how-tab.active {position:relative; left:auto; top:auto; opacity:1; transform:translateY(0)}
 
 .main-catalogue {margin:100px -100px 0 -100px; padding:0 100px; background:url(../images/main-catalogue.svg) no-repeat center 64px}
+.main-catalogue-container {margin:10px 0 0 0}
+.main-catalogue-container .catalogue-item {width:25%}
 .main-catalogue-more {margin:30px 0 0 0}
 .main-catalogue-more a {display:block; margin:0 auto; width:474px; height:61px; text-decoration:none; background:rgba(209, 237, 247, 0.46); color:#0e2a3c; font-size:14px; line-height:61px; text-align:center; font-weight:normal; text-transform:uppercase}
 .main-catalogue-more a:hover {background:rgba(209, 237, 247, 1)}
@@ -249,6 +253,54 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
 .main-features {margin:112px 0 0 0; position:relative}
 .main-features::before {content:""; display:block; position:absolute; left:50%; top:-50px; width:2217px; height:894px; margin:0 0 0 -1108px; background:url(../images/main-features.png) no-repeat}
 .main-features .main-title-number::after {background:linear-gradient(90deg, rgba(253, 254, 254, 0) 0%, rgba(253, 254, 254, 1) 100%)}
+.main-features-list {margin:10px -10px 0 -10px; font-size:0; line-height:0; letter-spacing:-1px; position:relative}
+.main-features-item {display:inline-block; vertical-align:top; width:33.33%; padding:20px 10px 0 10px}
+.main-features-item-inner {background:#fff; padding:27px 24px 28px 30px}
+.main-features-item-icon {height:57px; line-height:57px}
+.main-features-item-icon img {display:inline-block; vertical-align:middle}
+.main-features-item-title {margin:15px 0 0 0; font-weight:bold; font-size:20px; line-height:26px; letter-spacing:0; color:#0e2a3c}
+.fonts-loaded .main-features-item-title {font-family:FiraSans, sans-serif}
+.main-features-item-text {margin:6px 0 0 0; font-size:14px; line-height:21px; letter-spacing:0; color:#646464}
+
+.main-services {margin:178px 0 0 0}
+.main-services-list {margin:0 -10px -30px -10px; font-size:0; line-height:0; letter-spacing:-1px; position:relative}
+.main-services-item {display:inline-block; vertical-align:top; width:33.33%; padding:43px 10px 30px 10px}
+.main-services-item-icon {height:54px; line-height:54px}
+.main-services-item-icon img {display:inline-block; vertical-align:middle}
+.main-services-item-title {margin:18px 0 0 0; font-weight:normal; font-size:20px; line-height:24px; letter-spacing:0; color:#0e2a3c}
+.fonts-loaded .main-services-item-title {font-family:FiraSans, sans-serif}
+.main-services-item-text {margin:2px 0 0 0; font-size:14px; line-height:21px; letter-spacing:0; color:#646464}
+
+.main-faq {margin:92px 0 0 0}
+.main-faq-container {margin:10px 0 0 0}
+
+.main-reviews {margin:12px 0 0 0; padding:80px 0 32px 0; background:rgba(218, 238, 244, 0.18); position:relative}
+.main-reviews::before {content:""; display:block; position:absolute; left:100%; top:0; bottom:0; width:9999px; background:rgba(218, 238, 244, 0.18)}
+.main-reviews::after {content:""; display:block; position:absolute; right:100%; top:0; bottom:0; width:9999px; background:rgba(218, 238, 244, 0.18)}
+.main-reviews .main-title-number::after {background:linear-gradient(90deg, rgba(248, 252, 253, 0) 0%, rgba(248, 252, 253, 1) 100%)}
+.main-reviews-list {margin:0 82px; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; position:relative; overflow:hidden}
+.main-reviews-list.slick-initialized {overflow:visible}
+.main-reviews-item {display:inline-block; vertical-align:top; width:50%; padding:20px 10px}
+.main-reviews-item-inner {display:block; background:#fff; padding:32px 51px 39px 61px; box-shadow:4px 4px 20px rgba(54, 92, 152, 0.06); border-radius:5px; text-decoration:none; white-space:normal}
+.main-reviews-item-inner:hover {text-decoration:none}
+.main-reviews-item-logo {height:58px; line-height:58px}
+.main-reviews-list .slick-slide .main-reviews-item-logo img,
+.main-reviews-item-logo img {display:inline-block; vertical-align:middle; max-height:100%}
+.main-reviews-item-title {margin:10px 0 0 0; font-weight:500; font-size:16px; line-height:19px; letter-spacing:0; color:#0e2a3c; transition:all 0.2s}
+.main-reviews-item-inner:hover .main-reviews-item-title {color:#f26c5d}
+.main-reviews-item-text {margin:8px 0 0 0; font-size:14px; line-height:21px; letter-spacing:0; color:#646464}
+.main-reviews-list .slick-prev,
+.main-reviews-list .slick-next {display:block; position:absolute; z-index:2; top:50%; width:36px; height:36px; border:none; border-radius:50%; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; background:#f26c5d; transform:translateY(-50%); transition:all 0.2s}
+.main-reviews-list .slick-prev {left:-82px}
+.main-reviews-list .slick-next {right:-82px}
+.main-reviews-list .slick-prev.slick-disabled,
+.main-reviews-list .slick-next.slick-disabled {display:none !important}
+.main-reviews-list .slick-prev svg {display:block; position:absolute; left:50%; top:50%; width:8px; height:12px; margin:-6px 0 0 -5px; stroke:#fff; fill:none}
+.main-reviews-list .slick-next svg {display:block; position:absolute; left:50%; top:50%; width:8px; height:12px; margin:-6px 0 0 -3px; stroke:#fff; fill:none}
+.main-reviews-list .slick-prev:hover,
+.main-reviews-list .slick-next:hover {background:#ff8e82}
+.main-reviews-list .slick-prev:active,
+.main-reviews-list .slick-next:active {background:#e55a4b}
 
 .breadcrumbs {margin:20px 0 0 0; font-size:14px; line-height:21px; font-weight:normal; color:#0e2a3c}
 .fonts-loaded .breadcrumbs {font-family:FiraSans, sans-serif}
@@ -256,6 +308,40 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
 .breadcrumbs a:hover {color:#f26c5d}
 .breadcrumbs span {display:inline-block; vertical-align:middle; width:5px; height:5px; border-radius:50%; background:#c4c4c4; margin:-2px 18px 0 8px}
 .breadcrumbs+h1 {margin-top:35px}
+
+.catalogue::after {content:""; display:block; clear:both}
+
+.catalogue-filter {float:left; width:230px}
+
+.catalogue-container {margin:0 0 0 275px}
+.catalogue-content {float:left; width:100%}
+
+.catalogue-list {margin:0 -10px; font-size:0; line-height:0; letter-spacing:-1px}
+.catalogue-item {display:inline-block; vertical-align:top; width:33.33%; padding:20px 10px 0 10px}
+.catalogue-item-inner {position:relative}
+.catalogue-item-container {display:block; text-decoration:none; position:relative; border:1px solid #e3e7f2; border-radius:4px; padding:0 30px 64px 30px; background:#fff}
+.catalogue-item-container:hover {text-decoration:none}
+.catalogue-item-inner:hover .catalogue-item-container {border-color:#f26c5d}
+.catalogue-item-logo {height:102px; line-height:82px; padding:10px 0; text-align:center}
+.catalogue-item-logo img {display:inline-block; vertical-align:middle; max-height:100%}
+.catalogue-item-title {font-weight:bold; font-size:18px; line-height:27px; letter-spacing:0; color:#0e2a3c}
+.fonts-loaded .catalogue-item-title {font-family:FiraSans, sans-serif}
+.catalogue-item-url {font-weight:normal; font-size:14px; line-height:21px; letter-spacing:0}
+.catalogue-item-url span {color:#f26c5d; transition:color 0.2s; cursor:pointer}
+.catalogue-item-url span:hover {text-decoration:underline}
+.catalogue-item-info {margin:10px 0 0 0; position:relative; overflow:hidden}
+.catalogue-item-info-inner {margin:0 0 0 -21px}
+.catalogue-item-info-item {float:left; margin:0 0 0 10px; padding:0 0 0 11px; position:relative}
+.catalogue-item-info-item::before {content:""; display:block; position:absolute; left:0; top:4px; bottom:4px; width:1px; background:#ebebeb}
+.catalogue-item-info-title {font-weight:500; font-size:10px; line-height:15px; letter-spacing:0; text-transform:uppercase; color:#848a93}
+.catalogue-item-info-value {font-weight:500; font-size:14px; line-height:21px; letter-spacing:0; color:#0e2a3c}
+.catalogue-item-info-flags {font-size:0; line-height:0; letter-spacing:-1px; margin:4px 0 -8px -8px}
+.catalogue-item-info-flags img {display:inline-block; vertical-align:top; height:17px; margin:0 0 8px 8px}
+.catalogue-item-info-icons {font-size:0; line-height:0; letter-spacing:-1px; margin:4px 0 -10px -10px}
+.catalogue-item-info-icons img {display:inline-block; vertical-align:top; height:20px; margin:0 0 10px 10px}
+.catalogue-item-cart {position:absolute; left:31px; bottom:18px; display:block; padding:0 10px; height:32px; font-size:12px; line-height:32px; font-weight:normal; letter-spacing:0; color:#363636; text-decoration:none; background:rgba(242, 108, 93, 0.11)}
+.catalogue-item-cart:hover {text-decoration:none; background:rgba(242, 108, 93, 0.22)}
+.catalogue-item-cart svg {display:inline-block; vertical-align:middle; width:20px; height:20px; fill:#f26c5d; margin:-2px 10px 0 0}
 
 .catalogue-card {margin:40px 0 0 0}
 .catalogue-card::after {content:""; display:block; clear:both}
@@ -293,6 +379,15 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
 .catalogue-card-info-country-flag img {width:26px; max-width:none}
 .catalogue-card-info-country-title {display:table-cell; vertical-align:middle; padding:0 0 0 13px}
 .catalogue-card-descr {margin:40px 0 0 0; color:#474747}
+
+.faq-list {border-bottom:1px solid rgba(196, 196, 196, 0.4)}
+.faq-item {border-top:1px solid rgba(196, 196, 196, 0.4)}
+.faq-item-title a {display:block; position:relative; padding:20px 38% 20px 0; font-weight:normal; font-size:20px; line-height:24px; color:#000; text-decoration:none}
+.faq-item-title a:hover {color:#f26c5d}
+.fonts-loaded .faq-item-title a {font-family:FiraSans, sans-serif}
+.faq-item-title a svg {display:block; width:16px; height:9px; fill:#f26c5d; transition:all 0.2s; position:absolute; right:0; top:27px}
+.faq-item.open .faq-item-title a svg {transform:rotate(-180deg)}
+.faq-item-text {display:none; margin:-11px 38% 0 0; padding:0 0 20px 0; color:#646464}
 
 .contacts {position:relative; margin:60px 0 0 0}
 .contacts::before {content:""; display:block; position:absolute; left:459px; top:0; bottom:0; width:1px; background:#dbdbdb}

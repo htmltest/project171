@@ -50,4 +50,25 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $('.faq-item-title a').click(function(e) {
+        var curItem = $(this).parents().filter('.faq-item');
+        curItem.toggleClass('open');
+        curItem.find('.faq-item-text').slideToggle();
+        e.preventDefault();
+    });
+
+    $('.main-reviews-list').slick({
+        infinite: false,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        prevArrow: '<button type="button" class="slick-prev"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#gallery-prev"></use></svg></button>',
+        nextArrow: '<button type="button" class="slick-next"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#gallery-next"></use></svg></button>',
+        dots: false
+    });
+
+    $('body').on('click', '[data-href]', function(e) {
+        window.open($(this).attr('data-href'), '_blank');
+        e.preventDefault();
+    });
+
 });
