@@ -32,6 +32,9 @@ window.onload = function() {
             var FiraSans400 = new FontFaceObserver('FiraSans', {
                 weight: 'normal'
             });
+            var FiraSans500 = new FontFaceObserver('FiraSans', {
+                weight: '500'
+            });
             var FiraSans600 = new FontFaceObserver('FiraSans', {
                 weight: '600'
             });

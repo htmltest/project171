@@ -97,4 +97,36 @@
         <path d="M39.495 5.99497C39.7683 5.72161 39.7683 5.27839 39.495 5.00503L35.0402 0.550252C34.7668 0.276886 34.3236 0.276886 34.0503 0.550252C33.7769 0.82362 33.7769 1.26684 34.0503 1.5402L38.0101 5.5L34.0503 9.4598C33.7769 9.73316 33.7769 10.1764 34.0503 10.4497C34.3236 10.7231 34.7668 10.7231 35.0402 10.4497L39.495 5.99497ZM0 6.2H39V4.8H0V6.2Z" />
     </symbol>
 
+    <symbol viewBox="0 0 16 16" id="catalogue-type-cards">
+        <rect x="0.75" y="0.75" width="5.5" height="5.5" stroke-width="1.5" />
+        <rect x="9.75" y="0.75" width="5.5" height="5.5" stroke-width="1.5" />
+        <rect x="0.75" y="9.75" width="5.5" height="5.5" stroke-width="1.5" />
+        <rect x="9.75" y="9.75" width="5.5" height="5.5" stroke-width="1.5" />
+    </symbol>
+
+    <symbol viewBox="0 0 19 16" id="catalogue-type-rows">
+        <rect width="19" height="2" />
+        <rect y="4.5" width="19" height="2" />
+        <rect y="9" width="19" height="2" />
+        <rect y="13.5" width="19" height="2" />
+    </symbol>
+
+    <symbol viewBox="0 0 14 8" id="catalogue-pager-size">
+        <path d="M1 1L7 7L13 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+
+    <symbol viewBox="0 0 14 15" id="selected">
+        <rect y="0.5" width="14" height="14" rx="7" fill="#F26C5D" />
+        <path d="M5.83333 9.5L5.41032 9.99352L5.83333 10.3561L6.25635 9.99352L5.83333 9.5ZM6.25635 9.00648L3.92301 7.00648L3.07699 7.99352L5.41032 9.99352L6.25635 9.00648ZM6.25635 9.99352L10.923 5.99352L10.077 5.00648L5.41032 9.00648L6.25635 9.99352Z" fill="white" />
+    </symbol>
+
+    <symbol viewBox="0 0 12 7" id="catalogue-filter-arrow">
+        <path d="M1 1L6 6L11 1" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+
+    <symbol viewBox="0 0 14 14" id="window-close">
+        <path d="M1 1L12.9999 13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M13 1L1.0001 13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+
 </svg>

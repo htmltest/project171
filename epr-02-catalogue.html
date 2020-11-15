@@ -6,6 +6,7 @@
 
         <link rel="stylesheet" href="css/styles.css" />
         <link rel="stylesheet" href="js/slick/slick.css" />
+        <link rel="stylesheet" href="js/nouislider/nouislider.css" />
 
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width" />
@@ -67,19 +68,157 @@
 
                     <div class="breadcrumbs"><a href="#">e-PR</a><span></span>Каталог СМИ</div>
 
-                    <h1>Каталог СМИ</h1>
+                    <div class="catalogue-header">
+                        <h1>Каталог СМИ</h1>
+                        <div class="catalogue-header-status">Издания с <span class="catalogue-header-status-from">15</span> по <span class="catalogue-header-status-to">30</span> из <span class="catalogue-header-status-count">800</span></div>
+                    </div>
 
                     <!-- catalogue -->
                     <div class="catalogue">
 
                         <!-- catalogue filter -->
                         <div class="catalogue-filter">
+                            <form action="ajax/epr-02-catalogue.html" method="post">
+                                <!-- catalogue filter group -->
+                                <div class="catalogue-filter-group open">
+                                    <div class="catalogue-filter-group-header">Страна<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></div>
+                                    <div class="catalogue-filter-group-container">
+                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label><input type="checkbox" name="country1" /><span><em><img src="files/flags/Russia.png" alt="" /></em>Россия</span><strong>13</strong></label></div>
+                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label><input type="checkbox" name="country2" checked="checked" /><span><em><img src="files/flags/United-Kingdom.png" alt="" /></em>Англия</span><strong>44</strong></label></div>
+                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label><input type="checkbox" name="country3" /><span><em><img src="files/flags/Spain.png" alt="" /></em>Испания</span><strong>9</strong></label></div>
+                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label><input type="checkbox" name="country4" /><span><em><img src="files/flags/Ukraine.png" alt="" /></em>Украина</span><strong>3</strong></label></div>
+                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label><input type="checkbox" name="country5" checked="checked" /><span><em><img src="files/flags/Belarus.png" alt="" /></em>Белорусия</span><strong>1</strong></label></div>
+                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label><input type="checkbox" name="country6" /><span><em><img src="files/flags/France.png" alt="" /></em>Франция</span><strong>57</strong></label></div>
+                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label><input type="checkbox" name="country7" /><span><em><img src="files/flags/Turkey.png" alt="" /></em>Турция</span><strong>33</strong></label></div>
+                                        <div class="catalogue-filter-group-all"><a href="#"><span>еще <em></em></span><span>свернуть</span></a></div>
+                                    </div>
+                                </div>
+                                <!-- catalogue filter group END -->
+
+                                <!-- catalogue filter group -->
+                                <div class="catalogue-filter-group">
+                                    <div class="catalogue-filter-group-header">Язык<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></div>
+                                    <div class="catalogue-filter-group-container">
+                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label><input type="checkbox" name="language1" /><span><em><img src="files/flags/Russia.png" alt="" /></em>Русский</span><strong>13</strong></label></div>
+                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label><input type="checkbox" name="language2" /><span><em><img src="files/flags/United-Kingdom.png" alt="" /></em>Английский</span><strong>44</strong></label></div>
+                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label><input type="checkbox" name="language3" /><span><em><img src="files/flags/Spain.png" alt="" /></em>Испанский</span><strong>9</strong></label></div>
+                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label><input type="checkbox" name="language4" /><span><em><img src="files/flags/Ukraine.png" alt="" /></em>Украинский</span><strong>3</strong></label></div>
+                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label><input type="checkbox" name="language5" /><span><em><img src="files/flags/Belarus.png" alt="" /></em>Белорусский</span><strong>1</strong></label></div>
+                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label><input type="checkbox" name="language6" /><span><em><img src="files/flags/France.png" alt="" /></em>Французский</span><strong>57</strong></label></div>
+                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label><input type="checkbox" name="language7" /><span><em><img src="files/flags/Turkey.png" alt="" /></em>Турецкий</span><strong>33</strong></label></div>
+                                        <div class="catalogue-filter-group-all"><a href="#"><span>еще <em></em></span><span>свернуть</span></a></div>
+                                    </div>
+                                </div>
+                                <!-- catalogue filter group END -->
+
+                                <!-- catalogue filter group -->
+                                <div class="catalogue-filter-group open">
+                                    <div class="catalogue-filter-group-header">Тематика<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></div>
+                                    <div class="catalogue-filter-group-container">
+                                        <div class="catalogue-filter-item"><label><input type="checkbox" name="theme1" /><span>Спорт</span><strong>4</strong></label></div>
+                                        <div class="catalogue-filter-item"><label><input type="checkbox" name="theme2" /><span>Бизнес</span><strong>91</strong></label></div>
+                                        <div class="catalogue-filter-item"><label><input type="checkbox" name="theme3" checked="checked" /><span>ИТ</span><strong>3</strong></label></div>
+                                        <div class="catalogue-filter-item"><label><input type="checkbox" name="theme4" /><span>Политика</span><strong>44</strong></label></div>
+                                        <div class="catalogue-filter-item"><label><input type="checkbox" name="theme5" /><span>Мода</span><strong>12</strong></label></div>
+                                        <div class="catalogue-filter-group-all"><a href="#"><span>еще <em></em></span><span>свернуть</span></a></div>
+                                    </div>
+                                </div>
+                                <!-- catalogue filter group END -->
+
+                                <!-- catalogue filter group -->
+                                <div class="catalogue-filter-group">
+                                    <div class="catalogue-filter-group-header">Тип издания<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></div>
+                                    <div class="catalogue-filter-group-container">
+                                        <div class="catalogue-filter-item"><label><input type="checkbox" name="type1" /><span>Онлайн издание</span><strong>91</strong></label></div>
+                                        <div class="catalogue-filter-item"><label><input type="checkbox" name="type2" /><span>Газета</span><strong>2</strong></label></div>
+                                        <div class="catalogue-filter-group-all"><a href="#"><span>еще <em></em></span><span>свернуть</span></a></div>
+                                    </div>
+                                </div>
+                                <!-- catalogue filter group END -->
+
+                                <!-- catalogue filter group -->
+                                <div class="catalogue-filter-group open">
+                                    <div class="catalogue-filter-group-header">Тип публикации<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></div>
+                                    <div class="catalogue-filter-group-container">
+                                        <div class="catalogue-filter-item"><label><input type="checkbox" name="publication1" /><span>Онлайн издание</span><strong>91</strong></label></div>
+                                        <div class="catalogue-filter-item"><label><input type="checkbox" name="publication2" /><span>Газета</span><strong>2</strong></label></div>
+                                        <div class="catalogue-filter-item"><label><input type="checkbox" name="publication3" /><span>Медиа</span><strong>21</strong></label></div>
+                                        <div class="catalogue-filter-group-all"><a href="#"><span>еще <em></em></span><span>свернуть</span></a></div>
+                                    </div>
+                                </div>
+                                <!-- catalogue filter group END -->
+
+                                <!-- catalogue filter group -->
+                                <div class="catalogue-filter-group open">
+                                    <div class="catalogue-filter-group-header">Тираж<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></div>
+                                    <div class="catalogue-filter-group-container">
+                                        <div class="catalogue-filter-slider">
+                                            <div class="form-slider">
+                                                <input type="hidden" name="pressrunFrom" value="790" class="form-slider-from" />
+                                                <input type="hidden" name="pressrunTo" value="30000" class="form-slider-to" />
+                                                <div class="form-slider-range">
+                                                    <div class="form-slider-range-inner"></div>
+                                                </div>
+                                                <div class="form-slider-params">
+                                                    <div class="form-slider-unit">экз.</div>
+                                                    <div class="form-slider-min">0</div>
+                                                    <div class="form-slider-max">50000</div>
+                                                    <div class="form-slider-step">1000</div>
+                                                </div>
+                                                <div class="form-slider-hints">
+                                                    <div class="form-slider-hints-from">от <span></span></div>
+                                                    <div class="form-slider-hints-to">до <span></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- catalogue filter group END -->
+
+                                <!-- catalogue filter group -->
+                                <div class="catalogue-filter-group">
+                                    <div class="catalogue-filter-group-header">Посещаемость<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></div>
+                                    <div class="catalogue-filter-group-container">
+                                        <div class="catalogue-filter-slider">
+                                            <div class="form-slider">
+                                                <input type="hidden" name="trafficFrom" value="10000" class="form-slider-from" />
+                                                <input type="hidden" name="trafficTo" value="30000" class="form-slider-to" />
+                                                <div class="form-slider-range">
+                                                    <div class="form-slider-range-inner"></div>
+                                                </div>
+                                                <div class="form-slider-params">
+                                                    <div class="form-slider-unit">тыс</div>
+                                                    <div class="form-slider-min">0</div>
+                                                    <div class="form-slider-max">50000</div>
+                                                    <div class="form-slider-step">1000</div>
+                                                </div>
+                                                <div class="form-slider-hints">
+                                                    <div class="form-slider-hints-from">от <span></span></div>
+                                                    <div class="form-slider-hints-to">до <span></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- catalogue filter group END -->
+                            </form>
                         </div>
                         <!-- catalogue filter END -->
 
                         <!-- catalogue container -->
                         <div class="catalogue-container">
                             <div class="catalogue-content">
+
+                                <div class="catalogue-ctrl">
+                                    <div class="catalogue-sort">
+                                        <div class="catalogue-sort-item" data-value="price"><a href="#">По цене</a></div>
+                                        <div class="catalogue-sort-item active" data-value="top"><a href="#">По популярности</a></div>
+                                    </div>
+                                    <div class="catalogue-type">
+                                        <div class="catalogue-type-item active"><a href="#"><svg class="catalogue-type-cards"><use xlink:href="images/sprite.svg#catalogue-type-cards"></use></svg></a></div>
+                                        <div class="catalogue-type-item"><a href="#"><svg class="catalogue-type-rows"><use xlink:href="images/sprite.svg#catalogue-type-rows"></use></svg></a></div>
+                                    </div>
+                                </div>
 
                                 <!-- catalogue list -->
                                 <div class="catalogue-list">
@@ -633,18 +772,31 @@
                                 </div>
                                 <!-- catalogue list END -->
 
-                                <div class="pager">
-                                    <a href="#" class="pager-prev"><svg><use xlink:href="images/sprite.svg#pager-prev"></use></svg></a>
-                                    <a href="#" class="active">1</a>
-                                    <a href="#">2</a>
-                                    <a href="#">3</a>
-                                    <a href="#">4</a>
-                                    <a href="#">5</a>
-                                    <a href="#">6</a>
-                                    <a href="#">7</a>
-                                    <a href="#">8</a>
-                                    <span>...</span>
-                                    <a href="#" class="pager-next"><svg><use xlink:href="images/sprite.svg#pager-next"></use></svg></a>
+                                <div class="catalogue-pager">
+
+                                    <div class="pager">
+                                        <a href="#" class="pager-prev" data-value="prev"><svg><use xlink:href="images/sprite.svg#pager-prev"></use></svg></a>
+                                        <a href="#" class="active" data-value="1">1</a>
+                                        <a href="#" data-value="2">2</a>
+                                        <a href="#" data-value="3">3</a>
+                                        <a href="#" data-value="4">4</a>
+                                        <a href="#" data-value="5">5</a>
+                                        <a href="#" data-value="6">6</a>
+                                        <a href="#" data-value="7">7</a>
+                                        <a href="#" data-value="8">8</a>
+                                        <span>...</span>
+                                        <a href="#" class="pager-next" data-value="next"><svg><use xlink:href="images/sprite.svg#pager-next"></use></svg></a>
+                                    </div>
+
+                                    <div class="catalogue-pager-size">
+                                        <div class="catalogue-pager-size-current"><span>Показывать по 15</span><svg><use xlink:href="images/sprite.svg#catalogue-pager-size"></use></svg></div>
+                                        <ul>
+                                            <li class="active" data-value="15"><a href="#"><span>Показывать по 15</span><svg><use xlink:href="images/sprite.svg#selected"></use></svg></a></li>
+                                            <li data-value="30"><a href="#"><span>Показывать по 30</span><svg><use xlink:href="images/sprite.svg#selected"></use></svg></a></li>
+                                            <li data-value="45"><a href="#"><span>Показывать по 45</span><svg><use xlink:href="images/sprite.svg#selected"></use></svg></a></li>
+                                        </ul>
+                                    </div>
+
                                 </div>
 
                             </div>
@@ -753,6 +905,11 @@
 
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="js/slick/slick.min.js"></script>
+        <script src="js/jquery.mask.min.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/nouislider/nouislider.min.js"></script>
+        <script src="js/nouislider/wNumb.js"></script>
         <script src="js/tools.js"></script>
 
     </body>
