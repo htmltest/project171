@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="css/styles.css" />
         <link rel="stylesheet" href="js/slick/slick.css" />
         <link rel="stylesheet" href="js/nouislider/nouislider.css" />
+        <link rel="stylesheet" href="js/mcustomscrollbar/jquery.mCustomScrollbar.css" />
 
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width" />
@@ -23,10 +24,12 @@
                         <div class="header-inner">
                             <div class="logo">e-PR</div>
 
+                            <a href="#" class="mobile-menu-link"><svg><use xlink:href="images/sprite.svg#mobile-menu-link"></use></svg></a>
+
                             <nav class="nav">
                                 <ul>
                                     <li>
-                                        <a href="#">О нас<svg><use xlink:href="images/sprite.svg#nav-arrow"></use></svg></a>
+                                        <a href="#">О нас<svg class="nav-arrow"><use xlink:href="images/sprite.svg#nav-arrow"></use></svg><svg class="nav-arrow-mobile"><use xlink:href="images/sprite.svg#nav-arrow-mobile"></use></svg></a>
                                         <ul>
                                             <li><a href="#">О проекте</a></li>
                                             <li><a href="#">Издательствам</a></li>
@@ -40,6 +43,21 @@
                                     <li><a href="#">FAQ</a></li>
                                     <li><a href="#">Контакты</a></li>
                                 </ul>
+                                <div class="nav-contacts">
+                                    <div class="nav-contacts-social">
+                                        <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#social-fb"></use></svg></a>
+                                        <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#social-instagram"></use></svg></a>
+                                        <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#social-twitter"></use></svg></a>
+                                        <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#social-linkedin"></use></svg></a>
+                                        <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#social-g10"></use></svg></a>
+                                        <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#social-monogram"></use></svg></a>
+                                        <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#social-telegram"></use></svg></a>
+                                    </div>
+                                    <div class="nav-contacts-content">
+                                        <div class="nav-contacts-email"><svg><use xlink:href="images/sprite.svg#nav-contacts-email"></use></svg><a href="mailto:info@e-pr.online">info@e-pr.online</a></div>
+                                        <div class="nav-contacts-address"><svg><use xlink:href="images/sprite.svg#nav-contacts-address"></use></svg>28 Liberty st., New York, NY, 10005</div>
+                                    </div>
+                                </div>
                             </nav>
 
                             <div class="header-right">
@@ -49,6 +67,12 @@
 
                                 <div class="header-search">
                                     <a href="#" class="header-search-link"><svg><use xlink:href="images/sprite.svg#icon-search"></use></svg></a>
+                                    <div class="header-search-form">
+                                        <form action="#" method="post">
+                                            <div class="header-search-input"><input type="text" name="search" value="" placeholder="Поиск" /></div>
+                                            <div class="header-search-submit"><button type="submit"><svg><use xlink:href="images/sprite.svg#icon-search"></use></svg></button></div>
+                                        </form>
+                                    </div>
                                 </div>
 
                                 <div class="header-cart">
@@ -203,25 +227,27 @@
                             <div class="main-title-text">Как работает<br /> сервис</div>
                         </div>
                         <div class="main-how-menu">
-                            <div class="main-how-menu-item active">
-                                <div class="main-how-menu-item-number">01<svg><use xlink:href="images/sprite.svg#main-how-arrow"></use></svg></div>
-                                <a href="#">Создаете аккаунт<br /> на портале e-PR</a>
-                            </div>
-                            <div class="main-how-menu-item">
-                                <div class="main-how-menu-item-number">02<svg><use xlink:href="images/sprite.svg#main-how-arrow"></use></svg></div>
-                                <a href="#">Выберите<br /> нужные СМИ</a>
-                            </div>
-                            <div class="main-how-menu-item">
-                                <div class="main-how-menu-item-number">03<svg><use xlink:href="images/sprite.svg#main-how-arrow"></use></svg></div>
-                                <a href="#">Пополните счет<br /> в ситеме</a>
-                            </div>
-                            <div class="main-how-menu-item">
-                                <div class="main-how-menu-item-number">04<svg><use xlink:href="images/sprite.svg#main-how-arrow"></use></svg></div>
-                                <a href="#">Разместите<br /> пресс-релиз</a>
-                            </div>
-                            <div class="main-how-menu-item">
-                                <div class="main-how-menu-item-number">05<svg><use xlink:href="images/sprite.svg#main-how-arrow"></use></svg></div>
-                                <a href="#">Публикуетесь<br /> в выбраннных СМИ</a>
+                            <div class="main-how-menu-inner">
+                                <div class="main-how-menu-item active">
+                                    <div class="main-how-menu-item-number">01<svg><use xlink:href="images/sprite.svg#main-how-arrow"></use></svg></div>
+                                    <a href="#">Создаете аккаунт<br /> на портале e-PR</a>
+                                </div>
+                                <div class="main-how-menu-item">
+                                    <div class="main-how-menu-item-number">02<svg><use xlink:href="images/sprite.svg#main-how-arrow"></use></svg></div>
+                                    <a href="#">Выберите<br /> нужные СМИ</a>
+                                </div>
+                                <div class="main-how-menu-item">
+                                    <div class="main-how-menu-item-number">03<svg><use xlink:href="images/sprite.svg#main-how-arrow"></use></svg></div>
+                                    <a href="#">Пополните счет<br /> в ситеме</a>
+                                </div>
+                                <div class="main-how-menu-item">
+                                    <div class="main-how-menu-item-number">04<svg><use xlink:href="images/sprite.svg#main-how-arrow"></use></svg></div>
+                                    <a href="#">Разместите<br /> пресс-релиз</a>
+                                </div>
+                                <div class="main-how-menu-item">
+                                    <div class="main-how-menu-item-number">05<svg><use xlink:href="images/sprite.svg#main-how-arrow"></use></svg></div>
+                                    <a href="#">Публикуетесь<br /> в выбраннных СМИ</a>
+                                </div>
                             </div>
                         </div>
                         <div class="main-how-tabs">
@@ -305,7 +331,7 @@
                                                 </div>
                                             </div>
                                         </a>
-                                        <a href="#" class="catalogue-item-cart"><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg>Публикация от 300$</a>
+                                        <a href="windows/order.html" class="catalogue-item-cart window-link"><span><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg>Публикация от </span>300$</a>
                                     </div>
                                 </div>
                                 <!-- catalogue item END -->
@@ -364,7 +390,7 @@
                                                 </div>
                                             </div>
                                         </a>
-                                        <a href="#" class="catalogue-item-cart"><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg>Публикация от 300$</a>
+                                        <a href="windows/order.html" class="catalogue-item-cart window-link"><span><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg>Публикация от </span>300$</a>
                                     </div>
                                 </div>
                                 <!-- catalogue item END -->
@@ -424,7 +450,7 @@
                                                 </div>
                                             </div>
                                         </a>
-                                        <a href="#" class="catalogue-item-cart"><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg>Публикация от 300$</a>
+                                        <a href="windows/order.html" class="catalogue-item-cart window-link"><span><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg>Публикация от </span>300$</a>
                                     </div>
                                 </div>
                                 <!-- catalogue item END -->
@@ -486,7 +512,7 @@
                                                 </div>
                                             </div>
                                         </a>
-                                        <a href="#" class="catalogue-item-cart"><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg>Публикация от 300$</a>
+                                        <a href="windows/order.html" class="catalogue-item-cart window-link"><span><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg>Публикация от </span>300$</a>
                                     </div>
                                 </div>
                                 <!-- catalogue item END -->
@@ -548,7 +574,7 @@
                                                 </div>
                                             </div>
                                         </a>
-                                        <a href="#" class="catalogue-item-cart"><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg>Публикация от 300$</a>
+                                        <a href="windows/order.html" class="catalogue-item-cart window-link"><span><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg>Публикация от </span>300$</a>
                                     </div>
                                 </div>
                                 <!-- catalogue item END -->
@@ -608,7 +634,7 @@
                                                 </div>
                                             </div>
                                         </a>
-                                        <a href="#" class="catalogue-item-cart"><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg>Публикация от 300$</a>
+                                        <a href="windows/order.html" class="catalogue-item-cart window-link"><span><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg>Публикация от </span>300$</a>
                                     </div>
                                 </div>
                                 <!-- catalogue item END -->
@@ -667,7 +693,7 @@
                                                 </div>
                                             </div>
                                         </a>
-                                        <a href="#" class="catalogue-item-cart"><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg>Публикация от 300$</a>
+                                        <a href="windows/order.html" class="catalogue-item-cart window-link"><span><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg>Публикация от </span>300$</a>
                                     </div>
                                 </div>
                                 <!-- catalogue item END -->
@@ -730,7 +756,7 @@
                                                 </div>
                                             </div>
                                         </a>
-                                        <a href="#" class="catalogue-item-cart"><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg>Публикация от 300$</a>
+                                        <a href="windows/order.html" class="catalogue-item-cart window-link"><span><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg>Публикация от </span>300$</a>
                                     </div>
                                 </div>
                                 <!-- catalogue item END -->
@@ -803,49 +829,61 @@
                         <div class="main-title">
                             <div class="main-title-number">06</div>
                             <div class="main-title-text">Дополнительные<br /> услуги</div>
-                            <div class="main-title-btn"><a href="#" class="btn btn-blue">все услуги</a></div>
+                            <div class="main-title-btn"><a href="#" class="btn btn-blue">все услуги<svg><use xlink:href="images/sprite.svg#main-title-btn"></use></svg></a></div>
                         </div>
                         <div class="main-services-list">
                             <div class="main-services-item">
                                 <div class="main-services-item-inner">
                                     <div class="main-services-item-icon"><img src="files/main-services-1.png" alt="" /></div>
-                                    <div class="main-services-item-title">Медиапланирование</div>
-                                    <div class="main-services-item-text">компании, продукта, товара</div>
+                                    <div class="main-services-item-content">
+                                        <div class="main-services-item-title">Медиапланирование</div>
+                                        <div class="main-services-item-text">компании, продукта, товара</div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="main-services-item">
                                 <div class="main-services-item-inner">
                                     <div class="main-services-item-icon"><img src="files/main-services-2.png" alt="" /></div>
-                                    <div class="main-services-item-title">Копирайтинг</div>
-                                    <div class="main-services-item-text">компании, продукта, товара</div>
+                                    <div class="main-services-item-content">
+                                        <div class="main-services-item-title">Копирайтинг</div>
+                                        <div class="main-services-item-text">компании, продукта, товара</div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="main-services-item">
                                 <div class="main-services-item-inner">
                                     <div class="main-services-item-icon"><img src="files/main-services-3.png" alt="" /></div>
-                                    <div class="main-services-item-title">Рерайтинг</div>
-                                    <div class="main-services-item-text">компании, продукта, товара</div>
+                                    <div class="main-services-item-content">
+                                        <div class="main-services-item-title">Рерайтинг</div>
+                                        <div class="main-services-item-text">компании, продукта, товара</div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="main-services-item">
                                 <div class="main-services-item-inner">
                                     <div class="main-services-item-icon"><img src="files/main-services-4.png" alt="" /></div>
-                                    <div class="main-services-item-title">Перевод материалов</div>
-                                    <div class="main-services-item-text">компании, продукта, товара</div>
+                                    <div class="main-services-item-content">
+                                        <div class="main-services-item-title">Перевод материалов</div>
+                                        <div class="main-services-item-text">компании, продукта, товара</div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="main-services-item">
                                 <div class="main-services-item-inner">
                                     <div class="main-services-item-icon"><img src="files/main-services-5.png" alt="" /></div>
-                                    <div class="main-services-item-title">Аналитика</div>
-                                    <div class="main-services-item-text">компании, продукта, товара</div>
+                                    <div class="main-services-item-content">
+                                        <div class="main-services-item-title">Аналитика</div>
+                                        <div class="main-services-item-text">компании, продукта, товара</div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="main-services-item">
                                 <div class="main-services-item-inner">
                                     <div class="main-services-item-icon"><img src="files/main-services-6.png" alt="" /></div>
-                                    <div class="main-services-item-title">Перевод материалов</div>
-                                    <div class="main-services-item-text">компании, продукта, товара</div>
+                                    <div class="main-services-item-content">
+                                        <div class="main-services-item-title">Перевод материалов</div>
+                                        <div class="main-services-item-text">компании, продукта, товара</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -857,7 +895,7 @@
                         <div class="main-title">
                             <div class="main-title-number">07</div>
                             <div class="main-title-text">Вопросы</div>
-                            <div class="main-title-btn"><a href="#" class="btn btn-blue">все Вопросы</a></div>
+                            <div class="main-title-btn"><a href="#" class="btn btn-blue">все Вопросы<svg><use xlink:href="images/sprite.svg#main-title-btn"></use></svg></a></div>
                         </div>
 
                         <div class="main-faq-container">
@@ -888,7 +926,7 @@
                         <div class="main-title">
                             <div class="main-title-number">08</div>
                             <div class="main-title-text">СМИ о нас</div>
-                            <div class="main-title-btn"><a href="#" class="btn btn-blue">все публикации</a></div>
+                            <div class="main-title-btn"><a href="#" class="btn btn-blue">все публикации<svg><use xlink:href="images/sprite.svg#main-title-btn"></use></svg></a></div>
                         </div>
 
                         <div class="main-reviews-list">
@@ -956,7 +994,7 @@
                             </div>
 
                             <div class="footer-menu-block">
-                                <div class="footer-menu-block-title"><a href="#">Услуги</a></div>
+                                <div class="footer-menu-block-title"><a href="#">Услуги<svg class="footer-menu-block-title-arrow"><use xlink:href="images/sprite.svg#nav-arrow-mobile"></use></svg></a></a></div>
                                 <div class="footer-menu-block-list">
                                     <ul>
                                         <li><a href="#">Работа со средствами массовой информации</a></li>
@@ -970,7 +1008,7 @@
 
                         <div class="footer-menu">
                             <div class="footer-menu-block">
-                                <div class="footer-menu-block-title"><a href="#">О нас</a></div>
+                                <div class="footer-menu-block-title"><a href="#">О нас<svg class="footer-menu-block-title-arrow"><use xlink:href="images/sprite.svg#nav-arrow-mobile"></use></svg></a></a></div>
                                 <div class="footer-menu-block-list">
                                     <ul>
                                         <li><a href="#">О проекте</a></li>
@@ -986,7 +1024,7 @@
                         </div>
 
                         <div class="footer-menu">
-                            <div class="footer-menu-block-title"><a href="#">Контакты</a></div>
+                            <div class="footer-menu-block-title"><a href="#">Контакты<svg class="footer-menu-block-title-arrow"><use xlink:href="images/sprite.svg#nav-arrow-mobile"></use></svg></a></a></div>
                             <div class="footer-menu-block-list">
                                 <div class="footer-contacts-item"><a href="mailto:info@e-pr.online">info@e-pr.online</a></div>
                                 <div class="footer-contacts-item"><a href="tel:+19295005900">+1 (929) 500-5900</a></div>
@@ -1042,6 +1080,7 @@
         <script src="js/validation/messages_ru.js"></script>
         <script src="js/nouislider/nouislider.min.js"></script>
         <script src="js/nouislider/wNumb.js"></script>
+        <script src="js/mcustomscrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="js/tools.js"></script>
 
     </body>
