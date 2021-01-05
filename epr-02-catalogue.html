@@ -101,7 +101,7 @@
                     </div>
 
                     <div class="catalogue-ctrl-mobile">
-                        <a href="#" class="catalogue-ctrl-mobile-sort"><svg><use xlink:href="images/sprite.svg#catalogue-sort-mobile"></use></svg>По цене</a>
+                        <a href="#" class="catalogue-ctrl-mobile-sort"><svg><use xlink:href="images/sprite.svg#catalogue-sort-mobile"></use></svg><span>По популярности</span></a>
                         <a href="#" class="catalogue-ctrl-mobile-filter"><svg><use xlink:href="images/sprite.svg#catalogue-filter-mobile"></use></svg>Фильтры</a>
                     </div>
 
@@ -114,10 +114,20 @@
                                 <a href="#" class="catalogue-filter-close"><svg><use xlink:href="images/sprite.svg#catalogue-filter-close"></use></svg></a>
                                 <div class="catalogue-filter-header-title">Фильтры</div>
                             </div>
-                            <form action="ajax/epr-02-catalogue.html" method="post">
+                            <div class="catalogue-search">
+                                <form action="ajax/epr-02-catalogue.html" method="post">
+                                    <div class="catalogue-search-input"><input type="text" name="search" value="" placeholder="Поиск" class="required" /></div>
+                                    <div class="catalogue-search-submit"><button type="submit"><svg><use xlink:href="images/sprite.svg#icon-search"></use></svg></button></div>
+                                </form>
+                            </div>
+                            <form action="ajax/epr-02-catalogue.html" method="post" class="catalogue-filter-form">
                                 <!-- catalogue filter group -->
                                 <div class="catalogue-filter-group open">
-                                    <div class="catalogue-filter-group-header">Страна<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></div>
+                                    <div class="catalogue-filter-group-header">
+                                        <a href="#" class="catalogue-filter-group-header-link">Страна<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></a>
+                                        <div class="catalogue-filter-group-params"></div>
+                                        <a href="#" class="catalogue-filter-group-params-remove"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-params-remove"></use></svg></a>
+                                    </div>
                                     <a href="#" class="catalogue-filter-group-reset">Сбросить</a>
                                     <a href="#" class="catalogue-filter-group-close"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-close"></use></svg></a>
                                     <div class="catalogue-filter-group-container">
@@ -136,7 +146,11 @@
 
                                 <!-- catalogue filter group -->
                                 <div class="catalogue-filter-group">
-                                    <div class="catalogue-filter-group-header">Язык<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></div>
+                                    <div class="catalogue-filter-group-header">
+                                        <a href="#" class="catalogue-filter-group-header-link">Язык<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></a>
+                                        <div class="catalogue-filter-group-params"></div>
+                                        <a href="#" class="catalogue-filter-group-params-remove"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-params-remove"></use></svg></a>
+                                    </div>
                                     <a href="#" class="catalogue-filter-group-reset">Сбросить</a>
                                     <a href="#" class="catalogue-filter-group-close"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-close"></use></svg></a>
                                     <div class="catalogue-filter-group-container">
@@ -155,7 +169,11 @@
 
                                 <!-- catalogue filter group -->
                                 <div class="catalogue-filter-group open">
-                                    <div class="catalogue-filter-group-header">Тематика<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></div>
+                                    <div class="catalogue-filter-group-header">
+                                        <a href="#" class="catalogue-filter-group-header-link">Тематика<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></a>
+                                        <div class="catalogue-filter-group-params"></div>
+                                        <a href="#" class="catalogue-filter-group-params-remove"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-params-remove"></use></svg></a>
+                                    </div>
                                     <a href="#" class="catalogue-filter-group-reset">Сбросить</a>
                                     <a href="#" class="catalogue-filter-group-close"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-close"></use></svg></a>
                                     <div class="catalogue-filter-group-container">
@@ -172,7 +190,11 @@
 
                                 <!-- catalogue filter group -->
                                 <div class="catalogue-filter-group">
-                                    <div class="catalogue-filter-group-header">Тип издания<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></div>
+                                    <div class="catalogue-filter-group-header">
+                                        <a href="#" class="catalogue-filter-group-header-link">Тип издания<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></a>
+                                        <div class="catalogue-filter-group-params"></div>
+                                        <a href="#" class="catalogue-filter-group-params-remove"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-params-remove"></use></svg></a>
+                                    </div>
                                     <a href="#" class="catalogue-filter-group-reset">Сбросить</a>
                                     <a href="#" class="catalogue-filter-group-close"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-close"></use></svg></a>
                                     <div class="catalogue-filter-group-container">
@@ -186,7 +208,11 @@
 
                                 <!-- catalogue filter group -->
                                 <div class="catalogue-filter-group open">
-                                    <div class="catalogue-filter-group-header">Тип публикации<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></div>
+                                    <div class="catalogue-filter-group-header">
+                                        <a href="#" class="catalogue-filter-group-header-link">Тип публикации<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></a>
+                                        <div class="catalogue-filter-group-params"></div>
+                                        <a href="#" class="catalogue-filter-group-params-remove"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-params-remove"></use></svg></a>
+                                    </div>
                                     <a href="#" class="catalogue-filter-group-reset">Сбросить</a>
                                     <a href="#" class="catalogue-filter-group-close"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-close"></use></svg></a>
                                     <div class="catalogue-filter-group-container">
@@ -201,7 +227,11 @@
 
                                 <!-- catalogue filter group -->
                                 <div class="catalogue-filter-group open">
-                                    <div class="catalogue-filter-group-header">Тираж<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></div>
+                                    <div class="catalogue-filter-group-header">
+                                        <a href="#" class="catalogue-filter-group-header-link">Тираж<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></a>
+                                        <div class="catalogue-filter-group-params"></div>
+                                        <a href="#" class="catalogue-filter-group-params-remove"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-params-remove"></use></svg></a>
+                                    </div>
                                     <a href="#" class="catalogue-filter-group-reset">Сбросить</a>
                                     <a href="#" class="catalogue-filter-group-close"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-close"></use></svg></a>
                                     <div class="catalogue-filter-group-container">
@@ -231,7 +261,11 @@
 
                                 <!-- catalogue filter group -->
                                 <div class="catalogue-filter-group">
-                                    <div class="catalogue-filter-group-header">Посещаемость<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></div>
+                                    <div class="catalogue-filter-group-header">
+                                        <a href="#" class="catalogue-filter-group-header-link">Посещаемость<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></a>
+                                        <div class="catalogue-filter-group-params"></div>
+                                        <a href="#" class="catalogue-filter-group-params-remove"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-params-remove"></use></svg></a>
+                                    </div>
                                     <a href="#" class="catalogue-filter-group-reset">Сбросить</a>
                                     <a href="#" class="catalogue-filter-group-close"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-close"></use></svg></a>
                                     <div class="catalogue-filter-group-container">
@@ -352,8 +386,8 @@
                                         <div class="catalogue-item-inner">
                                             <a href="#" class="catalogue-item-container">
                                                 <div class="catalogue-item-logo"><img src="files/catalogue-2.png" alt="" /></div>
-                                                <div class="catalogue-item-title">Коммерсант</div>
-                                                <div class="catalogue-item-url"><span data-href="https://kommersant.ru">kommersant.ru</span></div>
+                                                <div class="catalogue-item-title">Коммерсант&nbsp;длинное&nbsp;название&nbsp;для&nbsp;тестирования</div>
+                                                <div class="catalogue-item-url"><span data-href="https://kommersant.ru">kommersant.rukommersant.rukommersant.ru</span></div>
                                                 <div class="catalogue-item-info">
                                                     <div class="catalogue-item-info-inner">
                                                         <div class="catalogue-item-info-item">

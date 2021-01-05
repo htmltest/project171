@@ -90,6 +90,12 @@
 .noUi-horizontal {
   height: 2px;
 }
+
+@media screen and (max-width:1119px) {
+    .noUi-horizontal {
+      height: 4px;
+    }
+}
 .noUi-horizontal .noUi-handle {
   width: 25px;
   height: 25px;
@@ -101,12 +107,12 @@
   right: 0;
 }
 
-@media screen and (max-width:1169px) {
+@media screen and (max-width:1119px) {
     .noUi-horizontal .noUi-handle {
-      width: 35px;
-      height: 35px;
-      right: -33px;
-      top: -16px;
+      width: 34px;
+      height: 34px;
+      right: -34px;
+      top: -17px;
     }
     .noUi-horizontal .noUi-handle.noUi-handle-upper {
       right: 0;
@@ -152,9 +158,10 @@
   cursor: pointer;
 }
 
-@media screen and (max-width:1169px) {
+@media screen and (max-width:1119px) {
     .noUi-handle {
-        border-width: 4px;
+        border: 4px solid #f26c5d;
+        background: #fff;
     }
 }
 .noUi-active {
@@ -175,6 +182,7 @@
 .noUi-handle:after {
   left: 17px;
 }
+
 .noUi-vertical .noUi-handle:before,
 .noUi-vertical .noUi-handle:after {
   width: 14px;
@@ -184,6 +192,12 @@
 }
 .noUi-vertical .noUi-handle:after {
   top: 17px;
+}
+@media screen and (max-width:1119px) {
+    .noUi-vertical .noUi-handle:before,
+    .noUi-vertical .noUi-handle:after {
+        display:none; 
+    }
 }
 /* Disabled state;
  */
@@ -302,9 +316,9 @@
   background: #fff;
 }
 
-@media screen and (max-width:1169px) {
+@media screen and (max-width:1119px) {
     .noUi-tooltip {
-        display: block;
+        display: none;
     }
 }
 .noUi-horizontal .noUi-tooltip {
