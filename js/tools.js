@@ -204,33 +204,25 @@ $(document).ready(function() {
         if (!curItem.hasClass('active')) {
             $('.catalogue-sort-item.active').removeClass('active');
             curItem.addClass('active');
-            $('.catalogue-ctrl-mobile-sort span').html($(this).html());
             filterCatalogue();
         }
-        e.preventDefault();
-    });
-
-    $('.catalogue-ctrl-mobile-sort').click(function(e) {
-        var curActive = $('.catalogue-sort-item.active');
-        var curIndex = $('.catalogue-sort-item').index(curActive);
-        curIndex++;
-        if (curIndex > $('.catalogue-sort-item').length - 1) {
-            curIndex = 0;
-        }
-        $('.catalogue-sort-item').eq(curIndex).find('a').trigger('click');
         e.preventDefault();
     });
 
     $('.catalogue-type-item a').click(function(e) {
         var curItem = $(this).parent();
         if (!curItem.hasClass('active')) {
+            $('.catalogue-list, .catalogue-list-rows-headers').removeClass($('.catalogue-type-item.active a').attr('data-type'));
             $('.catalogue-type-item.active').removeClass('active');
             curItem.addClass('active');
+            $('.catalogue-list, .catalogue-list-rows-headers').addClass(curItem.find('a').attr('data-type'));
         }
         e.preventDefault();
     });
 
     $('.catalogue-ctrl-mobile-filter').click(function(e) {
+        $('html').removeClass('catalogue-search-open');
+        $('html').removeClass('catalogue-sort-open');
         if (!$('html').hasClass('catalogue-filter-open')) {
             var curWidth = $(window).width();
             if (curWidth < 480) {
@@ -252,6 +244,18 @@ $(document).ready(function() {
             $('.wrapper').css('margin-top', 0);
             $(window).scrollTop($('html').data('scrollTop'));
         }
+        e.preventDefault();
+    });
+
+    $('.catalogue-ctrl-mobile-search').click(function(e) {
+        $('html').removeClass('catalogue-sort-open');
+        $('html').toggleClass('catalogue-search-open');
+        e.preventDefault();
+    });
+
+    $('.catalogue-ctrl-mobile-sort').click(function(e) {
+        $('html').removeClass('catalogue-search-open');
+        $('html').toggleClass('catalogue-sort-open');
         e.preventDefault();
     });
 

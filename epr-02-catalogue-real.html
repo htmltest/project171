@@ -101,9 +101,9 @@
                     </div>
 
                     <div class="catalogue-ctrl-mobile">
-                        <a href="#" class="btn catalogue-ctrl-mobile-filter"><svg><use xlink:href="images/sprite.svg#catalogue-filter-mobile"></use></svg>Фильтр</a>
-                        <a href="#" class="btn catalogue-ctrl-mobile-search"><svg><use xlink:href="images/sprite.svg#icon-search"></use></svg>Поиск</a>
-                        <a href="#" class="btn catalogue-ctrl-mobile-sort"><svg><use xlink:href="images/sprite.svg#catalogue-sort-mobile"></use></svg><span>Сорт.</span></a>
+                        <a href="#" class="btn catalogue-ctrl-mobile-filter"><svg><use xlink:href="images/sprite.svg#catalogue-filter-mobile"></use></svg>Filter</a>
+                        <a href="#" class="btn catalogue-ctrl-mobile-search"><svg><use xlink:href="images/sprite.svg#icon-search"></use></svg>Search</a>
+                        <a href="#" class="btn catalogue-ctrl-mobile-sort"><svg><use xlink:href="images/sprite.svg#catalogue-sort-mobile"></use></svg><span>Sort</span></a>
                     </div>
 
                     <!-- catalogue -->
@@ -116,12 +116,12 @@
                                 <div class="catalogue-filter-header-title">Фильтры</div>
                             </div>
                             <div class="catalogue-search">
-                                <form action="ajax/epr-02-catalogue.html" method="post">
+                                <form action="ajax/epr-02-catalogue-real.html" method="post">
                                     <div class="catalogue-search-input"><input type="text" name="search" value="" placeholder="Поиск" class="required" /></div>
                                     <div class="catalogue-search-submit"><button type="submit"><svg><use xlink:href="images/sprite.svg#icon-search"></use></svg></button></div>
                                 </form>
                             </div>
-                            <form action="ajax/epr-02-catalogue.html" method="post" class="catalogue-filter-form">
+                            <form action="ajax/epr-02-catalogue-real.html" method="post" class="catalogue-filter-form">
                                 <!-- catalogue filter group -->
                                 <div class="catalogue-filter-group open">
                                     <div class="catalogue-filter-group-header">
@@ -307,8 +307,9 @@
 
                                 <div class="catalogue-ctrl">
                                     <div class="catalogue-sort">
-                                        <div class="catalogue-sort-item" data-value="price"><a href="#">По цене</a></div>
-                                        <div class="catalogue-sort-item active" data-value="top"><a href="#">По популярности</a></div>
+                                        <div class="catalogue-sort-item" data-value="name"><a href="#">By name</a></div>
+                                        <div class="catalogue-sort-item" data-value="price"><a href="#">By price</a></div>
+                                        <div class="catalogue-sort-item active" data-value="top"><a href="#">By popularity</a></div>
                                     </div>
                                     <div class="catalogue-type">
                                         <div class="catalogue-type-item active"><a href="#" data-type=""><svg class="catalogue-type-cards"><use xlink:href="images/sprite.svg#catalogue-type-cards"></use></svg></a></div>
@@ -316,55 +317,39 @@
                                     </div>
                                 </div>
 
-                                <div class="catalogue-list-rows-headers">
-                                    <div class="catalogue-list-rows-header">Компания</div>
-                                    <div class="catalogue-list-rows-header">Тираж</div>
-                                    <div class="catalogue-list-rows-header">Посещаемость</div>
-                                    <div class="catalogue-list-rows-header">Страна</div>
-                                    <div class="catalogue-list-rows-header">Язык</div>
-                                    <div class="catalogue-list-rows-header">Темы</div>
+                                <div class="catalogue-list-rows-headers catalogue-list-rows-headers-2">
+                                    <div class="catalogue-list-rows-header">Company</div>
+                                    <div class="catalogue-list-rows-header">Country</div>
+                                    <div class="catalogue-list-rows-header">Language</div>
+                                    <div class="catalogue-list-rows-header">Category</div>
                                 </div>
 
                                 <!-- catalogue list -->
-                                <div class="catalogue-list">
+                                <div class="catalogue-list catalogue-list-2">
 
                                     <!-- catalogue item -->
                                     <div class="catalogue-item">
                                         <div class="catalogue-item-inner">
                                             <a href="#" class="catalogue-item-container">
-                                                <div class="catalogue-item-logo"><img src="files/catalogue-1.png" alt="" /></div>
+                                                <div class="catalogue-item-logo"><img src="files/catalogue-real-01.png" alt="" /></div>
                                                 <div class="catalogue-item-text">
-                                                    <div class="catalogue-item-title">Медуза</div>
-                                                    <div class="catalogue-item-url"><span data-href="https://meduza.io">meduza.io</span></div>
+                                                    <div class="catalogue-item-title">Econsultancy</div>
+                                                    <div class="catalogue-item-url"><span data-href="https://econsultancy.com">econsultancy.com</span></div>
                                                 </div>
                                                 <div class="catalogue-item-info">
                                                     <div class="catalogue-item-info-inner">
                                                         <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Тираж</div>
-                                                            <div class="catalogue-item-info-value">100 000</div>
-                                                        </div>
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Посещаемость</div>
-                                                            <div class="catalogue-item-info-value">1 200 K</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="catalogue-item-info">
-                                                    <div class="catalogue-item-info-inner">
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Страна</div>
+                                                            <div class="catalogue-item-info-title">Country</div>
                                                             <div class="catalogue-item-info-value">
                                                                 <div class="catalogue-item-info-flags">
-                                                                    <img src="files/flags/Russia.png" alt="" />
-                                                                    <img src="files/flags/United-Kingdom.png" alt="" />
+                                                                    <img src="files/flags/United-States-of-America.png" alt="" />
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Язык</div>
+                                                            <div class="catalogue-item-info-title">Language</div>
                                                             <div class="catalogue-item-info-value">
                                                                 <div class="catalogue-item-info-flags">
-                                                                    <img src="files/flags/Russia.png" alt="" />
                                                                     <img src="files/flags/United-Kingdom.png" alt="" />
                                                                 </div>
                                                             </div>
@@ -374,21 +359,15 @@
                                                 <div class="catalogue-item-info">
                                                     <div class="catalogue-item-info-inner">
                                                         <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Темы</div>
+                                                            <div class="catalogue-item-info-title">Category</div>
                                                             <div class="catalogue-item-info-value">
-                                                                <div class="catalogue-item-info-icons">
-                                                                    <img src="images/catalogue-icon-01.svg" alt="" />
-                                                                    <img src="images/catalogue-icon-02.svg" alt="" />
-                                                                    <img src="images/catalogue-icon-03.svg" alt="" />
-                                                                    <img src="images/catalogue-icon-04.svg" alt="" />
-                                                                    <img src="images/catalogue-icon-05.svg" alt="" />
-                                                                </div>
+                                                                Advertising
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </a>
-                                            <a href="windows/order.html" class="catalogue-item-cart window-link"><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg><span>Публикация </span>от 99 999$</a>
+                                            <a href="windows/order.html" class="catalogue-item-cart window-link"><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg><span>Publication </span>from $7 155</a>
                                         </div>
                                     </div>
                                     <!-- catalogue item END -->
@@ -397,285 +376,25 @@
                                     <div class="catalogue-item">
                                         <div class="catalogue-item-inner">
                                             <a href="#" class="catalogue-item-container">
-                                                <div class="catalogue-item-logo"><img src="files/catalogue-2.png" alt="" /></div>
+                                                <div class="catalogue-item-logo"><img src="files/catalogue-real-02.jpg" alt="" /></div>
                                                 <div class="catalogue-item-text">
-                                                    <div class="catalogue-item-title">Коммерсант&nbsp;длинное&nbsp;название&nbsp;для&nbsp;тестирования</div>
-                                                    <div class="catalogue-item-url"><span data-href="https://kommersant.ru">kommersant.rukommersant.rukommersant.ru</span></div>
+                                                    <div class="catalogue-item-title">Digiday</div>
+                                                    <div class="catalogue-item-url"><span data-href="https://digiday.com">digiday.com</span></div>
                                                 </div>
                                                 <div class="catalogue-item-info">
                                                     <div class="catalogue-item-info-inner">
                                                         <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Тираж</div>
-                                                            <div class="catalogue-item-info-value">20 000</div>
-                                                        </div>
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Посещаемость</div>
-                                                            <div class="catalogue-item-info-value">250 K</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="catalogue-item-info">
-                                                    <div class="catalogue-item-info-inner">
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Страна</div>
+                                                            <div class="catalogue-item-info-title">Country</div>
                                                             <div class="catalogue-item-info-value">
                                                                 <div class="catalogue-item-info-flags">
-                                                                    <img src="files/flags/Russia.png" alt="" />
+                                                                    <img src="files/flags/United-States-of-America.png" alt="" />
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Язык</div>
+                                                            <div class="catalogue-item-info-title">Language</div>
                                                             <div class="catalogue-item-info-value">
                                                                 <div class="catalogue-item-info-flags">
-                                                                    <img src="files/flags/Russia.png" alt="" />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="catalogue-item-info">
-                                                    <div class="catalogue-item-info-inner">
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Темы</div>
-                                                            <div class="catalogue-item-info-value">
-                                                                <div class="catalogue-item-info-icons">
-                                                                    <img src="images/catalogue-icon-01.svg" alt="" />
-                                                                    <img src="images/catalogue-icon-03.svg" alt="" />
-                                                                    <img src="images/catalogue-icon-05.svg" alt="" />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="windows/order.html" class="catalogue-item-cart window-link"><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg>Запросить цену</a>
-                                        </div>
-                                    </div>
-                                    <!-- catalogue item END -->
-
-                                    <!-- catalogue item -->
-                                    <div class="catalogue-item">
-                                        <div class="catalogue-item-inner">
-                                            <a href="#" class="catalogue-item-container">
-                                                <div class="catalogue-item-logo"><img src="files/catalogue-3.png" alt="" /></div>
-                                                <div class="catalogue-item-text">
-                                                    <div class="catalogue-item-title">Ведомости</div>
-                                                    <div class="catalogue-item-url"><span data-href="https://vedomosti.ru">vedomosti.ru</span></div>
-                                                </div>
-                                                <div class="catalogue-item-info">
-                                                    <div class="catalogue-item-info-inner">
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Тираж</div>
-                                                            <div class="catalogue-item-info-value">2 100 000</div>
-                                                        </div>
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Посещаемость</div>
-                                                            <div class="catalogue-item-info-value">150 000 K</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="catalogue-item-info">
-                                                    <div class="catalogue-item-info-inner">
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Страна</div>
-                                                            <div class="catalogue-item-info-value">
-                                                                <div class="catalogue-item-info-flags">
-                                                                    <img src="files/flags/Russia.png" alt="" />
-                                                                    <img src="files/flags/United-Kingdom.png" alt="" />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Язык</div>
-                                                            <div class="catalogue-item-info-value">
-                                                                <div class="catalogue-item-info-flags">
-                                                                    <img src="files/flags/Russia.png" alt="" />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="catalogue-item-info">
-                                                    <div class="catalogue-item-info-inner">
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Темы</div>
-                                                            <div class="catalogue-item-info-value">
-                                                                <div class="catalogue-item-info-icons">
-                                                                    <img src="images/catalogue-icon-02.svg" alt="" />
-                                                                    <img src="images/catalogue-icon-03.svg" alt="" />
-                                                                    <img src="images/catalogue-icon-04.svg" alt="" />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="windows/order.html" class="catalogue-item-cart window-link"><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg><span>Публикация </span>от 300$</a>
-                                        </div>
-                                    </div>
-                                    <!-- catalogue item END -->
-
-                                    <!-- catalogue item -->
-                                    <div class="catalogue-item">
-                                        <div class="catalogue-item-inner">
-                                            <a href="#" class="catalogue-item-container">
-                                                <div class="catalogue-item-logo"><img src="files/catalogue-2.png" alt="" /></div>
-                                                <div class="catalogue-item-text">
-                                                    <div class="catalogue-item-title">Коммерсант</div>
-                                                    <div class="catalogue-item-url"><span data-href="https://kommersant.ru">kommersant.ru</span></div>
-                                                </div>
-                                                <div class="catalogue-item-info">
-                                                    <div class="catalogue-item-info-inner">
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Тираж</div>
-                                                            <div class="catalogue-item-info-value">20 000</div>
-                                                        </div>
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Посещаемость</div>
-                                                            <div class="catalogue-item-info-value">250 K</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="catalogue-item-info">
-                                                    <div class="catalogue-item-info-inner">
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Страна</div>
-                                                            <div class="catalogue-item-info-value">
-                                                                <div class="catalogue-item-info-flags">
-                                                                    <img src="files/flags/Russia.png" alt="" />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Язык</div>
-                                                            <div class="catalogue-item-info-value">
-                                                                <div class="catalogue-item-info-flags">
-                                                                    <img src="files/flags/Russia.png" alt="" />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="catalogue-item-info">
-                                                    <div class="catalogue-item-info-inner">
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Темы</div>
-                                                            <div class="catalogue-item-info-value">
-                                                                <div class="catalogue-item-info-icons">
-                                                                    <img src="images/catalogue-icon-01.svg" alt="" />
-                                                                    <img src="images/catalogue-icon-03.svg" alt="" />
-                                                                    <img src="images/catalogue-icon-05.svg" alt="" />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="windows/order.html" class="catalogue-item-cart window-link"><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg><span>Публикация </span>от 300$</a>
-                                        </div>
-                                    </div>
-                                    <!-- catalogue item END -->
-
-                                    <!-- catalogue item -->
-                                    <div class="catalogue-item">
-                                        <div class="catalogue-item-inner">
-                                            <a href="#" class="catalogue-item-container">
-                                                <div class="catalogue-item-logo"><img src="files/catalogue-3.png" alt="" /></div>
-                                                <div class="catalogue-item-text">
-                                                    <div class="catalogue-item-title">Ведомости</div>
-                                                    <div class="catalogue-item-url"><span data-href="https://vedomosti.ru">vedomosti.ru</span></div>
-                                                </div>
-                                                <div class="catalogue-item-info">
-                                                    <div class="catalogue-item-info-inner">
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Тираж</div>
-                                                            <div class="catalogue-item-info-value">2 100 000</div>
-                                                        </div>
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Посещаемость</div>
-                                                            <div class="catalogue-item-info-value">150 000 K</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="catalogue-item-info">
-                                                    <div class="catalogue-item-info-inner">
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Страна</div>
-                                                            <div class="catalogue-item-info-value">
-                                                                <div class="catalogue-item-info-flags">
-                                                                    <img src="files/flags/Russia.png" alt="" />
-                                                                    <img src="files/flags/United-Kingdom.png" alt="" />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Язык</div>
-                                                            <div class="catalogue-item-info-value">
-                                                                <div class="catalogue-item-info-flags">
-                                                                    <img src="files/flags/Russia.png" alt="" />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="catalogue-item-info">
-                                                    <div class="catalogue-item-info-inner">
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Темы</div>
-                                                            <div class="catalogue-item-info-value">
-                                                                <div class="catalogue-item-info-icons">
-                                                                    <img src="images/catalogue-icon-02.svg" alt="" />
-                                                                    <img src="images/catalogue-icon-03.svg" alt="" />
-                                                                    <img src="images/catalogue-icon-04.svg" alt="" />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="windows/order.html" class="catalogue-item-cart window-link"><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg><span>Публикация </span>от 300$</a>
-                                        </div>
-                                    </div>
-                                    <!-- catalogue item END -->
-
-                                    <!-- catalogue item -->
-                                    <div class="catalogue-item">
-                                        <div class="catalogue-item-inner">
-                                            <a href="#" class="catalogue-item-container">
-                                                <div class="catalogue-item-logo"><img src="files/catalogue-1.png" alt="" /></div>
-                                                <div class="catalogue-item-text">
-                                                    <div class="catalogue-item-title">Медуза</div>
-                                                    <div class="catalogue-item-url"><span data-href="https://meduza.io">meduza.io</span></div>
-                                                </div>
-                                                <div class="catalogue-item-info">
-                                                    <div class="catalogue-item-info-inner">
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Тираж</div>
-                                                            <div class="catalogue-item-info-value">100 000</div>
-                                                        </div>
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Посещаемость</div>
-                                                            <div class="catalogue-item-info-value">1 200 K</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="catalogue-item-info">
-                                                    <div class="catalogue-item-info-inner">
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Страна</div>
-                                                            <div class="catalogue-item-info-value">
-                                                                <div class="catalogue-item-info-flags">
-                                                                    <img src="files/flags/Russia.png" alt="" />
-                                                                    <img src="files/flags/United-Kingdom.png" alt="" />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Язык</div>
-                                                            <div class="catalogue-item-info-value">
-                                                                <div class="catalogue-item-info-flags">
-                                                                    <img src="files/flags/Russia.png" alt="" />
                                                                     <img src="files/flags/United-Kingdom.png" alt="" />
                                                                 </div>
                                                             </div>
@@ -685,21 +404,15 @@
                                                 <div class="catalogue-item-info">
                                                     <div class="catalogue-item-info-inner">
                                                         <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Темы</div>
+                                                            <div class="catalogue-item-info-title">Category</div>
                                                             <div class="catalogue-item-info-value">
-                                                                <div class="catalogue-item-info-icons">
-                                                                    <img src="images/catalogue-icon-01.svg" alt="" />
-                                                                    <img src="images/catalogue-icon-02.svg" alt="" />
-                                                                    <img src="images/catalogue-icon-03.svg" alt="" />
-                                                                    <img src="images/catalogue-icon-04.svg" alt="" />
-                                                                    <img src="images/catalogue-icon-05.svg" alt="" />
-                                                                </div>
+                                                                Advertising
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </a>
-                                            <a href="windows/order.html" class="catalogue-item-cart window-link"><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg><span>Публикация </span>от 300$</a>
+                                            <a href="windows/order.html" class="catalogue-item-cart window-link"><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg>Request a Quote</a>
                                         </div>
                                     </div>
                                     <!-- catalogue item END -->
@@ -708,39 +421,25 @@
                                     <div class="catalogue-item">
                                         <div class="catalogue-item-inner">
                                             <a href="#" class="catalogue-item-container">
-                                                <div class="catalogue-item-logo"><img src="files/catalogue-1.png" alt="" /></div>
+                                                <div class="catalogue-item-logo"><img src="files/catalogue-real-03.png" alt="" /></div>
                                                 <div class="catalogue-item-text">
-                                                    <div class="catalogue-item-title">Медуза</div>
-                                                    <div class="catalogue-item-url"><span data-href="https://meduza.io">meduza.io</span></div>
+                                                    <div class="catalogue-item-title">Ad Verve</div>
+                                                    <div class="catalogue-item-url"><span data-href="https://www.adverveblog.com">www.adverveblog.com</span></div>
                                                 </div>
                                                 <div class="catalogue-item-info">
                                                     <div class="catalogue-item-info-inner">
                                                         <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Тираж</div>
-                                                            <div class="catalogue-item-info-value">100 000</div>
-                                                        </div>
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Посещаемость</div>
-                                                            <div class="catalogue-item-info-value">1 200 K</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="catalogue-item-info">
-                                                    <div class="catalogue-item-info-inner">
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Страна</div>
+                                                            <div class="catalogue-item-info-title">Country</div>
                                                             <div class="catalogue-item-info-value">
                                                                 <div class="catalogue-item-info-flags">
-                                                                    <img src="files/flags/Russia.png" alt="" />
-                                                                    <img src="files/flags/United-Kingdom.png" alt="" />
+                                                                    <img src="files/flags/United-States-of-America.png" alt="" />
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Язык</div>
+                                                            <div class="catalogue-item-info-title">Language</div>
                                                             <div class="catalogue-item-info-value">
                                                                 <div class="catalogue-item-info-flags">
-                                                                    <img src="files/flags/Russia.png" alt="" />
                                                                     <img src="files/flags/United-Kingdom.png" alt="" />
                                                                 </div>
                                                             </div>
@@ -750,21 +449,15 @@
                                                 <div class="catalogue-item-info">
                                                     <div class="catalogue-item-info-inner">
                                                         <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Темы</div>
+                                                            <div class="catalogue-item-info-title">Category</div>
                                                             <div class="catalogue-item-info-value">
-                                                                <div class="catalogue-item-info-icons">
-                                                                    <img src="images/catalogue-icon-01.svg" alt="" />
-                                                                    <img src="images/catalogue-icon-02.svg" alt="" />
-                                                                    <img src="images/catalogue-icon-03.svg" alt="" />
-                                                                    <img src="images/catalogue-icon-04.svg" alt="" />
-                                                                    <img src="images/catalogue-icon-05.svg" alt="" />
-                                                                </div>
+                                                                Advertising
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </a>
-                                            <a href="windows/order.html" class="catalogue-item-cart window-link"><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg><span>Публикация </span>от 300$</a>
+                                            <a href="windows/order.html" class="catalogue-item-cart window-link"><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg>Request a Quote</a>
                                         </div>
                                     </div>
                                     <!-- catalogue item END -->
@@ -773,100 +466,71 @@
                                     <div class="catalogue-item">
                                         <div class="catalogue-item-inner">
                                             <a href="#" class="catalogue-item-container">
-                                                <div class="catalogue-item-logo"><img src="files/catalogue-2.png" alt="" /></div>
+                                                <div class="catalogue-item-logo"><img src="files/catalogue-real-04.jpg" alt="" /></div>
                                                 <div class="catalogue-item-text">
-                                                    <div class="catalogue-item-title">Коммерсант</div>
-                                                    <div class="catalogue-item-url"><span data-href="https://kommersant.ru">kommersant.ru</span></div>
+                                                    <div class="catalogue-item-title">Advertising Specialty Institute</div>
+                                                    <div class="catalogue-item-url"><span data-href="https://www.asicentral.com/news">www.asicentral.com/news</span></div>
                                                 </div>
                                                 <div class="catalogue-item-info">
                                                     <div class="catalogue-item-info-inner">
                                                         <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Тираж</div>
-                                                            <div class="catalogue-item-info-value">20 000</div>
-                                                        </div>
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Посещаемость</div>
-                                                            <div class="catalogue-item-info-value">250 K</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="catalogue-item-info">
-                                                    <div class="catalogue-item-info-inner">
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Страна</div>
+                                                            <div class="catalogue-item-info-title">Country</div>
                                                             <div class="catalogue-item-info-value">
                                                                 <div class="catalogue-item-info-flags">
-                                                                    <img src="files/flags/Russia.png" alt="" />
+                                                                    <img src="files/flags/United-States-of-America.png" alt="" />
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Язык</div>
+                                                            <div class="catalogue-item-info-title">Language</div>
                                                             <div class="catalogue-item-info-value">
                                                                 <div class="catalogue-item-info-flags">
-                                                                    <img src="files/flags/Russia.png" alt="" />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="catalogue-item-info">
-                                                    <div class="catalogue-item-info-inner">
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Темы</div>
-                                                            <div class="catalogue-item-info-value">
-                                                                <div class="catalogue-item-info-icons">
-                                                                    <img src="images/catalogue-icon-01.svg" alt="" />
-                                                                    <img src="images/catalogue-icon-03.svg" alt="" />
-                                                                    <img src="images/catalogue-icon-05.svg" alt="" />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="windows/order.html" class="catalogue-item-cart window-link"><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg><span>Публикация </span>от 300$</a>
-                                        </div>
-                                    </div>
-                                    <!-- catalogue item END -->
-
-                                    <!-- catalogue item -->
-                                    <div class="catalogue-item">
-                                        <div class="catalogue-item-inner">
-                                            <a href="#" class="catalogue-item-container">
-                                                <div class="catalogue-item-logo"><img src="files/catalogue-3.png" alt="" /></div>
-                                                <div class="catalogue-item-text">
-                                                    <div class="catalogue-item-title">Ведомости</div>
-                                                    <div class="catalogue-item-url"><span data-href="https://vedomosti.ru">vedomosti.ru</span></div>
-                                                </div>
-                                                <div class="catalogue-item-info">
-                                                    <div class="catalogue-item-info-inner">
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Тираж</div>
-                                                            <div class="catalogue-item-info-value">2 100 000</div>
-                                                        </div>
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Посещаемость</div>
-                                                            <div class="catalogue-item-info-value">150 000 K</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="catalogue-item-info">
-                                                    <div class="catalogue-item-info-inner">
-                                                        <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Страна</div>
-                                                            <div class="catalogue-item-info-value">
-                                                                <div class="catalogue-item-info-flags">
-                                                                    <img src="files/flags/Russia.png" alt="" />
                                                                     <img src="files/flags/United-Kingdom.png" alt="" />
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                    </div>
+                                                </div>
+                                                <div class="catalogue-item-info">
+                                                    <div class="catalogue-item-info-inner">
                                                         <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Язык</div>
+                                                            <div class="catalogue-item-info-title">Category</div>
+                                                            <div class="catalogue-item-info-value">
+                                                                Advertising
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="windows/order.html" class="catalogue-item-cart window-link"><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg>Request a Quote</a>
+                                        </div>
+                                    </div>
+                                    <!-- catalogue item END -->
+
+                                    <!-- catalogue item -->
+                                    <div class="catalogue-item">
+                                        <div class="catalogue-item-inner">
+                                            <a href="#" class="catalogue-item-container">
+                                                <div class="catalogue-item-logo"><img src="files/catalogue-real-05.png" alt="" /></div>
+                                                <div class="catalogue-item-text">
+                                                    <div class="catalogue-item-title">RIA Biz</div>
+                                                    <div class="catalogue-item-url"><span data-href="https://riabiz.com">riabiz.com</span></div>
+                                                </div>
+                                                <div class="catalogue-item-info">
+                                                    <div class="catalogue-item-info-inner">
+                                                        <div class="catalogue-item-info-item">
+                                                            <div class="catalogue-item-info-title">Country</div>
                                                             <div class="catalogue-item-info-value">
                                                                 <div class="catalogue-item-info-flags">
-                                                                    <img src="files/flags/Russia.png" alt="" />
+                                                                    <img src="files/flags/United-States-of-America.png" alt="" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="catalogue-item-info-item">
+                                                            <div class="catalogue-item-info-title">Language</div>
+                                                            <div class="catalogue-item-info-value">
+                                                                <div class="catalogue-item-info-flags">
+                                                                    <img src="files/flags/United-Kingdom.png" alt="" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -875,19 +539,195 @@
                                                 <div class="catalogue-item-info">
                                                     <div class="catalogue-item-info-inner">
                                                         <div class="catalogue-item-info-item">
-                                                            <div class="catalogue-item-info-title">Темы</div>
+                                                            <div class="catalogue-item-info-title">Category</div>
                                                             <div class="catalogue-item-info-value">
-                                                                <div class="catalogue-item-info-icons">
-                                                                    <img src="images/catalogue-icon-02.svg" alt="" />
-                                                                    <img src="images/catalogue-icon-03.svg" alt="" />
-                                                                    <img src="images/catalogue-icon-04.svg" alt="" />
-                                                                </div>
+                                                                Advertising
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </a>
-                                            <a href="windows/order.html" class="catalogue-item-cart window-link"><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg><span>Публикация </span>от 300$</a>
+                                            <a href="windows/order.html" class="catalogue-item-cart window-link"><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg>Request a Quote</a>
+                                        </div>
+                                    </div>
+                                    <!-- catalogue item END -->
+
+                                    <!-- catalogue item -->
+                                    <div class="catalogue-item">
+                                        <div class="catalogue-item-inner">
+                                            <a href="#" class="catalogue-item-container">
+                                                <div class="catalogue-item-logo"><img src="files/catalogue-real-06.png" alt="" /></div>
+                                                <div class="catalogue-item-text">
+                                                    <div class="catalogue-item-title">Advertising Age</div>
+                                                    <div class="catalogue-item-url"><span data-href="https://adage.com/">adage.com/</span></div>
+                                                </div>
+                                                <div class="catalogue-item-info">
+                                                    <div class="catalogue-item-info-inner">
+                                                        <div class="catalogue-item-info-item">
+                                                            <div class="catalogue-item-info-title">Country</div>
+                                                            <div class="catalogue-item-info-value">
+                                                                <div class="catalogue-item-info-flags">
+                                                                    <img src="files/flags/United-States-of-America.png" alt="" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="catalogue-item-info-item">
+                                                            <div class="catalogue-item-info-title">Language</div>
+                                                            <div class="catalogue-item-info-value">
+                                                                <div class="catalogue-item-info-flags">
+                                                                    <img src="files/flags/United-Kingdom.png" alt="" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="catalogue-item-info">
+                                                    <div class="catalogue-item-info-inner">
+                                                        <div class="catalogue-item-info-item">
+                                                            <div class="catalogue-item-info-title">Category</div>
+                                                            <div class="catalogue-item-info-value">
+                                                                Advertising
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="windows/order.html" class="catalogue-item-cart window-link"><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg><span>Publication </span>from $22 750</a>
+                                        </div>
+                                    </div>
+                                    <!-- catalogue item END -->
+
+                                    <!-- catalogue item -->
+                                    <div class="catalogue-item">
+                                        <div class="catalogue-item-inner">
+                                            <a href="#" class="catalogue-item-container">
+                                                <div class="catalogue-item-logo"><img src="files/catalogue-real-07.jpg" alt="" /></div>
+                                                <div class="catalogue-item-text">
+                                                    <div class="catalogue-item-title">www.dogkennelsandcrates.com)</div>
+                                                    <div class="catalogue-item-url"><span data-href="https://dogkennelsandcrates.com">dogkennelsandcrates.com</span></div>
+                                                </div>
+                                                <div class="catalogue-item-info">
+                                                    <div class="catalogue-item-info-inner">
+                                                        <div class="catalogue-item-info-item">
+                                                            <div class="catalogue-item-info-title">Country</div>
+                                                            <div class="catalogue-item-info-value">
+                                                                <div class="catalogue-item-info-flags">
+                                                                    <img src="files/flags/United-States-of-America.png" alt="" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="catalogue-item-info-item">
+                                                            <div class="catalogue-item-info-title">Language</div>
+                                                            <div class="catalogue-item-info-value">
+                                                                <div class="catalogue-item-info-flags">
+                                                                    <img src="files/flags/United-Kingdom.png" alt="" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="catalogue-item-info">
+                                                    <div class="catalogue-item-info-inner">
+                                                        <div class="catalogue-item-info-item">
+                                                            <div class="catalogue-item-info-title">Category</div>
+                                                            <div class="catalogue-item-info-value">
+                                                                Advertising
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="windows/order.html" class="catalogue-item-cart window-link"><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg><span>Publication </span>from $75</a>
+                                        </div>
+                                    </div>
+                                    <!-- catalogue item END -->
+
+                                    <!-- catalogue item -->
+                                    <div class="catalogue-item">
+                                        <div class="catalogue-item-inner">
+                                            <a href="#" class="catalogue-item-container">
+                                                <div class="catalogue-item-logo"><img src="files/catalogue-real-08.jpg" alt="" /></div>
+                                                <div class="catalogue-item-text">
+                                                    <div class="catalogue-item-title">Pets Radar</div>
+                                                    <div class="catalogue-item-url"><span data-href="https://www.petsradar.com">www.petsradar.com</span></div>
+                                                </div>
+                                                <div class="catalogue-item-info">
+                                                    <div class="catalogue-item-info-inner">
+                                                        <div class="catalogue-item-info-item">
+                                                            <div class="catalogue-item-info-title">Country</div>
+                                                            <div class="catalogue-item-info-value">
+                                                                <div class="catalogue-item-info-flags">
+                                                                    <img src="files/flags/United-States-of-America.png" alt="" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="catalogue-item-info-item">
+                                                            <div class="catalogue-item-info-title">Language</div>
+                                                            <div class="catalogue-item-info-value">
+                                                                <div class="catalogue-item-info-flags">
+                                                                    <img src="files/flags/United-Kingdom.png" alt="" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="catalogue-item-info">
+                                                    <div class="catalogue-item-info-inner">
+                                                        <div class="catalogue-item-info-item">
+                                                            <div class="catalogue-item-info-title">Category</div>
+                                                            <div class="catalogue-item-info-value">
+                                                                Advertising
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="windows/order.html" class="catalogue-item-cart window-link"><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg><span>Publication </span>from $8 450</a>
+                                        </div>
+                                    </div>
+                                    <!-- catalogue item END -->
+
+                                    <!-- catalogue item -->
+                                    <div class="catalogue-item">
+                                        <div class="catalogue-item-inner">
+                                            <a href="#" class="catalogue-item-container">
+                                                <div class="catalogue-item-logo"><img src="files/catalogue-real-09.png" alt="" /></div>
+                                                <div class="catalogue-item-text">
+                                                    <div class="catalogue-item-title">Animal Rescue Site</div>
+                                                    <div class="catalogue-item-url"><span data-href="https://blog.theanimalrescuesite.greatergood.com/">blog.theanimalrescuesite.greatergood.com/</span></div>
+                                                </div>
+                                                <div class="catalogue-item-info">
+                                                    <div class="catalogue-item-info-inner">
+                                                        <div class="catalogue-item-info-item">
+                                                            <div class="catalogue-item-info-title">Country</div>
+                                                            <div class="catalogue-item-info-value">
+                                                                <div class="catalogue-item-info-flags">
+                                                                    <img src="files/flags/United-States-of-America.png" alt="" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="catalogue-item-info-item">
+                                                            <div class="catalogue-item-info-title">Language</div>
+                                                            <div class="catalogue-item-info-value">
+                                                                <div class="catalogue-item-info-flags">
+                                                                    <img src="files/flags/United-Kingdom.png" alt="" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="catalogue-item-info">
+                                                    <div class="catalogue-item-info-inner">
+                                                        <div class="catalogue-item-info-item">
+                                                            <div class="catalogue-item-info-title">Category</div>
+                                                            <div class="catalogue-item-info-value">
+                                                                Advertising
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="windows/order.html" class="catalogue-item-cart window-link"><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg>Request a Quote</a>
                                         </div>
                                     </div>
                                     <!-- catalogue item END -->
