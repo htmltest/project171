@@ -318,6 +318,11 @@ $(document).ready(function() {
             }
         });
     });
+    
+    $('.catalogue-search-input input').on('keyup', function() {
+        $('.catalogue-search form').trigger('submit');
+    });
+    
 
     $('.catalogue-filter-reset').click(function(e) {
         $('.catalogue-filter-group-reset').trigger('click');

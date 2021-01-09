@@ -1,0 +1,7 @@
+input[type="text"],
+input[type="submit"],
+input[type="reset"],
+button[type="submit"],
+button[type="reset"],
+textarea, 
+select {font-size:24px !important}

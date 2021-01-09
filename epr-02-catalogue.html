@@ -5,6 +5,11 @@
         <title>e-PR</title>
 
         <link rel="stylesheet" href="css/styles.css" />
+        <script>
+            if (/iPhone/i.test(navigator.userAgent)) {
+                document.write('<link rel="stylesheet" href="css/iphone-inputs.css" />');
+            }
+        </script>
         <link rel="stylesheet" href="js/slick/slick.css" />
         <link rel="stylesheet" href="js/nouislider/nouislider.css" />
         <link rel="stylesheet" href="js/mcustomscrollbar/jquery.mCustomScrollbar.css" />
@@ -117,7 +122,7 @@
                             </div>
                             <div class="catalogue-search">
                                 <form action="ajax/epr-02-catalogue.html" method="post">
-                                    <div class="catalogue-search-input"><input type="text" name="search" value="" placeholder="Поиск" class="required" /></div>
+                                    <div class="catalogue-search-input"><input type="text" name="search" value="" placeholder="Поиск" /></div>
                                     <div class="catalogue-search-submit"><button type="submit"><svg><use xlink:href="images/sprite.svg#icon-search"></use></svg></button></div>
                                 </form>
                             </div>

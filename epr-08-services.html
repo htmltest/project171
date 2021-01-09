@@ -5,6 +5,11 @@
         <title>e-PR</title>
 
         <link rel="stylesheet" href="css/styles.css" />
+        <script>
+            if (/iPhone/i.test(navigator.userAgent)) {
+                document.write('<link rel="stylesheet" href="css/iphone-inputs.css" />');
+            }
+        </script>
         <link rel="stylesheet" href="js/slick/slick.css" />
         <link rel="stylesheet" href="js/nouislider/nouislider.css" />
         <link rel="stylesheet" href="js/mcustomscrollbar/jquery.mCustomScrollbar.css" />

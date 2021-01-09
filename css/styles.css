@@ -880,7 +880,7 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .catalogue-filter-group.open-mobile .catalogue-filter-group-apply .btn {display:block}
 
     .catalogue-search {display:none; padding:0}
-    .catalogue-search-input input {height:50px; font-size:24px; line-height:27px; padding:10px 38px 11px 14px}
+    .catalogue-search-input input {height:50px; font-size:18px; line-height:27px; padding:10px 38px 11px 14px}
     .catalogue-search-submit button {width:50px; height:50px}
     .catalogue-search-submit button svg {width:24px; height:24px}
 
