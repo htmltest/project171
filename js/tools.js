@@ -318,11 +318,11 @@ $(document).ready(function() {
             }
         });
     });
-    
+
     $('.catalogue-search-input input').on('keyup', function() {
         $('.catalogue-search form').trigger('submit');
     });
-    
+
 
     $('.catalogue-filter-reset').click(function(e) {
         $('.catalogue-filter-group-reset').trigger('click');
@@ -755,12 +755,13 @@ function filterCatalogue() {
         data: curData,
         cache: false
     }).done(function(html) {
-        $('.catalogue-container .catalogue-list').html($(html).find('.catalogue-list').html())
-        $('.catalogue-container .pager').html($(html).find('.pager').html())
+        $('.catalogue-container .catalogue-list').html($(html).find('.catalogue-list').html());
+        $('.catalogue-container .pager').html($(html).find('.pager').html());
         $('.catalogue-header-status-from').html($(html).find('.catalogue-list').attr('data-statusfrom'));
         $('.catalogue-header-status-to').html($(html).find('.catalogue-list').attr('data-statusto'));
         $('.catalogue-header-status-count').html($(html).find('.catalogue-list').attr('data-statuscount'));
         $('.catalogue-container').removeClass('loading');
+        $('html, body').animate({'scrollTop': $('.catalogue-container').offset().top});
     });
 }
 
