@@ -7,39 +7,6 @@ $(document).ready(function() {
         'Ошибка заполнения'
     );
 
-    $.validator.addMethod('inputDate',
-        function(curDate, element) {
-            if (this.optional(element) && curDate == '') {
-                return true;
-            } else {
-                if (curDate.match(/^[0-9]{2}\.[0-9]{2}\.[0-9]{4}$/)) {
-                    var userDate = new Date(curDate.substr(6, 4), Number(curDate.substr(3, 2)) - 1, Number(curDate.substr(0, 2)));
-                    if ($(element).attr('min')) {
-                        var minDateStr = $(element).attr('min');
-                        var minDate = new Date(minDateStr.substr(6, 4), Number(minDateStr.substr(3, 2)) - 1, Number(minDateStr.substr(0, 2)));
-                        if (userDate < minDate) {
-                            $.validator.messages['inputDate'] = 'Минимальная дата - ' + minDateStr;
-                            return false;
-                        }
-                    }
-                    if ($(element).attr('max')) {
-                        var maxDateStr = $(element).attr('max');
-                        var maxDate = new Date(maxDateStr.substr(6, 4), Number(maxDateStr.substr(3, 2)) - 1, Number(maxDateStr.substr(0, 2)));
-                        if (userDate > maxDate) {
-                            $.validator.messages['inputDate'] = 'Максимальная дата - ' + maxDateStr;
-                            return false;
-                        }
-                    }
-                    return true;
-                } else {
-                    $.validator.messages['inputDate'] = 'Дата введена некорректно';
-                    return false;
-                }
-            }
-        },
-        ''
-    );
-
     $('body').on('focus', '.form-input input, .form-input textarea', function() {
         $(this).parent().addClass('focus');
     });
@@ -492,6 +459,48 @@ $(document).ready(function() {
         }
     });
 
+    $('.up-link').click(function(e) {
+        $('html, body').animate({'scrollTop': 0});
+        e.preventDefault();
+    });
+
+    $('.catalogue-card-tabs').each(function() {
+        var curTabs = $(this);
+        var curTabsMenu = curTabs.find('> .catalogue-card-tabs-menu');
+        var curTabsContainer = curTabs.find('> .catalogue-card-tabs-container');
+        var newHTML = '<ul>';
+        curTabsContainer.find('> .catalogue-card-tab').each(function() {
+            var curTabTitle = $(this).find('> .catalogue-card-tab-title span').html();
+            newHTML += '<li><a href="#">' + curTabTitle + '</a></li> ';
+        });
+        curTabsContainer.find('> .catalogue-card-tab').eq(0).addClass('active');
+        newHTML += '</ul>';
+        curTabsMenu.html(newHTML);
+        curTabsMenu.find('li').eq(0).addClass('active');
+    });
+
+    $('body').on('click', '.catalogue-card-tabs-menu li a', function(e) {
+        var curLi = $(this).parent();
+        if (!curLi.hasClass('active')) {
+            var curTabs = curLi.parents().filter('.catalogue-card-tabs');
+            curTabs.find('.catalogue-card-tabs-menu li.active').removeClass('active');
+            curLi.addClass('active');
+            var curIndex = curTabs.find('.catalogue-card-tabs-menu li').index(curLi);
+            curTabs.find('.catalogue-card-tab.active').removeClass('active');
+            curTabs.find('.catalogue-card-tab').eq(curIndex).addClass('active');
+        }
+        e.preventDefault();
+    });
+
+    $('body').on('click', '.catalogue-card-tab-title', function(e) {
+        $(this).parent().toggleClass('open');
+    });
+
+    $('body').on('click', '.catalogue-card-text-more a', function(e) {
+        $(this).parents().filter('.catalogue-card-text').toggleClass('open');
+        e.preventDefault();
+    });
+
 });
 
 $(window).on('load resize', function() {
@@ -505,6 +514,14 @@ $(window).on('load resize', function() {
     } else {
         $('.main-how-menu').mCustomScrollbar('destroy');
     }
+
+    $('.catalogue-card-text').each(function() {
+        var curBlock = $(this);
+        curBlock.removeClass('open with-more');
+        if (curBlock.find('.catalogue-card-text-wrap').height() > curBlock.find('.catalogue-card-text-inner').height()) {
+            curBlock.addClass('with-more');
+        }
+    });
 });
 
 
@@ -517,101 +534,10 @@ function initForm(curForm) {
 
     curForm.find('input.phoneRU').mask('+7 (000) 000-00-00');
 
-    curForm.find('.form-input-date input').mask('00.00.0000');
-    curForm.find('.form-input-date input').attr('autocomplete', 'off');
-    curForm.find('.form-input-date input').addClass('inputDate');
-
-    curForm.find('.form-input-date input').on('keyup', function() {
-        var curValue = $(this).val();
-        if (curValue.match(/^[0-9]{2}\.[0-9]{2}\.[0-9]{4}$/)) {
-            var isCorrectDate = true;
-            var userDate = new Date(curValue.substr(6, 4), Number(curValue.substr(3, 2)) - 1, Number(curValue.substr(0, 2)));
-            if ($(this).attr('min')) {
-                var minDateStr = $(this).attr('min');
-                var minDate = new Date(minDateStr.substr(6, 4), Number(minDateStr.substr(3, 2)) - 1, Number(minDateStr.substr(0, 2)));
-                if (userDate < minDate) {
-                    isCorrectDate = false;
-                }
-            }
-            if ($(this).attr('max')) {
-                var maxDateStr = $(this).attr('max');
-                var maxDate = new Date(maxDateStr.substr(6, 4), Number(maxDateStr.substr(3, 2)) - 1, Number(maxDateStr.substr(0, 2)));
-                if (userDate > maxDate) {
-                    isCorrectDate = false;
-                }
-            }
-            if (isCorrectDate) {
-                var myDatepicker = $(this).data('datepicker');
-                if (myDatepicker) {
-                    var curValueArray = curValue.split('.');
-                    myDatepicker.selectDate(new Date(Number(curValueArray[2]), Number(curValueArray[1]) - 1, Number(curValueArray[0])));
-                    myDatepicker.show();
-                    $(this).focus();
-                }
-            } else {
-                $(this).addClass('error');
-                return false;
-            }
-        }
-    });
-
-    curForm.find('.form-input-date input').each(function() {
-        var minDateText = $(this).attr('min');
-        var minDate = null;
-        if (typeof (minDateText) != 'undefined') {
-            var minDateArray = minDateText.split('.');
-            minDate = new Date(Number(minDateArray[2]), Number(minDateArray[1]) - 1, Number(minDateArray[0]));
-        }
-        var maxDateText = $(this).attr('max');
-        var maxDate = null;
-        if (typeof (maxDateText) != 'undefined') {
-            var maxDateArray = maxDateText.split('.');
-            maxDate = new Date(Number(maxDateArray[2]), Number(maxDateArray[1]) - 1, Number(maxDateArray[0]));
-        }
-        if ($(this).hasClass('maxDate1Year')) {
-            var curDate = new Date();
-            curDate.setFullYear(curDate.getFullYear() + 1);
-            curDate.setDate(curDate.getDate() - 1);
-            maxDate = curDate;
-            var maxDay = curDate.getDate();
-            if (maxDay < 10) {
-                maxDay = '0' + maxDay
-            }
-            var maxMonth = curDate.getMonth() + 1;
-            if (maxMonth < 10) {
-                maxMonth = '0' + maxMonth
-            }
-            $(this).attr('max', maxDay + '.' + maxMonth + '.' + curDate.getFullYear());
-        }
-        var startDate = new Date();
-        if (typeof ($(this).attr('value')) != 'undefined') {
-            var curValue = $(this).val();
-            if (curValue != '') {
-                var startDateArray = curValue.split('.');
-                startDate = new Date(Number(startDateArray[2]), Number(startDateArray[1]) - 1 , Number(startDateArray[0]));
-            }
-        }
-        $(this).datepicker({
-            language: 'ru',
-            minDate: minDate,
-            maxDate: maxDate,
-            startDate: startDate,
-            toggleSelected: false
-        });
-        if (typeof ($(this).attr('value')) != 'undefined') {
-            var curValue = $(this).val();
-            if (curValue != '') {
-                var startDateArray = curValue.split('.');
-                startDate = new Date(Number(startDateArray[2]), Number(startDateArray[1]) - 1 , Number(startDateArray[0]));
-                $(this).data('datepicker').selectDate(startDate);
-            }
-        }
-    });
-
     curForm.find('.form-input textarea').each(function() {
         $(this).css({'height': this.scrollHeight, 'overflow-y': 'hidden'});
         $(this).on('input', function() {
-            this.style.height = '99px';
+            this.style.height = 'auto';
             this.style.height = (this.scrollHeight) + 'px';
         });
     });
@@ -804,13 +730,26 @@ function windowOpen(linkWindow, dataWindow) {
             $('.window .window-loading').remove();
         }
 
-        $('.archive-card-descr-container').each(function() {
+        $('.window .catalogue-card-tabs').each(function() {
+            var curTabs = $(this);
+            var curTabsMenu = curTabs.find('> .catalogue-card-tabs-menu');
+            var curTabsContainer = curTabs.find('> .catalogue-card-tabs-container');
+            var newHTML = '<ul>';
+            curTabsContainer.find('> .catalogue-card-tab').each(function() {
+                var curTabTitle = $(this).find('> .catalogue-card-tab-title span').html();
+                newHTML += '<li><a href="#">' + curTabTitle + '</a></li> ';
+            });
+            curTabsContainer.find('> .catalogue-card-tab').eq(0).addClass('active');
+            newHTML += '</ul>';
+            curTabsMenu.html(newHTML);
+            curTabsMenu.find('li').eq(0).addClass('active');
+        });
+
+        $('.window .catalogue-card-text').each(function() {
             var curBlock = $(this);
-            curBlock.removeClass('open');
-            if (curBlock.height() < curBlock.find('.archive-card-descr-content').height()) {
+            curBlock.removeClass('open with-more');
+            if (curBlock.find('.catalogue-card-text-wrap').height() > curBlock.find('.catalogue-card-text-inner').height()) {
                 curBlock.addClass('with-more');
-            } else {
-                curBlock.removeClass('with-more');
             }
         });
 
@@ -854,3 +793,24 @@ function checkFontsLoaded() {
         timerLoadFonts = window.setTimeout(checkFontsLoaded, 300);
     }
 }
+
+$(window).on('load resize scroll', function() {
+    var windowScroll = $(window).scrollTop();
+    $('body').append('<div id="body-test-height" style="position:fixed; left:0; top:0; right:0; bottom:0; z-index:-1"></div>');
+    var windowHeight = $('#body-test-height').height();
+    $('#body-test-height').remove();
+
+    if (windowScroll > 77) {
+        $('html').addClass('header-fixed');
+    } else {
+        $('html').removeClass('header-fixed');
+    }
+
+    if ($('.up-link').length == 1) {
+        if (windowScroll > windowHeight / 2) {
+            $('.up-link').addClass('visible');
+        } else {
+            $('.up-link').removeClass('visible');
+        }
+    }
+});

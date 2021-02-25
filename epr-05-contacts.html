@@ -5,16 +5,10 @@
         <title>e-PR</title>
 
         <link rel="stylesheet" href="css/styles.css" />
-        <script>
-            if (/iPhone/i.test(navigator.userAgent)) {
-                document.write('<link rel="stylesheet" href="css/iphone-inputs.css" />');
-            }
-        </script>
         <link rel="stylesheet" href="js/slick/slick.css" />
         <link rel="stylesheet" href="js/nouislider/nouislider.css" />
         <link rel="stylesheet" href="js/mcustomscrollbar/jquery.mCustomScrollbar.css" />
         <link rel="stylesheet" href="js/select2/select2.css" />
-        <link rel="stylesheet" href="js/air-datepicker/datepicker.css" />
 
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width" />
@@ -129,6 +123,21 @@
 
                         <div class="contacts-form">
                             <div class="contacts-info-title">Отправить сообщение</div>
+                            <form action="#" method="post">
+                                <div class="form-input"><span>Имя<em>*</em></span><input type="text" name="name" value="" class="required" /></div>
+                                <div class="form-input"><span>Телефон<em>*</em></span><input type="text" name="phone" id="phone" value="" class="required" /></div>
+                                <div class="form-input"><span>Сообщение</span><textarea name="message" rows="5" cols="10"></textarea></div>
+                                <div class="form-submit"><input type="submit" value="Отправить" class="btn" /></div>
+                            </form>
+
+                            <link rel="stylesheet" href="js/intlTelInput/intlTelInput.css" />
+                            <script src="js/intlTelInput/intlTelInput.min.js"></script>
+                            <script>
+                                var input = document.querySelector("#phone");
+                                window.intlTelInput(input, {
+                                });
+                            </script>
+
                         </div>
                     </div>
                     <!-- contacts END -->
@@ -241,7 +250,6 @@
         <script src="js/masonry.pkgd.min.js"></script>
         <script src="js/select2/select2.min.js"></script>
         <script src="js/select2/ru.js"></script>
-        <script src="js/air-datepicker/datepicker.min.js"></script>
         <script src="js/tools.js"></script>
 
     </body>

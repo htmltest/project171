@@ -5,16 +5,10 @@
         <title>e-PR</title>
 
         <link rel="stylesheet" href="css/styles.css" />
-        <script>
-            if (/iPhone/i.test(navigator.userAgent)) {
-                document.write('<link rel="stylesheet" href="css/iphone-inputs.css" />');
-            }
-        </script>
         <link rel="stylesheet" href="js/slick/slick.css" />
         <link rel="stylesheet" href="js/nouislider/nouislider.css" />
         <link rel="stylesheet" href="js/mcustomscrollbar/jquery.mCustomScrollbar.css" />
         <link rel="stylesheet" href="js/select2/select2.css" />
-        <link rel="stylesheet" href="js/air-datepicker/datepicker.css" />
 
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width" />
@@ -181,13 +175,106 @@
                                 <div class="catalogue-card-info-title">Тираж печатного издания</div>
                                 <div class="catalogue-card-info-value">100 000 экз.</div>
                             </div>
-                            
+
                             <div class="catalogue-card-descr">Медиахолдинг PROfashion основан в 2006 году. В него входит порядка 15 проектов, в том числе печатные издания, онлайн-портал, консалтинговое агентство и коммуникационное агентство. Также медиахолдинг является учредителем Русской ассоциации участников fashion-индустрии (РАФИ). Своими задачами PROfashion считает предоставление актуальной информации и аналитики рынка российским специалистам в сфере моды и легпрома, а также создание рабочей площадки для налаживания постоянных контактов между всеми участниками модной индустрии</div>
                         </div>
                         <!-- catalogue card info END -->
 
                     </div>
                     <!-- catalogue card END -->
+
+                    <!-- catalogue card tabs -->
+                    <div class="catalogue-card-tabs">
+
+                        <div class="catalogue-card-tabs-menu"></div>
+
+                        <div class="catalogue-card-tabs-container">
+
+                            <div class="catalogue-card-tab active">
+                                <div class="catalogue-card-tab-title"><span>Посещаемость сайта</span><svg><use xlink:href="images/sprite.svg#catalogue-card-tab-title"></use></svg></div>
+                                <div class="catalogue-card-tab-container">
+
+                                    <div class="catalogue-card-visits-chart">
+                                        <canvas id="catalogue-card-visits-chart"></canvas>
+                                        <script src="js/Chart.min.js"></script>
+                                        <script>
+                                            var config = {
+                                                type: 'line',
+                                                data: {
+                                                    labels: ['Ноябрь', 'Январь', 'Март', 'Май', 'Июль', 'Сентябрь', 'Ноябрь', 'Январь', 'Март', 'Май', 'Июль', 'Сентябрь', 'Ноябрь', 'Январь', 'Март', 'Май', 'Июль'],
+                                                    datasets: [{
+                                                        label: '',
+                                                        data: [27, 28, 24, 23, 30, 31, 28, 29, 28, 36, 38, 45, 55, 49, 55, 56, 70],
+                                                        backgroundColor: 'rgba(255, 255, 255, 0)',
+                                                        borderColor: '#aaa',
+                                                        borderWidth: 3,
+                                                       lineTension: 0
+                                                    }]
+                                                },
+                                                options: {
+                                                    responsive: true,
+                                                    legend: {
+                                                        display: false
+                                                    },
+                                                    tooltips: {
+                                                        enabled: false
+                                                    },
+                                                    scales: {
+                                                        xAxes: [{
+                                                            display: true,
+                                                            gridLines: {
+                                                                display: false
+                                                            }
+                                                        }],
+                                                        yAxes: [{
+                                                            display: true,
+                                                        }]
+                                                    },
+                                                    title: {
+                                                        display: false
+                                                    }
+                                                }
+                                            };
+
+                                            var ctx = document.getElementById('catalogue-card-visits-chart').getContext('2d');
+                                            new Chart(ctx, config);
+                                        </script>
+                                    </div>
+
+                                    <div class="catalogue-card-visits-info">
+                                        <div class="catalogue-card-visits-info-row">
+                                            <div class="catalogue-card-visits-info-title">Среднее время на&nbsp;сайте:</div>
+                                            <div class="catalogue-card-visits-info-value">00:05:02</div>
+                                        </div>
+                                        <div class="catalogue-card-visits-info-row">
+                                            <div class="catalogue-card-visits-info-title">Просмотры страниц:</div>
+                                            <div class="catalogue-card-visits-info-value">12</div>
+                                        </div>
+                                        <div class="catalogue-card-visits-info-row">
+                                            <div class="catalogue-card-visits-info-title">Показатель отказов:</div>
+                                            <div class="catalogue-card-visits-info-value">88%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="catalogue-card-tab">
+                                <div class="catalogue-card-tab-title"><span>География распространения</span><svg><use xlink:href="images/sprite.svg#catalogue-card-tab-title"></use></svg></div>
+                                <div class="catalogue-card-tab-container">
+                                    География распространения
+                                </div>
+                            </div>
+
+                            <div class="catalogue-card-tab">
+                                <div class="catalogue-card-tab-title"><span>Целевая аудитория</span><svg><use xlink:href="images/sprite.svg#catalogue-card-tab-title"></use></svg></div>
+                                <div class="catalogue-card-tab-container">
+                                    Целевая аудитория
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- catalogue card tabs END -->
 
                 </div>
                 <!-- container END -->
@@ -297,7 +384,6 @@
         <script src="js/masonry.pkgd.min.js"></script>
         <script src="js/select2/select2.min.js"></script>
         <script src="js/select2/ru.js"></script>
-        <script src="js/air-datepicker/datepicker.min.js"></script>
         <script src="js/tools.js"></script>
 
     </body>

@@ -5,16 +5,10 @@
         <title>e-PR</title>
 
         <link rel="stylesheet" href="css/styles.css" />
-        <script>
-            if (/iPhone/i.test(navigator.userAgent)) {
-                document.write('<link rel="stylesheet" href="css/iphone-inputs.css" />');
-            }
-        </script>
         <link rel="stylesheet" href="js/slick/slick.css" />
         <link rel="stylesheet" href="js/nouislider/nouislider.css" />
         <link rel="stylesheet" href="js/mcustomscrollbar/jquery.mCustomScrollbar.css" />
         <link rel="stylesheet" href="js/select2/select2.css" />
-        <link rel="stylesheet" href="js/air-datepicker/datepicker.css" />
 
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width" />
@@ -107,6 +101,7 @@
                                             <div class="slider-item-links">
                                                 <a href="#" class="btn">Регистрация</a>
                                                 <a href="#" class="btn btn-blue">Участие для сми</a>
+                                                <a href="#" class="btn btn-blue btn-doc"><svg><use xlink:href="images/sprite.svg#btn-doc"></use></svg>Пресс-релиз<span>2.4 Мб</span></a>
                                             </div>
                                         </div>
                                         <div class="slider-item-img"><img src="files/slider-1.png" alt="" /></div>
@@ -124,6 +119,8 @@
                                             <div class="slider-item-text">Сервис онлайн PR-службы для вашей компании</div>
                                             <div class="slider-item-links">
                                                 <a href="#" class="btn">Регистрация</a>
+                                                <a href="#" class="btn">Регистрация</a>
+                                                <a href="#" class="btn btn-blue">Участие для сми</a>
                                                 <a href="#" class="btn btn-blue">Участие для сми</a>
                                             </div>
                                         </div>
@@ -272,6 +269,19 @@
                         <div class="main-title">
                             <div class="main-title-number">04</div>
                             <div class="main-title-text">Каталог СМИ<span>Для публикации PR-материалов</span></div>
+                            <div class="main-catalogue-filter">
+                                <form action="#" method="post">
+                                    <div class="form-input"><input type="text" name="search" value="" placeholder="Поиск" /></div>
+                                    <div class="form-submit"><button type="submit"><svg><use xlink:href="images/sprite.svg#icon-search"></use></svg></button></div>
+                                    <div class="form-select">
+                                        <select name="section">
+                                            <option value="">Все разделы</option>
+                                            <option value="1">Новости</option>
+                                            <option value="2">Каталог</option>
+                                        </select>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
 
                         <!-- main catalogue container -->
@@ -1088,6 +1098,8 @@
             </div>
         </footer>
 
+        <a href="#" class="up-link"><svg><use xlink:href="images/sprite.svg#up-link"></use></svg></a>
+
         <script>
             var pathTemplate = './';
         </script>
@@ -1107,7 +1119,6 @@
         <script src="js/masonry.pkgd.min.js"></script>
         <script src="js/select2/select2.min.js"></script>
         <script src="js/select2/ru.js"></script>
-        <script src="js/air-datepicker/datepicker.min.js"></script>
         <script src="js/tools.js"></script>
 
     </body>
