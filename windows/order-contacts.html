@@ -1,0 +1,42 @@
+<div class="window-order">
+    <div class="window-title">Заказ публикации</div>
+    <div class="window-order-form">
+        <form action="#" method="post">
+            <div class="window-order-container">
+                <div class="window-order-logo"><div class="window-order-logo-inner"><img src="files/window-logo.png" alt="" /></div></div>
+                <div class="window-order-title">Коммерсант</div>
+                <div class="window-order-url"><a href="https://kommersant.ru" target="_blank">kommersant.ru</a></div>
+                <div class="window-order-groups">
+                    <div class="window-order-group open">
+                        <div class="window-order-group-header">
+                            <label>
+                                <input type="radio" name="type" value="1" checked="checked" />
+                                <span>Рекламная статья<strong>$ 2 599.00</strong></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <h3>Контактные данные</h3>
+                <div class="form-input"><span>Имя <em>*</em></span><input type="text" name="LastName" value="" class="required" /></div>
+                <div class="form-input focus-always"><span>Телефон <em>*</em></span><input type="text" name="phone" value="" class="required" id="phone" /></div>
+                <div class="form-input"><span>Email <em>*</em></span><input type="text" name="email" value="" class="required email" /></div>
+                <div class="form-input"><span>Сообщение</span><textarea name="message" cols="5" rows="3" ></textarea></div>
+                <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+                <div class="form-captcha">
+                    <div class="g-recaptcha"></div>
+                    <input type="hidden" class="required" name="hiddenRecaptcha" value="" />
+                </div>
+            </div>
+            <div class="window-order-submit"><button type="submit" class="btn">В корзину<svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg></button></div>
+
+            <link rel="stylesheet" href="js/intlTelInput/intlTelInput.css" />
+            <script src="js/intlTelInput/intlTelInput.min.js"></script>
+            <script>
+                var input = document.querySelector("#phone");
+                window.intlTelInput(input, {
+                    utilsScript: 'js/intlTelInput/utils.js'
+                });
+            </script>
+        </form>
+    </div>
+</div>

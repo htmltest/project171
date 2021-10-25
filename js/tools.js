@@ -8,15 +8,15 @@ $(document).ready(function() {
     );
 
     $('body').on('focus', '.form-input input, .form-input textarea', function() {
-        $(this).parent().addClass('focus');
+        $(this).parents().filter('.form-input').addClass('focus');
     });
 
     $('body').on('blur', '.form-input input, .form-input textarea', function() {
-        $(this).parent().removeClass('focus');
+        $(this).parents().filter('.form-input').removeClass('focus');
         if ($(this).val() != '') {
-            $(this).parent().addClass('full');
+            $(this).parents().filter('.form-input').addClass('full');
         } else {
-            $(this).parent().removeClass('full');
+            $(this).parents().filter('.form-input').removeClass('full');
         }
     });
 
@@ -501,6 +501,33 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $('body').on('click', '.text-with-hint-link', function(e) {
+        var curBlock = $(this).parent();
+        if (curBlock.hasClass('open')) {
+            curBlock.removeClass('open');
+        } else {
+            $('.text-with-hint.open').removeClass('open');
+            curBlock.removeClass('to-right');
+            curBlock.addClass('open');
+            var curPopup = curBlock.find('.text-with-hint-popup');
+            if (curPopup.offset().left + curPopup.outerWidth() > $(window).width()) {
+                curBlock.addClass('to-right');
+            }
+        }
+        e.preventDefault();
+    });
+
+    $('body').on('click', '.text-with-hint-popup-close', function(e) {
+        $('.text-with-hint.open').removeClass('open');
+        e.preventDefault();
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).parents().filter('.text-with-hint').length == 0) {
+            $('.text-with-hint.open').removeClass('open');
+        }
+    });
+
 });
 
 $(window).on('load resize', function() {
@@ -528,7 +555,7 @@ $(window).on('load resize', function() {
 function initForm(curForm) {
     curForm.find('.form-input input, .form-input textarea').each(function() {
         if ($(this).val() != '') {
-            $(this).parent().addClass('full');
+            $(this).parents().filter('.form-input').addClass('full');
         }
     });
 
@@ -814,3 +841,30 @@ $(window).on('load resize scroll', function() {
         }
     }
 });
+
+var captchaKey = '6Ldk5DMUAAAAALWRTOM96EQI_0OApr59RQHoMirA';
+var captchaArray = [];
+
+var onloadCallback = function() {
+    $('.g-recaptcha').each(function() {
+        var newCaptcha = grecaptcha.render(this, {
+            'sitekey' : captchaKey,
+            'callback' : verifyCallback,
+        });
+        captchaArray.push([newCaptcha, $(this)]);
+    });
+};
+
+var verifyCallback = function(response) {
+    for (var i = 0; i < captchaArray.length; i++) {
+        try {
+            if (grecaptcha.getResponse(captchaArray[i][0])) {
+                var curInput = captchaArray[i][1].next();
+                curInput.val(response);
+                curInput.removeClass('error');
+                curInput.parent().find('label.error').remove();
+            }
+        } catch (err) {
+        }
+    }
+};

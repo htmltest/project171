@@ -125,8 +125,19 @@
                             <div class="contacts-info-title">Отправить сообщение</div>
                             <form action="#" method="post">
                                 <div class="form-input"><span>Имя<em>*</em></span><input type="text" name="name" value="" class="required" /></div>
-                                <div class="form-input"><span>Телефон<em>*</em></span><input type="text" name="phone" id="phone" value="" class="required" /></div>
+                                <div class="form-input focus-always"><span>Телефон<em>*</em></span><input type="text" name="phone" id="phone" value="" class="required" /></div>
                                 <div class="form-input"><span>Сообщение</span><textarea name="message" rows="5" cols="10"></textarea></div>
+                                <div class="form-file">
+                                    <div class="form-file-input"><input type="file" name="file" /><span>Загрузка файла</span></div>
+                                    <div class="form-file-name"></div>
+                                </div>
+
+                                <div class="form-checkbox form-policy"><label><input type="checkbox" name="policy" class="required" /><span>Я принимаю условия <a href="#">политики конфиденциальности</a><br /> и <a href="#">пользовательского соглашения</a></span></label></div>
+                                <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+                                <div class="form-captcha">
+                                    <div class="g-recaptcha"></div>
+                                    <input type="hidden" class="required" name="hiddenRecaptcha" value="" />
+                                </div>
                                 <div class="form-submit"><input type="submit" value="Отправить" class="btn" /></div>
                             </form>
 
@@ -135,6 +146,7 @@
                             <script>
                                 var input = document.querySelector("#phone");
                                 window.intlTelInput(input, {
+                                    utilsScript: 'js/intlTelInput/utils.js'
                                 });
                             </script>
 

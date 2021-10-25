@@ -75,6 +75,10 @@ blockquote {margin:40px 0; padding:0 0 0 20px; font-size:16px; line-height:24px;
 .btn-doc svg {display:inline-block; vertical-align:middle; width:20px; height:20px; fill:none; stroke:#565656; margin:-2px 6px 0 0}
 .btn-doc span {margin:0 0 0 6px; font-weight:500; opacity:0.6}
 
+.btn-reset {padding:11px 0; background:transparent; color:#f26c5d; border-radius:0; font-size:16px; line-height:24px; text-transform:none}
+.btn-reset:hover {text-decoration:underline; color:#f26c5d; background:none}
+.btn-reset:active {text-decoration:underline; color:#f26c5d; background:none}
+
 .form-label {margin:32px 0 20px 0; font-weight:normal; font-size:18px; line-height:27px; color:#000}
 
 @media screen and (max-width:1169px) {
@@ -82,10 +86,11 @@ blockquote {margin:40px 0; padding:0 0 0 20px; font-size:16px; line-height:24px;
 }
 
 .form-input {position:relative; margin:15px 0}
-.form-input span {position:absolute; left:20px; top:18px; font-size:16px; line-height:24px; font-weight:normal; color:#808080; transition:all 0.2s; pointer-events:none; z-index:1}
-.form-input span em {color:#df8e8e; font-style:normal}
-.form-input.focus span,
-.form-input.full span {font-size:14px; line-height:21px; top:7px}
+.form-input > span {position:absolute; left:20px; top:18px; font-size:16px; line-height:24px; font-weight:normal; color:#808080; transition:all 0.2s; pointer-events:none; z-index:1}
+.form-input > span em {color:#df8e8e; font-style:normal}
+.form-input.focus > span,
+.form-input.focus-always > span,
+.form-input.full > span {font-size:14px; line-height:21px; top:7px}
 .form-input input,
 .form-input textarea {position:relative; border:2px solid #e5e5e5; font:16px/24px Arial, sans-serif; color:#000; vertical-align:top; margin:0; padding:26px 18px 6px 18px; width:100%; height:60px; box-sizing:border-box; outline:none; border-radius:0; background:#fdfdfd; -webkit-appearance:none; transition:border-color 0.2s}
 .fonts-loaded .form-input input,
@@ -106,90 +111,62 @@ label.error {display:block; font-size:12px; line-height:18px; color:#df8e8e; mar
 @-webkit-keyframes autofill {to {color:#000; background:#fdfdfd}}
 .form-input input:-webkit-autofill {-webkit-animation-name:autofill; -webkit-animation-fill-mode:both}
 
+.form-input .iti__flag-container {bottom:0; height:60px}
+
 .form-select {position:relative; margin:15px 0}
 .form-select select {position:relative; border:2px solid #e5e5e5; font:16px/24px Arial, sans-serif; color:#000; vertical-align:top; margin:0; padding:26px 18px 6px 18px; width:100%; height:60px; box-sizing:border-box; outline:none; border-radius:0; background:#fdfdfd; -webkit-appearance:none; transition:border-color 0.2s}
 .form-select label.error {position:absolute; right:0; bottom:0; white-space:nowrap}
 
-.form-radio {margin:20px 0}
+.form-radio {margin:20px 0; color:#414141}
 .form-radio::after {content:""; display:block; clear:both}
 .form-radio label {float:left; display:block; cursor:pointer; position:relative}
 .form-radio input {display:none}
-.form-radio span {display:block; position:relative; padding:0 0 0 25px}
-.form-radio span::before {content:""; display:block; width:16px; height:16px; border:1px solid rgba(103, 103, 103, 0.4); border-radius:50%; position:absolute; left:0; top:3px}
-.form-radio span::after {content:""; display:block; width:6px; height:6px; position:absolute; left:5px; top:8px; border-radius:50%; background:#316bce; opacity:0}
+.form-radio span {display:block; position:relative; padding:0 0 0 30px}
+.form-radio span::before {content:""; display:block; width:20px; height:20px; border:1px solid #c8c9cc; border-radius:50%; position:absolute; left:0; top:2px}
 .form-radio input.error+span,
 .form-radio input.error+label.error+span {padding-bottom:23px}
 .form-radio input.error+span::before,
-.form-radio input.error+label.error+span::before {border-color:#f00}
-.form-radio input:checked+span::after,
-.form-radio input:checked+label.error+span::after {opacity:1}
+.form-radio input.error+label.error+span::before {border-color:#ffa7a7}
+.form-radio input:checked+span::before,
+.form-radio input:checked+label.error+span::before {border:5px solid #f26c5d}
 .form-radio label.error {position:absolute; left:0; bottom:0; white-space:nowrap}
 
-@media screen and (max-width:1169px) {
-    .form-radio {margin:9px 0}
-    .form-radio span {padding:0 0 0 47px}
-    .form-radio span::before {width:28px; height:28px; top:1px}
-    .form-radio span::after {width:12px; height:12px; top:9px; left:8px}
-}
-
-.form-checkbox {margin:20px 0}
+.form-checkbox {margin:20px 0; color:#414141}
 .form-checkbox::after {content:""; display:block; clear:both}
 .form-checkbox label {float:left; display:block; cursor:pointer; position:relative}
 .form-checkbox input {display:none}
-.form-checkbox span {display:block; position:relative; padding:0 0 0 25px}
-.form-checkbox span::before {content:""; display:block; width:16px; height:16px; border:1px solid #c2c2c2; position:absolute; left:0; top:4px; background:url(../images/checkbox.svg) no-repeat -999px -999px}
+.form-checkbox span {display:block; position:relative; padding:0 0 0 30px}
+.form-checkbox span::before {content:""; display:block; width:20px; height:20px; border:1px solid #c8c9cc; border-radius:2px; position:absolute; left:0; top:2px; background:url(../images/checkbox.svg) no-repeat -999px -999px}
 .form-checkbox input.error+span,
 .form-checkbox input.error+label.error+span {padding-bottom:23px}
 .form-checkbox input.error+span::before,
-.form-checkbox input.error+label.error+span::before {border-color:#f00}
+.form-checkbox input.error+label.error+span::before {border-color:#ffa7a7}
 .form-checkbox input:checked+span::before,
-.form-checkbox input:checked+label.error+span::before {background-position:center}
+.form-checkbox input:checked+label.error+span::before {background-position:center; background-color:#f26c5d}
 .form-checkbox label.error {position:absolute; left:0; bottom:0; white-space:nowrap}
-
-@media screen and (max-width:1169px) {
-    .form-checkbox {margin:9px 0}
-    .form-checkbox span {padding:0 0 0 47px}
-    .form-checkbox span::before {width:28px; height:28px; top:1px; background-image:url(../images/checkbox-mobile.svg)}
-}
 
 .form-file {margin:20px 0}
 .form-file::after {content:""; display:block; clear:both}
 .form-file-input {position:relative; overflow:hidden; cursor:pointer}
-.form-file-input span {display:block; height:60px; font-size:16px; line-height:58px; background:#edf4ff; border:1px solid #edf4ff; text-align:center; font-weight:normal; transition:all 0.2s; color:#316bce}
-.form-file-input span::before {content:""; display:inline-block; vertical-align:middle; width:19px; height:17px; background:url(../images/file.svg) no-repeat; margin:-2px 20px 0 0}
+.form-file-input span {display:block; height:60px; font-size:16px; line-height:58px; background:#f0f0f0; border:1px solid #f0f0f0; text-align:center; font-weight:normal; transition:all 0.2s; color:#000}
+.form-file-input span::before {content:""; display:inline-block; vertical-align:middle; width:19px; height:17px; background:url(../images/file.svg) no-repeat; margin:-2px 10px 0 0}
 .form-file-input input {height:200px; z-index:1; position:absolute; top:0; right:0; opacity:0; cursor:pointer; font-size:200px; background:url(../images/blank.gif); -webkit-appearance:none}
-.form-file-input input.error+span {margin-bottom:28px}
-.form-file-input input.error+label.error+span {margin-bottom:28px}
-.form-file-input:hover span {border-color:#316bce}
-.form-file-input:active span {background:#e0ecff}
-.form-file-input label.error {display:block; position:absolute; left:0; bottom:0; font-size:12px; line-height:18px; font-weight:normal; color:#f00}
-.form-file-name {padding:10px 0 0 0; color:#181818}
+.form-file-input input.error+span {margin-bottom:27px}
+.form-file-input input.error+label.error+span {margin-bottom:27px}
+.form-file-input label.error {display:block; position:absolute; left:0; bottom:0; font-size:12px; line-height:18px; font-weight:normal; color:#df8e8e}
+.form-file-name {padding:9px 0 0 0; color:#121212; font-size:12px; line-height:18px}
 
-@media screen and (max-width:1169px) {
-    .form-file-input span {height:50px; font-size:20px; line-height:48px}
-    .form-file-input span::before {margin:-2px 10px 0 0}
-    .form-file-name {font-size:16px; line-height:24px}
-}
-
-.form-policy {color:#838383; margin:28px 0 24px 0}
+.form-policy {color:#838383; margin:0 0 30px 0; font-size:14px; line-height:21px}
+.form-policy span {padding:0 0 0 26px}
+.form-policy span::before {width:16px; height:16px; top:3px; background-size:12px 8px}
 .form-policy a {color:#838383; text-decoration:underline}
 .form-policy a:hover {text-decoration:none}
 
-@media screen and (max-width:1169px) {
-    .form-policy {color:#000; margin:32px 0 30px 0; font-size:18px; line-height:27px}
-    .form-policy a {color:#000}
-    .form-policy span::before {top:0}
-}
+.form-captcha {margin:20px 0}
 
-.form-reset {margin:20px 0 0 0}
-.form-reset input {display:inline-block; margin:0; padding:0; overflow:hidden; outline:none; vertical-align:top; height:27px; text-decoration:none; background:transparent; color:#dc4848; border:none; border-radius:0; font:18px/27px Arial, Helvetica, sans-serif; text-align:left; position:relative; -webkit-appearance:none; cursor:pointer; transition:all 0.2s}
-.fonts-loaded .form-reset input {font-family:Rubik, sans-serif}
-.form-reset input:hover {text-decoration:underline}
-
-@media screen and (max-width:1169px) {
-    .form-reset {text-align:center}
-    .form-reset input {font-size:20px; line-height:30px; height:30px}
-}
+.form-ctrl {margin:30px 0 0 0; text-align:right}
+.form-ctrl .form-reset {margin:0 15px 0 0; display:inline-block; vertical-align:top}
+.form-ctrl .form-submit {margin:0; display:inline-block; vertical-align:top}
 
 .gallery {margin:40px 0; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; position:relative; overflow:hidden}
 .gallery.slick-initialized {overflow:visible}
@@ -242,6 +219,34 @@ label.error {display:block; font-size:12px; line-height:18px; color:#df8e8e; mar
     .pager a.pager-next {margin:0; position:absolute; right:0; top:0}
     .pager a.pager-prev svg,
     .pager a.pager-next svg {width:11px; height:20px; margin:-10px 0 0 -5.5px}
+}
+
+.text-with-hint {position:relative}
+.text-with-hint-link {text-decoration:none; border-bottom:1px dashed #f26c5d; position:relative; font-weight:normal}
+@media screen and (min-width:1120px) {
+    .text-with-hint-link:hover {border-bottom-color:transparent; text-decoration:none}
+}
+.text-with-hint.open .text-with-hint-link::after {content:""; display:block; width:20px; height:20px; border-top:1px solid #dbdbdb; border-right:1px solid #dbdbdb; background:#fff; transform:rotate(-45deg); position:absolute; left:50%; margin-left:-10px; top:100%; margin-top:13px; z-index:99}
+.text-with-hint-popup {display:block; text-align:left; transition:all 0.2s; visibility:hidden; opacity:0; padding:20px; transform:translateY(5px); position:absolute; left:0; top:100%; margin-top:23px; width:530px; background:#fff; border:1px solid #dbdbdb; box-shadow:10px 10px 60px rgba(105, 105, 105, 0.12); z-index:98}
+.text-with-hint.to-right .text-with-hint-popup {right:0; left:auto}
+.text-with-hint.open .text-with-hint-popup {visibility:visible; opacity:1; transform:none}
+.text-with-hint-popup::after {content:""; display:block; clear:both}
+.text-with-hint-popup-photo {line-height:0; float:left; width:100px}
+.text-with-hint-popup-photo img {display:block; width:100%}
+.text-with-hint-popup-photo+.text-with-hint-popup-content {margin:0 0 0 120px}
+.text-with-hint-popup-content {display:block}
+.text-with-hint-popup-title {display:block; font-size:20px; line-height:24px; font-weight:bold; color:#0e2a3c}
+.text-with-hint-popup-text {display:block; margin:10px 0 0 0; font-weight:normal; font-size:16px; line-height:24px; color:#646464}
+.text-with-hint-popup-links {display:block; margin:20px 0 0 0; text-align:right}
+.text-with-hint-popup-links .btn-reset {margin:0 15px 0 0}
+.text-with-hint-popup-close {display:none}
+
+@media (max-width:1119px) {
+    .text-with-hint.open .text-with-hint-link::after {display:none}
+    .text-with-hint-popup {position:fixed; left:50%; top:50%; bottom:auto; width:440px; margin:0 0 0 -220px; padding:20px 40px 53px 20px; transform:translateY(-50%)}
+    .text-with-hint.to-right .text-with-hint-popup {right:auto; left:50%}
+    .text-with-hint.open .text-with-hint-popup {transform:translateY(-50%)}
+    .text-with-hint-popup-close {display:block; position:absolute; right:0; top:0; width:40px; height:40px; background:url(../images/text-with-hint-popup-close.svg) no-repeat center}
 }
 
 .container {max-width:1120px; margin:0 auto; padding:0 20px}
@@ -1659,6 +1664,8 @@ footer {height:361px; position:relative; margin:-361px 0 0 0; border-top:1px sol
 }
 
 .window-catalogue-link {padding:27px 20px 28px 20px; text-align:center; background:#f2f2f2}
+.window-catalogue-link a {margin:0 0 0 15px}
+.window-catalogue-link a:first-child {margin:0}
 
 .window-catalogue-prev,
 .window-catalogue-next {display:block; position:fixed; z-index:9999; top:210px; width:40px; height:40px; border-radius:50%; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; background:#f26c5d; transition:all 0.2s}
@@ -1702,3 +1709,13 @@ footer {height:361px; position:relative; margin:-361px 0 0 0; border-top:1px sol
 @media screen and (max-width:1119px) {
     .catalogue-card-link {display:none}
 }
+
+.window-general {width:530px}
+
+@media screen and (max-width:1119px) {
+    .window-general {width:440px}
+}
+
+.window-general-container {padding:20px 20px 40px 20px}
+.window-general-container *:first-child {margin-top:0}
+.window-general-container *:last-child {margin-bottom:0}

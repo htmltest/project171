@@ -1,6 +1,6 @@
 .iti {
   position: relative;
-  display: inline-block; }
+  display: block;  }
   .iti * {
     box-sizing: border-box;
     -moz-box-sizing: border-box; }
@@ -20,38 +20,56 @@
     top: 0;
     bottom: 0;
     right: 0;
-    padding: 1px; }
+    padding: 0; }
+  .iti__flag-container::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 13px;
+    bottom: 13px;
+    left: 0;
+    z-index: 2;
+    width: 1px;
+    background: #c4c4c4; }
   .iti__selected-flag {
     z-index: 1;
     position: relative;
     display: flex;
     align-items: center;
     height: 100%;
-    padding: 0 6px 0 8px; }
+    padding: 0 10px 0 19px; }
   .iti__arrow {
-    margin-left: 6px;
-    width: 0;
-    height: 0;
-    border-left: 3px solid transparent;
-    border-right: 3px solid transparent;
-    border-top: 4px solid #555; }
+    margin-left: 13px;
+    width: 10px;
+    height: 7px;
+    background: url(arrow.svg) no-repeat; }
     .iti__arrow--up {
-      border-top: none;
-      border-bottom: 4px solid #555; }
+      transform: rotate(-180deg); }
   .iti__country-list {
     position: absolute;
+    right: 0;
     z-index: 2;
     list-style: none;
     text-align: left;
     padding: 0;
-    margin: 0 0 0 -1px;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-    background-color: white;
-    border: 1px solid #CCC;
-    white-space: nowrap;
+    margin: 0;
+    box-shadow: 10px 10px 60px rgba(105, 105, 105, 0.12);
+    background-color: #fff;
+    width: 300px;
+    border: 1px solid #eaeaea;
     max-height: 200px;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch; }
+    .iti__country-list li {
+        border-top: 1px solid #eaeaea;
+        margin: 0;
+    }
+    .iti__country-list li:first-child {
+        border-top: none;
+    }
+    .iti__country-list li::before {
+      display:none;
+    }
     .iti__country-list--dropup {
       bottom: 100%;
       margin-bottom: -1px; }
@@ -62,11 +80,9 @@
     display: inline-block;
     width: 20px; }
   .iti__divider {
-    padding-bottom: 5px;
-    margin-bottom: 5px;
-    border-bottom: 1px solid #CCC; }
+    display: none; }
   .iti__country {
-    padding: 5px 10px;
+    padding: 10px;
     outline: none; }
   .iti__dial-code {
     color: #999; }
@@ -77,12 +93,12 @@
   .iti__flag-box, .iti__country-name {
     margin-right: 6px; }
   .iti--allow-dropdown input, .iti--allow-dropdown input[type=text], .iti--allow-dropdown input[type=tel], .iti--separate-dial-code input, .iti--separate-dial-code input[type=text], .iti--separate-dial-code input[type=tel] {
-    padding-right: 6px;
-    padding-left: 52px;
+    padding-right: 90px;
+    padding-left: 18px;
     margin-left: 0; }
   .iti--allow-dropdown .iti__flag-container, .iti--separate-dial-code .iti__flag-container {
-    right: auto;
-    left: 0; }
+    right: 0;
+    left: auto; }
   .iti--allow-dropdown .iti__flag-container:hover {
     cursor: pointer; }
     .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
@@ -102,7 +118,7 @@
     top: -1000px;
     left: -1000px;
     z-index: 1060;
-    padding: 1px; }
+    padding: 0; }
     .iti--container:hover {
       cursor: pointer; }
 
