@@ -92,12 +92,25 @@
                 <!-- container -->
                 <div class="container">
 
-                    <div class="back-mobile"><a href="#"><span><svg><use xlink:href="images/sprite.svg#back-mobile"></use></svg></span>Главная</a></div>
+                    <!-- auth -->
+                    <div class="auth">
 
-                    <div class="page-404-title">404</div>
-                    <div class="page-404-subtitle">Страница не найдена!</div>
-                    <div class="page-404-text">Это значит, что запрашиваемая вами страница была удалена, перемещена или вы просто набрали неточный адрес</div>
-                    <div class="page-404-btn"><a href="#" class="btn">Вернуться на главную</a></div>
+                        <h1>Войти в систему</h1>
+
+                        <form action="#" method="post">
+                            <div class="form-input"><span>Логин</span><input type="text" name="login" value="" class="required" /></div>
+                            <div class="form-input"><span>Пароль</span><input type="password" name="password" value="" class="required" /></div>
+                            <div class="form-checkbox form-policy"><label><input type="checkbox" name="remember" /><span>Запомнить меня на этом компьютере</span></label></div>
+                            <div class="form-submit"><button type="submit" class="btn">Войти</button></div>
+                            <div class="forgot-auth"><a href="#">Забыли пароль?</a><a href="#">Регистрация</a></div>
+                            <div class="forgot-help">
+                                <div class="forgot-help-title">или напишите нам</div>
+                                <div class="forgot-help-btn"><a href="#" class="btn btn-blue">обратная связь</a></div>
+                            </div>
+                        </form>
+
+                    </div>
+                    <!-- auth END -->
 
                 </div>
                 <!-- container END -->

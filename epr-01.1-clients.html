@@ -73,6 +73,7 @@
                                             <div class="header-search-input"><input type="text" name="search" value="" placeholder="Поиск" /></div>
                                             <div class="header-search-submit"><button type="submit"><svg><use xlink:href="images/sprite.svg#icon-search"></use></svg></button></div>
                                         </form>
+                                        <a href="#" class="header-search-close"><svg><use xlink:href="images/sprite.svg#header-search-close"></use></svg></a>
                                     </div>
                                 </div>
 
@@ -805,18 +806,31 @@
                         </div>
                         <!-- clients reviews END -->
 
+                        <!-- clients reg -->
                         <div class="clients-reg">
-                            <div class="clients-reg-inner">
-                                <h3>Радикальная экономия времени</h3>
-                                <div class="clients-reg-text">Контролируйте своё онлайн присутствие и определяйте идеальные моменты для публикации PR-материалов через собственный аккаунт.</div>
-                                <div class="clients-reg-btn"><a href="#" class="btn">Зарегистрироваться в системе</a></div>
+                            <div class="main-title">
+                                <div class="main-title-number">05</div>
+                                <div class="main-title-text">Стать клиентом</div>
                             </div>
+
+                            <div class="clients-reg-form">
+                                <form action="#" method="post">
+                                    <div class="form-input"><span>Имя <em>*</em></span><input type="text" name="name" value="" class="required" /></div>
+                                    <div class="form-input"><span>Электронная почта <em>*</em></span><input type="text" name="email" value="" class="required email" /></div>
+                                    <div class="form-checkbox form-policy"><label><input type="checkbox" name="policy" class="required" /><span>Я принимаю условия <a href="#">политики конфиденциальности</a><br /> и <a href="#">пользовательского соглашения</a></span></label></div>
+                                    <div class="form-submit"><input type="submit" value="Отправить" class="btn" /></div>
+                                    <div class="clients-reg-link">Уже есть аккаунт? <a href="#">Войти</a></div>
+                                </form>
+                                <div class="clients-reg-img"><img src="images/clients-reg.png" alt="" /></div>
+                            </div>
+
                         </div>
+                        <!-- clients reg END -->
 
                         <!-- main reviews -->
                         <div class="main-reviews">
                             <div class="main-title">
-                                <div class="main-title-number">05</div>
+                                <div class="main-title-number">06</div>
                                 <div class="main-title-text">Пресса о нас</div>
                                 <div class="main-title-btn"><a href="#" class="btn btn-blue">все публикации<svg><use xlink:href="images/sprite.svg#main-title-btn"></use></svg></a></div>
                             </div>
@@ -957,6 +971,8 @@
                 </div>
             </div>
         </footer>
+
+        <a href="#" class="up-link"><svg><use xlink:href="images/sprite.svg#up-link"></use></svg></a>
 
         <script>
             var pathTemplate = './';

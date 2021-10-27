@@ -260,7 +260,7 @@ label.error {display:block; font-size:12px; line-height:18px; color:#df8e8e; mar
 }
 
 header {position:absolute; left:0; top:0; right:0; z-index:20}
-.header-inner {border-bottom:1px solid #e2e2e2; height:77px}
+.header-inner {border-bottom:1px solid #e2e2e2; height:77px; position:relative}
 .header-inner::after {content:""; display:block; clear:both}
 
 .header-fixed header {position:fixed; background:#fff; border-bottom:1px solid #e2e2e2; box-shadow:10px 10px 60px rgba(105, 105, 105, 0.12)}
@@ -375,6 +375,31 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
 
 .header-fixed .header-search {margin:19px 0 0 48px}
 
+@media screen and (min-width:1120px) {
+    .header-search-form {position:absolute; right:82px; top:0; left:48px; height:76px; padding:0 0 0 100px; background:#fff; z-index:2}
+    .header-fixed .header-search-form {height:59px}
+    .header-search-open .header-search-form {display:block}
+    .header-search-form form {margin:0; padding:15px 0 0 0; position:relative}
+    .header-fixed .header-search-form form {padding:8px 0 0 0}
+    .header-search-input input {position:relative; border:none; font:16px/33px Arial, sans-serif; color:#333; vertical-align:top; margin:0; padding:5px 100px 5px 13px; width:100%; height:43px; box-sizing:border-box; outline:none; background:#f9f9f9; border-radius:5px; -webkit-appearance:none; transition:border-color 0.2s}
+    .header-search-input input {font-family:Inter, sans-serif}
+    .header-search-input input::-webkit-input-placeholder {opacity:1; color:#999}
+    .header-search-input input::-moz-placeholder {opacity:1; color:#999}
+    .header-search-input input:-ms-input-placeholder {opacity:1; color:#999}
+    .header-search-input input:-webkit-autofill,
+    .header-search-input input:-webkit-autofill:active,
+    .header-search-input input:-webkit-autofill:focus,
+    .header-search-input input:-webkit-autofill:hover {-webkit-text-fill-color:#333; caret-color:#333; -webkit-transition:background-color 999999s ease-in-out 0s; transition:background-color 999999s ease-in-out 0s}
+    .header-search-submit {position:absolute; right:52px; bottom:10px}
+    .header-search-submit button {display:block; vertical-align:top; margin:0; padding:0; overflow:visible; outline:none; text-decoration:none; background:transparent; border:none; border-radius:0; position:relative; -webkit-appearance:none; cursor:pointer; box-sizing:border-box; font-size:0; line-height:0}
+    .header-search-submit button svg {display:block; width:20px; height:20px; fill:#f26c5d}
+    .header-search-close {display:block; position:absolute; right:0; top:0; width:42px; height:76px; transition:none}
+    .header-fixed .header-search-close {height:59px}
+    .header-search-close svg {display:block; width:15px; height:14px; fill:#000; position:absolute; left:50%; top:50%; margin:-7px 0 0 -7px; transition:fill 0.2s}
+    .header-search-close:hover svg {fill:#f26c5d}
+}
+
+
 @media screen and (max-width:1119px) {
     .header-search {float:none; margin:0; position:absolute; left:20px; top:85px}
     .header-search-link {display:none}
@@ -388,6 +413,7 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .header-search-submit {position:absolute; top:0; right:0}
     .header-search-submit button {display:block; width:40px; height:46px; background:transparent; position:relative; border:none; -webkit-appearance:none; cursor:pointer; font-size:0; line-height:0; letter-spacing:-1px}
     .header-search-submit button svg {display:block; width:20px; height:20px; position:absolute; right:10px; top:13px; fill:#0e2a3c; opacity:0.4}
+    .header-search-close {display:none}
 }
 
 .header-cart {float:left; margin:29px 0 0 26px; position:relative}
@@ -1318,6 +1344,7 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
 @media screen and (max-width:1169px) {
     .page-clients .slider {margin:0}
     .page-clients .slider .container {padding:0}
+    .page-clients .main-reviews {margin:80px -20px -59px -20px}
 }
 
 .clients-reviews {margin:103px 0 0 0; padding:30px 0 71px 0; position:relative; background:rgba(218, 238, 244, 0.18)}
@@ -1364,12 +1391,42 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .clients-reviews-item-post {margin:10px 0 0 0; font-size:16px; line-height:24px}
 }
 
-.clients-reg {margin:80px 0 0 0; text-align:center; padding:52px 20px 57px 20px; background:#fbf7f2}
-.clients-reg-inner {max-width:570px; margin:0 auto}
-.clients-reg-inner h3 {margin:0}
-.clients-reg-text {margin:10px 0 0 0; color:#646464; font-size:18px; line-height:27px}
-.clients-reg-btn {margin:35px 0 0 0}
-.clients-reg-btn .btn {display:block; padding:20px 0; text-align:center}
+.clients-reg {margin:44px 0 46px 0}
+.clients-reg-form {margin:9px 0 0 0}
+.media-reg-form {margin:0}
+.clients-reg-form::after {content:""; display:block; clear:both}
+.clients-reg-form form {margin:0; padding:6px 0 0 0; float:left; width:509px}
+.media-reg-form form {padding:0}
+.clients-reg-form .form-input {margin:20px 0 0 0}
+.media-reg-form .form-input {margin:10px 0 0 0}
+.clients-reg-form .form-input:first-child {margin:0}
+.media-reg-form .form-input:first-child {margin:0}
+.clients-reg-form .form-policy {margin:23px 0 0 0}
+.media-reg-form .form-policy {margin:16px 0 0 0}
+.clients-reg-form .form-submit {margin:34px 0 0 0; width:397px}
+.media-reg-form .form-submit {width:256px}
+.clients-reg-form .form-submit .btn {width:100%}
+.clients-reg-link {margin:31px 0 0 0; color:#000}
+.clients-reg-link a {font-weight:normal}
+.clients-reg-img {float:right; width:505px; line-height:0}
+.media-reg-form .clients-reg-img {width:586px; margin:-18px -60px 0 0}
+
+@media screen and (max-width:1119px) {
+    .clients-reg {margin:23px 0 69px 0}
+    .clients-reg-form {margin:30px 0 0 0}
+    .clients-reg-form form {padding:0; float:none; width:auto}
+    .clients-reg-form .form-input {margin:30px 0 0 0}
+    .media-reg-form .form-input {margin:30px 0 0 0}
+    .clients-reg-form .form-policy {margin:30px 0 0 0; font-size:18px; line-height:27px}
+    .media-reg-form .form-policy {margin:30px 0 0 0}
+    .clients-reg-form .form-policy span {padding:0 0 0 36px}
+    .clients-reg-form .form-policy span::before {width:26px; height:26px; background-size:19px 15px; top:0}
+    .clients-reg-form .form-submit {margin:36px 0 0 0; width:auto}
+    .media-reg-form .clients-reg-form .form-submit {width:auto}
+    .clients-reg-form .form-submit .btn {padding:16px 0}
+    .clients-reg-link {margin:44px 0 0 0; text-align:center}
+    .clients-reg-img {display:none}
+}
 
 .clients-list {margin:83px 0 0 0}
 .clients-list-inner {margin:16px 30px 0 30px; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; position:relative; overflow:hidden}
@@ -1572,7 +1629,7 @@ footer {height:361px; position:relative; margin:-361px 0 0 0; border-top:1px sol
     .window-close {right:20px}
 }
 
-.window-title {background:#e0f6fe; padding:18px 108px 18px 40px; color:#0e2a3c; font-weight:normal; font-size:20px; line-height:24px}
+.window-title {background:#feeedb; padding:18px 108px 18px 40px; color:#0e2a3c; font-weight:normal; font-size:20px; line-height:24px}
 .fonts-loaded .window-title {font-family:FiraSans, sans-serif}
 
 @media screen and (max-width:1119px) {
@@ -1587,6 +1644,7 @@ footer {height:361px; position:relative; margin:-361px 0 0 0; border-top:1px sol
 }
 
 .window-order-container {padding:20px 40px}
+.window-order-logo {margin:0 0 16px 0}
 .window-order-logo::after {content:""; display:block; clear:both}
 .window-order-logo-inner {float:left; max-width:100%; padding:27px 40px; text-align:center; line-height:0; border:1px solid #efefef}
 .window-order-title {margin:16px 0 0 0; font-weight:500; font-size:18px; line-height:27px; color:#0e2a3c}
@@ -1615,6 +1673,7 @@ footer {height:361px; position:relative; margin:-361px 0 0 0; border-top:1px sol
 
 @media screen and (max-width:1119px) {
     .window-order-container {padding:20px}
+    .window-order-logo+.window-order-url {margin:56px 0 0 0}
 }
 
 .window-order-submit {padding:28px 0; text-align:center; background:#f8f8f8}
@@ -1625,12 +1684,13 @@ footer {height:361px; position:relative; margin:-361px 0 0 0; border-top:1px sol
 .up-link.visible {opacity:1; visibility:visible}
 .up-link:hover {background:#ff8e82}
 .up-link:active {background:#e65a4b; border-color:#e65a4b}
-.up-link svg {display:block; position:absolute; left:50%; top:50%; width:20px; height:12px; fill:#f26c5d; transition:stroke 0.2s; margin:-6px 0 0 -10px}
+.up-link svg {display:block; position:absolute; left:50%; top:50%; width:32px; height:32px; fill:#f26c5d; transition:fill 0.2s; margin:-16px 0 0 -16px}
 .up-link:hover svg {fill:#fff}
 .up-link:active svg {fill:#fff}
 
 @media screen and (max-width:1199px) {
-    .up-link {display:none}
+    .up-link {width:56px; height:56px}
+    .up-link svg {width:38px; height:38px; margin:-19px 0 0 -19px}
 }
 
 .window-catalogue {width:1012px}
@@ -1719,3 +1779,86 @@ footer {height:361px; position:relative; margin:-361px 0 0 0; border-top:1px sol
 .window-general-container {padding:20px 20px 40px 20px}
 .window-general-container *:first-child {margin-top:0}
 .window-general-container *:last-child {margin-bottom:0}
+
+.window-order-cart-summ {margin:0 0 20px 0}
+.window-order-cart-summ span {font-weight:500; color:#161616}
+.window-order-cart-summ a {font-weight:normal; margin:0 0 0 5px}
+.window-order-success-content {margin:12px 0 19px 0; display:table; width:100%}
+.window-order-success-row {display:table-row; color:#2f2f2f}
+.window-order-success-row-main {font-weight:bold; color:#0e2a3c}
+.window-order-success-label {display:table-cell; vertical-align:top; padding:10px 20px 0 0}
+.window-order-success-row-main .window-order-success-label {padding-top:18px; font-size:20px}
+.fonts-loaded .window-order-success-row-main .window-order-success-label {font-family:FiraSans, sans-serif}
+.window-order-success-price {display:table-cell; vertical-align:top; padding:10px 0 0 0; white-space:nowrap; color:#f26c5d; font-weight:normal}
+.window-order-success-row-main .window-order-success-price {padding-top:18px; font-weight:600}
+.window-order-more-link {display:inline-block; vertical-align:top; margin:11px 35px 0 0; color:#646464; text-decoration:none; border-bottom:1px dashed #bbbbbb; transition:border-color 0.2s}
+.window-order-more-link:hover {border-color:transparent; text-decoration:none; color:#646464}
+
+@media screen and (max-width:1119px) {
+    .window-order-cart-summ a {margin:10px 0 0 0; display:block}
+    .window-order-success-content {margin:20px 0 51px 0}
+    .window-order-success-label {padding-top:24px; font-size:18px; line-height:27px}
+    .window-order-success-row-main .window-order-success-label {padding-top:35px; font-size:22px; border-top:1px solid rgba(220, 219, 219, 0.7)}
+    .window-order-success-price {padding-top:24px}
+    .window-order-success-row-main .window-order-success-price {padding-top:35px; border-top:1px solid rgba(220, 219, 219, 0.7)}
+    .window-order-submit-success {padding:22px 20px 102px 20px; position:relative}
+    .window-order-submit-success .btn {width:100%; padding:15px 0; font-size:18px; line-height:27px; font-weight:normal}
+    .window-order-more-link {position:absolute; margin:0; bottom:42px; left:50%; transform:translateX(-50%); white-space:nowrap}
+}
+
+.auth {max-width:397px; margin:98px auto 0 auto}
+.auth h1 {text-align:center; margin:0}
+.auth form {margin:44px 0 0 0}
+.auth .form-input {margin:20px 0}
+.auth .form-submit {margin:20px 0 0 0}
+.auth .form-submit .btn {width:100%; padding:12px 0; font-size:15px; line-height:23px; font-weight:500}
+.forgot-auth {margin:60px 0 0 0; font-size:14px; line-height:21px; text-align:center}
+.forgot-auth a {margin:0 0 0 30px}
+.forgot-auth a:first-child {margin:0}
+.forgot-help {margin:24px 0 0 0; border-top:2px solid #f0f0f0; padding:18px 0 0 0; text-align:center}
+.forgot-help-title {color:#1f1f1f}
+.forgot-help-btn {margin:14px 0 0 0}
+
+@media screen and (max-width:1119px) {
+    .auth {margin:76px 0 0 0}
+    .auth form {margin:46px 0 0 0}
+    .auth .form-input {margin:30px 0}
+    .auth .form-submit {margin:40px 0 0 0}
+    .auth .form-submit .btn {padding:16px 0; font-size:18px; line-height:27px; font-weight:normal}
+    .forgot-auth {margin:46px 0 0 0; font-size:18px; line-height:27px}
+    .forgot-help {margin:38px 0 0 0; padding:38px 0 0 0}
+    .forgot-help-btn {margin:11px 0 0 0}
+}
+
+.sitemap {margin:59px 0 0 0; border-bottom:2px solid #f0f0f0; position:relative; padding:0 0 92px 0}
+.sitemap::before {content:""; display:block; position:absolute; left:50%; top:0; bottom:45px; width:2px; background:#f0f0f0; margin:0 0 0 -1px}
+.sitemap::after {content:""; display:block; clear:both}
+.sitemap-container {float:left; width:50%; padding:0 80px 0 0}
+.sitemap-container ul {margin:0 0 -20px 0; padding:0; list-style:none; column-count:2; font-weight:normal; font-size:18px; line-height:27px}
+.sitemap-container ul li {margin:0; padding:0 0 20px 0; -webkit-column-break-inside:avoid; page-break-inside:avoid; break-inside:avoid; break-inside:avoid-column}
+.sitemap-container ul li::before {display:none}
+.sitemap-container ul li a {color:#0e2a3c; text-decoration:none}
+.sitemap-container ul li a:hover {text-decoration:underline}
+.sitemap-container ul li ul {margin:10px 0 0 0; column-count:1; font-weight:300; font-size:14px; line-height:18px}
+.sitemap-container ul li ul li {padding:0; margin:10px 0 0 0}
+.sitemap-container ul li ul li a {color:rgba(31, 31, 31, 0.7)}
+.sitemap-feedback {float:left; width:50%; padding:0 0 0 80px}
+.sitemap-feedback-title {color:#1f1f1f}
+.sitemap-feedback-btn {margin:20px 0 0 0}
+
+@media screen and (max-width:1119px) {
+    .sitemap {margin:43px 0 0 0; padding:0 0 44px 0}
+    .sitemap::before {display:none}
+    .sitemap-container {float:none; width:auto; padding:0}
+    .sitemap-container ul {margin:0; column-count:1; font-size:22px; line-height:33px}
+    .sitemap-container ul li {margin:27px 0 0 0; padding:0}
+    .sitemap-container ul li ul {margin:17px 0 0 20px; font-size:20px; line-height:26px}
+    .sitemap-container ul li ul li {margin:20px 0 0 0}
+    .sitemap-container ul li ul li:first-child {margin:0}
+    .sitemap-feedback {float:none; width:auto; padding:44px 0 0 0; margin:30px 0 0 0; border-top:2px solid #f0f0f0; text-align:center}
+    .sitemap-feedback-title {font-size:18px; line-height:27px}
+    .sitemap-feedback-title br {display:none}
+    .sitemap-feedback-btn {margin:11px 0 0 0}
+}
+
+.sitemap+.main-catalogue {margin-top:40px}

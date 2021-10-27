@@ -73,6 +73,7 @@
                                             <div class="header-search-input"><input type="text" name="search" value="" placeholder="Поиск" /></div>
                                             <div class="header-search-submit"><button type="submit"><svg><use xlink:href="images/sprite.svg#icon-search"></use></svg></button></div>
                                         </form>
+                                        <a href="#" class="header-search-close"><svg><use xlink:href="images/sprite.svg#header-search-close"></use></svg></a>
                                     </div>
                                 </div>
 
@@ -285,18 +286,43 @@
                         </div>
                         <!-- clients reviews END -->
 
+                        <!-- clients reg -->
                         <div class="clients-reg">
-                            <div class="clients-reg-inner">
-                                <h3>Радикальная экономия времени</h3>
-                                <div class="clients-reg-text">Контролируйте своё онлайн присутствие и определяйте идеальные моменты для публикации PR-материалов через собственный аккаунт.</div>
-                                <div class="clients-reg-btn"><a href="#" class="btn">Зарегистрироваться в системе</a></div>
+                            <div class="main-title">
+                                <div class="main-title-number">04</div>
+                                <div class="main-title-text">Заявка на добавление<br /> в каталог</div>
                             </div>
+
+                            <div class="clients-reg-form media-reg-form">
+                                <form action="#" method="post">
+                                    <div class="form-input"><span>Имя <em>*</em></span><input type="text" name="name" value="" class="required" /></div>
+                                    <div class="form-input"><span>Название СМИ</span><input type="text" name="media" value="" /></div>
+                                    <div class="form-input"><span>Контактное лицо</span><input type="text" name="contact" value="" /></div>
+                                    <div class="form-input focus-always"><span>Телефон<em>*</em></span><input type="text" name="phone" id="phone" value="" class="required" /></div>
+                                    <div class="form-input"><span>Электронная почта <em>*</em></span><input type="text" name="email" value="" class="required email" /></div>
+                                    <div class="form-checkbox form-policy"><label><input type="checkbox" name="policy" class="required" /><span>Я принимаю условия <a href="#">политики конфиденциальности</a><br /> и <a href="#">пользовательского соглашения</a></span></label></div>
+                                    <div class="form-submit"><input type="submit" value="Подать" class="btn" /></div>
+                                </form>
+
+                                <link rel="stylesheet" href="js/intlTelInput/intlTelInput.css" />
+                                <script src="js/intlTelInput/intlTelInput.min.js"></script>
+                                <script>
+                                    var input = document.querySelector("#phone");
+                                    window.intlTelInput(input, {
+                                        utilsScript: 'js/intlTelInput/utils.js'
+                                    });
+                                </script>
+
+                                <div class="clients-reg-img"><img src="images/media-reg.png" alt="" /></div>
+                            </div>
+
                         </div>
+                        <!-- clients reg END -->
 
                         <!-- main reviews -->
                         <div class="main-reviews">
                             <div class="main-title">
-                                <div class="main-title-number">04</div>
+                                <div class="main-title-number">05</div>
                                 <div class="main-title-text">Пресса о нас</div>
                                 <div class="main-title-btn"><a href="#" class="btn btn-blue">все публикации<svg><use xlink:href="images/sprite.svg#main-title-btn"></use></svg></a></div>
                             </div>
@@ -437,6 +463,8 @@
                 </div>
             </div>
         </footer>
+
+        <a href="#" class="up-link"><svg><use xlink:href="images/sprite.svg#up-link"></use></svg></a>
 
         <script>
             var pathTemplate = './';
