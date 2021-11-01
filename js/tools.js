@@ -653,24 +653,84 @@ function initForm(curForm) {
         submitHandler: function(form) {
             var curForm = $(form);
             if (curForm.hasClass('ajax-form')) {
-                curForm.addClass('loading');
-                var formData = new FormData(form);
+                if (curForm.hasClass('recaptcha-form')) {
+                    grecaptcha.ready(function() {
+                        grecaptcha.execute('6LdHSvgcAAAAAHfkqTliNRLNbN8n4oSa0UJfMCU3', {action: 'submit'}).then(function(token) {
+                            $.ajax({
+                                type: 'POST',
+                                url: curForm.attr('data-captchaurl'),
+                                dataType: 'json',
+                                data: 'recaptcha_response=' + token,
+                                cache: false
+                            }).fail(function(jqXHR, textStatus, errorThrown) {
+                                alert('Сервис временно недоступен, попробуйте позже.' + textStatus);
+                            }).done(function(data) {
+                                if (data.status) {
+                                    curForm.addClass('loading');
+                                    var formData = new FormData(form);
 
-                if (curForm.find('[type=file]').length != 0) {
-                    var file = curForm.find('[type=file]')[0].files[0];
-                    formData.append('file', file);
+                                    if (curForm.find('[type=file]').length != 0) {
+                                        var file = curForm.find('[type=file]')[0].files[0];
+                                        formData.append('file', file);
+                                    }
+
+                                    $.ajax({
+                                        type: 'POST',
+                                        url: curForm.attr('action'),
+                                        processData: false,
+                                        contentType: false,
+                                        dataType: 'html',
+                                        data: formData,
+                                        cache: false
+                                    }).done(function(html) {
+                                        curForm.replaceWith(html);
+                                    });
+                                } else {
+                                    alert('Не пройдена проверка Google reCAPTCHA v3.');
+                                }
+                            });
+                        });
+                    });
+                } else {
+                    curForm.addClass('loading');
+                    var formData = new FormData(form);
+
+                    if (curForm.find('[type=file]').length != 0) {
+                        var file = curForm.find('[type=file]')[0].files[0];
+                        formData.append('file', file);
+                    }
+
+                    $.ajax({
+                        type: 'POST',
+                        url: curForm.attr('action'),
+                        processData: false,
+                        contentType: false,
+                        dataType: 'html',
+                        data: formData,
+                        cache: false
+                    }).done(function(html) {
+                        curForm.replaceWith(html);
+                    });
                 }
-
-                $.ajax({
-                    type: 'POST',
-                    url: curForm.attr('action'),
-                    processData: false,
-                    contentType: false,
-                    dataType: 'html',
-                    data: formData,
-                    cache: false
-                }).done(function(html) {
-                    curForm.replaceWith(html);
+            } else if (curForm.hasClass('recaptcha-form')) {
+                grecaptcha.ready(function() {
+                    grecaptcha.execute('6LdHSvgcAAAAAHfkqTliNRLNbN8n4oSa0UJfMCU3', {action: 'submit'}).then(function(token) {
+                        $.ajax({
+                            type: 'POST',
+                            url: curForm.attr('data-captchaurl'),
+                            dataType: 'json',
+                            data: 'recaptcha_response=' + token,
+                            cache: false
+                        }).fail(function(jqXHR, textStatus, errorThrown) {
+                            alert('Сервис временно недоступен, попробуйте позже.' + textStatus);
+                        }).done(function(data) {
+                            if (data.status) {
+                                form.submit();
+                            } else {
+                                alert('Не пройдена проверка Google reCAPTCHA v3.');
+                            }
+                        });
+                    });
                 });
             } else {
                 form.submit();
@@ -864,30 +924,3 @@ $(window).on('load resize scroll', function() {
         }
     }
 });
-
-var captchaKey = '6Ldk5DMUAAAAALWRTOM96EQI_0OApr59RQHoMirA';
-var captchaArray = [];
-
-var onloadCallback = function() {
-    $('.g-recaptcha').each(function() {
-        var newCaptcha = grecaptcha.render(this, {
-            'sitekey' : captchaKey,
-            'callback' : verifyCallback,
-        });
-        captchaArray.push([newCaptcha, $(this)]);
-    });
-};
-
-var verifyCallback = function(response) {
-    for (var i = 0; i < captchaArray.length; i++) {
-        try {
-            if (grecaptcha.getResponse(captchaArray[i][0])) {
-                var curInput = captchaArray[i][1].next();
-                curInput.val(response);
-                curInput.removeClass('error');
-                curInput.parent().find('label.error').remove();
-            }
-        } catch (err) {
-        }
-    }
-};
