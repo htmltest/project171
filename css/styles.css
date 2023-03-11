@@ -304,6 +304,7 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .nav ul li:hover ul li a,
     .nav ul li.active ul li a {display:block; height:34px; padding:0 55px 0 18px; color:#0e2a3c; background:transparent; position:relative}
     .nav ul li ul li.active a::after,
+    .nav ul li.active ul li a::after,
     .nav ul li.active ul li.active a::after {display:none}
     .nav ul li ul li a:hover,
     .nav ul li:hover ul li a:hover,
