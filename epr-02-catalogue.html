@@ -282,8 +282,18 @@
 
                                 <div class="catalogue-ctrl">
                                     <div class="catalogue-sort">
-                                        <div class="catalogue-sort-item" data-value="price"><a href="#">По цене</a></div>
-                                        <div class="catalogue-sort-item active" data-value="top"><a href="#">По популярности</a></div>
+                                        <div class="catalogue-sort-group">
+                                            <div class="catalogue-sort-item catalogue-sort-item-down dir-active" data-value="name" data-dir="down"><a href="#">Sort by name <span>(ascending)</span></a><svg><use xlink:href="images/sprite.svg#sort-dir"></use></svg></div>
+                                            <div class="catalogue-sort-item catalogue-sort-item-up" data-value="name" data-dir="up"><a href="#">Sort by name <span>(descending)</span></a><svg><use xlink:href="images/sprite.svg#sort-dir"></use></svg></div>
+                                        </div>
+                                        <div class="catalogue-sort-group">
+                                            <div class="catalogue-sort-item catalogue-sort-item-down dir-active" data-value="price" data-dir="down"><a href="#">Sort by price <span>(ascending)</span></a><svg><use xlink:href="images/sprite.svg#sort-dir"></use></svg></div>
+                                            <div class="catalogue-sort-item catalogue-sort-item-up" data-value="price" data-dir="up"><a href="#">Sort by price <span>(descending)</span></a><svg><use xlink:href="images/sprite.svg#sort-dir"></use></svg></div>
+                                        </div>
+                                        <div class="catalogue-sort-group active">
+                                            <div class="catalogue-sort-item catalogue-sort-item-down dir-active active" data-value="visits" data-dir="down"><a href="#">Sort by visits <span>(ascending)</span></a><svg><use xlink:href="images/sprite.svg#sort-dir"></use></svg></div>
+                                            <div class="catalogue-sort-item catalogue-sort-item-up" data-value="visits" data-dir="up"><a href="#">Sort by visits <span>(descending)</span></a><svg><use xlink:href="images/sprite.svg#sort-dir"></use></svg></div>
+                                        </div>
                                     </div>
                                     <div class="catalogue-type">
                                         <div class="catalogue-type-item active"><a href="#" data-type=""><svg class="catalogue-type-cards"><use xlink:href="images/sprite.svg#catalogue-type-cards"></use></svg></a></div>

@@ -117,6 +117,17 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $('.pager-size-current').click(function(e) {
+        $('.pager-size').toggleClass('open');
+        e.preventDefault();
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).parents().filter('.pager-size').length == 0) {
+            $('.pager-size').removeClass('open');
+        }
+    });
+
     $('.catalogue-pager-size-current').click(function(e) {
         $('.catalogue-pager-size').toggleClass('open');
         e.preventDefault();
@@ -168,11 +179,17 @@ $(document).ready(function() {
 
     $('.catalogue-sort-item a').click(function(e) {
         var curItem = $(this).parent();
+        var curGroup = curItem.parent();
         if (!curItem.hasClass('active')) {
             $('.catalogue-sort-item.active').removeClass('active');
             curItem.addClass('active');
-            filterCatalogue();
+            $('.catalogue-sort-group.active').removeClass('active');
+            curGroup.addClass('active');
+        } else {
+            curGroup.find('.catalogue-sort-item').addClass('active dir-active');
+            curItem.removeClass('active dir-active');
         }
+        filterCatalogue();
         e.preventDefault();
     });
 
@@ -403,13 +420,16 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    $('.nav ul li a').click(function(e) {
-        if ($(window).width() < 1120) {
-            if ($(this).parent().find('ul').length > 0) {
-                $(this).parent().toggleClass('open');
-                e.preventDefault();
-            }
+    $('.nav .nav-arrow-mobile').each(function() {
+        $(this).wrap('<span class="nav-arrow-mobile-container"></span>')
+    });
+
+    $('.nav-arrow-mobile-container').click(function(e) {
+        if ($(this).parent().parent().find('ul').length > 0) {
+            $(this).parent().parent().toggleClass('open');
+            e.preventDefault();
         }
+        return false;
     });
 
     $('.footer-menu-block-title a').click(function(e) {
@@ -542,6 +562,55 @@ $(document).ready(function() {
     $(document).click(function(e) {
         if ($(e.target).parents().filter('.header-search').length == 0) {
             $('html').removeClass('header-search-open');
+        }
+    });
+
+    $('.portfolio-item-inner').click(function(e) {
+        if (!$(e.target).parent().hasClass('portfolio-item-link')) {
+            var curItem = $(this).parent();
+            var curList = curItem.parent();
+
+            var curIndex = curList.find('.portfolio-item').index(curItem);
+
+            var newHTML =   '<div class="window-portfolio">' +
+                                '<div class="window-portfolio-list">';
+            var count = curList.find('.portfolio-item').length;
+            for (var i = 0; i < count; i++) {
+                var newItem = curList.find('.portfolio-item').eq(i);
+                newHTML +=          '<div class="window-portfolio-item">' +
+                                        '<div class="window-portfolio-item-title">' + newItem.find('.portfolio-item-title').html() + '</div>' +
+                                        '<div class="window-portfolio-item-photo"><img src="' + newItem.find('.portfolio-item-inner').attr('data-photobig') + '" alt=""></div>' +
+                                        '<div class="window-portfolio-item-link"><a href="' + newItem.find('.portfolio-item-link a').attr('href') + '" class="btn" target="_blank">' + newItem.find('.portfolio-item-link a').html() + '</a></div>' +
+                                    '</div>';
+            }
+            newHTML +=          '</div>' +
+                            '</div>';
+
+            var curPadding = $('.wrapper').width();
+            var curWidth = $(window).width();
+            if (curWidth < 480) {
+                curWidth = 480;
+            }
+            var curScroll = $(window).scrollTop();
+            $('html').addClass('window-open');
+            curPadding = $('.wrapper').width() - curPadding;
+            $('body').css({'margin-right': curPadding + 'px'});
+            $('header').css({'padding-right': curPadding + 'px'});
+            $('.wrapper').css({'top': -curScroll});
+            $('.wrapper').data('curScroll', curScroll);
+            $('meta[name="viewport"]').attr('content', 'width=' + curWidth);
+
+            $('body').append('<div class="window"><div class="window-container">' + newHTML + '<a href="#" class="window-close"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#window-close"></use></svg></a></div></div>')
+
+            $('.window-portfolio-list').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                initialSlide: curIndex,
+                prevArrow: '<button type="button" class="slick-prev"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#gallery-prev"></use></svg></button>',
+                nextArrow: '<button type="button" class="slick-next"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#gallery-next"></use></svg></button>',
+                dots: false
+            });
         }
     });
 
@@ -777,7 +846,7 @@ function filterCatalogue() {
     var curData = curForm.serialize();
     curData += '&page=' + $('.pager a.active').attr('data-value');
     curData += '&size=' + $('.catalogue-pager-size li.active').attr('data-value');
-    curData += '&sort=' + $('.catalogue-sort-item.active').attr('data-value');
+    curData += '&sort=' + $('.catalogue-sort-item.active').attr('data-value') + '&sortdir=' + $('.catalogue-sort-item.active').attr('data-dir');
     $.ajax({
         type: 'POST',
         url: curForm.attr('action'),
@@ -830,7 +899,7 @@ function windowOpen(linkWindow, dataWindow) {
         if ($('.window-container').length == 0) {
             $('.window').html('<div class="window-container window-container-preload">' + html + '<a href="#" class="window-close"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#window-close"></use></svg></a></div>');
         } else {
-            $('.window-container').html(html + '<a href="#" class="window-close"></a>');
+            $('.window-container').html(html + '<a href="#" class="window-close"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#window-close"></use></svg></a>');
             $('.window .window-loading').remove();
         }
 
