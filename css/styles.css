@@ -1019,8 +1019,6 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .catalogue-pager .pager {float:none}
 }
 
-.pager-with-size {margin:50px 0 0 0; position:relative}
-
 @media screen and (max-width:1119px) {
     .catalogue-pager {margin:40px 0 0 0}
 }
@@ -1046,26 +1044,6 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .catalogue-pager-size {display:none}
 }
 
-.pager-size {float:none; position:absolute; right:0; top:0}
-.pager-size.open {z-index:99}
-.pager-size-current {position:relative; cursor:pointer; border:1px solid #d7d7d7; border-radius:2px; padding:0 50px 0 15px; height:36px; font-weight:normal; font-size:15px; line-height:34px; color:#2c2c2c; transition:all 0.2s}
-.pager-size-current:hover {border-color:#d6d3d3}
-.pager-size.open .pager-size-current {border-color:#d6d3d3; border-radius:2px 2px 0 0}
-.pager-size-current svg {display:block; width:14px; height:8px; position:absolute; right:15px; top:14px; fill:none; stroke:#8e8e8e}
-.pager-size ul {display:none; margin:0; padding:0; list-style:none; position:absolute; left:0; top:100%; right:0; border:1px solid #eaeaea; border-top:none; background:#fdfdfd; box-shadow:10px 10px 60px rgba(105, 105, 105, 0.12)}
-.pager-size.open ul {display:block}
-.pager-size ul li {margin:0; padding:0; border-top:1px solid #eaeaea}
-.pager-size ul li::before {display:none}
-.pager-size ul li:first-child {border-top:none}
-.pager-size ul li a {display:block; text-decoration:none; color:#757575; font-size:16px; line-height:24px; font-weight:normal; padding:10px 31px 10px 10px; position:relative}
-.pager-size ul li a:hover {background:#f6fafe}
-.pager-size ul li.active a {color:#000}
-.pager-size ul li a svg {display:none; width:14px; height:15px; position:absolute; right:10px; top:15px}
-.pager-size ul li.active a svg {display:block}
-
-@media screen and (max-width:1119px) {
-    .pager-size {display:none}
-}
 @media screen and (max-width:1119px) {
     .catalogue-card-header {font-size:26px; line-height:36px}
 }
@@ -1869,7 +1847,9 @@ footer {height:361px; position:relative; margin:-361px 0 0 0; border-top:1px sol
     .team-item {width:50%}
 }
 
-.portfolio {margin:20px -10px 0 -10px; display:flex; flex-flow:wrap}
+.portfolio-container {margin:20px 0 0 0; position:relative}
+.portfolio-container.loading::after {content:""; display:block; position:absolute; left:0; top:0; right:0; bottom:0; background:rgba(255, 255, 255, 0.5) url(../images/loading.gif) no-repeat center}
+.portfolio {margin:0 -10px; display:flex; flex-flow:wrap}
 .portfolio-item {display:flex; width:25%; padding:20px 10px 0 10px}
 .portfolio-item-inner {display:flex; flex-direction:column; width:100%; background:#FFFFFF; border-radius:10px; border:1px solid #E3E7F2; transition:transform 0.2s; cursor:pointer; text-align:center; padding:20px}
 .portfolio-item-inner:hover {transform:translateY(-5px)}
@@ -1889,14 +1869,37 @@ footer {height:361px; position:relative; margin:-361px 0 0 0; border-top:1px sol
     .portfolio-item-link {margin:10px 0 0 0}
 }
 
+.portfolio-pager {margin:50px 0 0 0; position:relative}
+
+.portfolio-pager-size {float:none; position:absolute; right:0; top:0}
+.portfolio-pager-size.open {z-index:99}
+.portfolio-pager-size-current {position:relative; cursor:pointer; border:1px solid #d7d7d7; border-radius:2px; padding:0 50px 0 15px; height:36px; font-weight:normal; font-size:15px; line-height:34px; color:#2c2c2c; transition:all 0.2s}
+.portfolio-pager-size-current:hover {border-color:#d6d3d3}
+.portfolio-pager-size.open .portfolio-pager-size-current {border-color:#d6d3d3; border-radius:2px 2px 0 0}
+.portfolio-pager-size-current svg {display:block; width:14px; height:8px; position:absolute; right:15px; top:14px; fill:none; stroke:#8e8e8e}
+.portfolio-pager-size ul {display:none; margin:0; padding:0; list-style:none; position:absolute; left:0; top:100%; right:0; border:1px solid #eaeaea; border-top:none; background:#fdfdfd; box-shadow:10px 10px 60px rgba(105, 105, 105, 0.12)}
+.portfolio-pager-size.open ul {display:block}
+.portfolio-pager-size ul li {margin:0; padding:0; border-top:1px solid #eaeaea}
+.portfolio-pager-size ul li::before {display:none}
+.portfolio-pager-size ul li:first-child {border-top:none}
+.portfolio-pager-size ul li a {display:block; text-decoration:none; color:#757575; font-size:16px; line-height:24px; font-weight:normal; padding:10px 31px 10px 10px; position:relative}
+.portfolio-pager-size ul li a:hover {background:#f6fafe}
+.portfolio-pager-size ul li.active a {color:#000}
+.portfolio-pager-size ul li a svg {display:none; width:14px; height:15px; position:absolute; right:10px; top:15px}
+.portfolio-pager-size ul li.active a svg {display:block}
+
+@media screen and (max-width:1119px) {
+    .portfolio-pager-size {display:none}
+}
+
 .window-portfolio {width:570px}
 .window-portfolio-list {font-size:0; line-height:0; letter-spacing:-1px; position:relative; overflow:hidden; white-space:nowrap}
 .window-portfolio-list.slick-initialized {overflow:visible}
 .window-portfolio-item {display:inline-block; vertical-align:top; width:100%; white-space:normal}
 .window-portfolio-item-title {padding:18px 108px 18px 40px; background:#FEEEDB; font-weight:bold; font-size:20px; line-height:24px; letter-spacing:0; color:#0E2A3C}
-.window-portfolio-item-photo {padding:60px 100px}
+.window-portfolio-item-photo {padding:20px 100px}
 .window-portfolio-item-photo img {display:block; width:100%; border:1px solid #E3E7F2; border-radius:6px}
-.window-portfolio-item-link {padding:28px; background:#F8F8F8; text-align:center}
+.window-portfolio-item-link {padding:20px; background:#F8F8F8; text-align:center}
 .window-portfolio-list .slick-prev,
 .window-portfolio-list .slick-next {display:block; position:absolute; z-index:2; top:50%; width:40px; height:40px; border:none; border-radius:50%; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; background:#f26c5d; transform:translateY(-50%); transition:all 0.2s}
 .window-portfolio-list .slick-prev {left:-20px}
@@ -1913,9 +1916,26 @@ footer {height:361px; position:relative; margin:-361px 0 0 0; border-top:1px sol
 @media screen and (max-width:1119px) {
     .window-portfolio {width:440px}
     .window-portfolio-item-title {padding:20px 68px 20px 20px; font-size:18px; line-height:22px}
-    .window-portfolio-item-photo {padding:40px 35px}
-    .window-portfolio-item-link {padding:20px}
+    .window-portfolio-item-photo {padding:20px 35px}
     .window-portfolio-item-link .btn {width:100%}
     .window-portfolio-list .slick-prev {left:-15px}
     .window-portfolio-list .slick-next {right:-15px}
+}
+
+.main-customers {margin:80px 0}
+.main-customers-list {margin:10px -10px 0 -10px; font-size:0; line-height:0; letter-spacing:-1px}
+.main-customers-item {display:inline-block; vertical-align:top; padding:20px 10px 0 10px; width:20%}
+.main-customers-item-inner {display:block; background:#FFFFFF; padding:20px; transition:transform 0.2s, box-shadow 0.2s}
+.main-customers-item-inner:hover {transform:translateY(-5px); box-shadow:4px 4px 40px rgba(54, 92, 152, 0.06)}
+.main-customers-item-logo {height:89px; line-height:89px; text-align:center}
+.main-customers-item-logo img {display:inline-block; vertical-align:middle; max-height:100%}
+
+@media screen and (max-width:1023px) {
+    .main-customers-item {width:25%}
+}
+
+@media screen and (max-width:767px) {
+    .main-customers-list {margin:10px -10px -20px -10px}
+    .main-customers-item {width:33.33%; padding:0 10px 20px 10px}
+    .main-customers-item-logo {height:66px; line-height:66px}
 }
