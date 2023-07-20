@@ -282,10 +282,10 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .header-fixed .logo {margin:21px 0 0 0}
 }
 
-.nav {float:right; margin:26px 0 0 0}
 @media screen and (min-width:1120px) {
-    .nav ul {margin:0; padding:0; list-style:none; font-weight:normal; font-size:16px; line-height:24px}
-    .nav ul li {float:left; margin:0 0 0 42px; padding:0; position:relative}
+    .nav {margin:0 200px; padding:26px 0 0 0; text-align:center}
+    .nav ul {display:inline-block; text-align:left; vertical-align:top; margin:0; padding:0; list-style:none; font-weight:normal; font-size:16px; line-height:24px}
+    .nav ul li {float:left; margin:0 0 0 30px; padding:0; position:relative}
     .nav ul li:first-child {margin:0}
     .nav ul li::before {display:none}
     .nav ul li a {color:#0e2a3c; text-decoration:none}
@@ -312,11 +312,11 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .nav ul li.active ul li a:hover {background:#eff9fa}
     .nav ul li ul li.active a {color:#f26c5d; font-weight:500}
 
-    .header-fixed .nav {margin:16px 0 0 148px}
+    .header-fixed .nav {padding-top:16px}
 }
 
 @media screen and (max-width:1119px) {
-    .nav {display:none; position:fixed; top:85px; right:0; bottom:0; width:365px; background:#fff; z-index:9998; overflow:auto; float:none; margin:0; border-top:1px solid rgba(162, 162, 162, 0.3)}
+    .nav {display:none; position:fixed; top:161px; right:0; bottom:0; width:365px; background:#fff; z-index:9998; overflow:auto; float:none; margin:0; border-top:1px solid rgba(162, 162, 162, 0.3)}
     .mobile-menu-open .nav {display:block}
     .nav ul {margin:0; padding:0; list-style:none; font-weight:500; font-size:26px; line-height:26px; border-bottom:1px solid rgba(162, 162, 162, 0.3)}
     .nav ul li {float:none; margin:0; padding:0; border-top:1px solid rgba(162, 162, 162, 0.3)}
@@ -350,6 +350,95 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .nav-contacts-email svg {display:block; width:24px; height:24px; fill:none; stroke:#f26c5d; position:absolute; left:2px; top:1px}
     .nav-contacts-address {position:relative; padding:0 0 0 39px; margin:20px 0 0 0}
     .nav-contacts-address svg {display:block; width:24px; height:24px; fill:none; stroke:#f26c5d; position:absolute; left:2px; top:-1px}
+}
+
+.header-right {float:right}
+
+@media screen and (max-width:1119px) {
+    .header-right {display:none}
+
+    .mobile-menu-open .header-right {display:block; position:fixed; z-index:9999; right:0; top:0; width:365px}
+}
+
+.header-favourite {float:left; margin:29px 0 0 0; position:relative}
+.header-favourite-link svg {display:block; width:20px; height:20px; fill:#0e2a3c; transition:all 0.2s}
+.header-favourite-link:hover svg {fill:#f26c5d}
+
+.header-fixed .header-favourite {margin:19px 0 0 26px}
+
+@media screen and (max-width:1119px) {
+    .header-favourite {float:none; margin:0; position:absolute; left:175px; top:25px}
+    .header-favourite-link svg {width:30px; height:30px}
+}
+
+.header-search {float:left; margin:29px 0 0 26px}
+.header-search-link svg {display:block; width:20px; height:20px; fill:#0e2a3c; transition:all 0.2s}
+.header-search-link:hover svg {fill:#f26c5d}
+.header-search-form {display:none}
+
+.header-fixed .header-search {margin:19px 0 0 48px}
+
+@media screen and (min-width:1120px) {
+    .header-search-form {position:absolute; right:82px; top:0; left:78px; height:76px; padding:0 0 0 100px; background:#fff; z-index:2}
+    .header-fixed .header-search-form {height:59px}
+    .header-search-open .header-search-form {display:block}
+    .header-search-form form {margin:0; padding:15px 0 0 0; position:relative}
+    .header-fixed .header-search-form form {padding:8px 0 0 0}
+    .header-search-input input {position:relative; border:none; font:16px/33px Arial, sans-serif; color:#333; vertical-align:top; margin:0; padding:5px 100px 5px 13px; width:100%; height:43px; box-sizing:border-box; outline:none; background:#f9f9f9; border-radius:5px; -webkit-appearance:none; transition:border-color 0.2s}
+    .header-search-input input {font-family:Inter, sans-serif}
+    .header-search-input input::-webkit-input-placeholder {opacity:1; color:#999}
+    .header-search-input input::-moz-placeholder {opacity:1; color:#999}
+    .header-search-input input:-ms-input-placeholder {opacity:1; color:#999}
+    .header-search-input input:-webkit-autofill,
+    .header-search-input input:-webkit-autofill:active,
+    .header-search-input input:-webkit-autofill:focus,
+    .header-search-input input:-webkit-autofill:hover {-webkit-text-fill-color:#333; caret-color:#333; -webkit-transition:background-color 999999s ease-in-out 0s; transition:background-color 999999s ease-in-out 0s}
+    .header-search-submit {position:absolute; right:52px; bottom:10px}
+    .header-search-submit button {display:block; vertical-align:top; margin:0; padding:0; overflow:visible; outline:none; text-decoration:none; background:transparent; border:none; border-radius:0; position:relative; -webkit-appearance:none; cursor:pointer; box-sizing:border-box; font-size:0; line-height:0}
+    .header-search-submit button svg {display:block; width:20px; height:20px; fill:#f26c5d}
+    .header-search-close {display:block; position:absolute; right:0; top:0; width:42px; height:76px; transition:none}
+    .header-fixed .header-search-close {height:59px}
+    .header-search-close svg {display:block; width:15px; height:14px; fill:#000; position:absolute; left:50%; top:50%; margin:-7px 0 0 -7px; transition:fill 0.2s}
+    .header-search-close:hover svg {fill:#f26c5d}
+}
+
+
+@media screen and (max-width:1119px) {
+    .header-search {float:none; margin:0; position:absolute; left:20px; top:85px}
+    .header-search-link {display:none}
+    .header-search-form {display:block; width:325px}
+    .header-search-form form {margin:0; padding:0; position:relative}
+    .header-search-input input {position:relative; border:2px solid #e7e7e7; font:18px/27px Arial, sans-serif; color:#0e2a3c; vertical-align:top; margin:0; padding:8px 38px 7px 12px; width:100%; height:46px; box-sizing:border-box; outline:none; border-radius:2px; background:transparent; -webkit-appearance:none}
+    .fonts-loaded .header-search-input input {font-family:Inter, sans-serif}
+    .header-search-input input::-webkit-input-placeholder {opacity:1; color:#0e2a3c}
+    .header-search-input input::-moz-placeholder {opacity:1; color:#0e2a3c}
+    .header-search-input input:-ms-input-placeholder {opacity:1; color:#0e2a3c}
+    .header-search-submit {position:absolute; top:0; right:0}
+    .header-search-submit button {display:block; width:40px; height:46px; background:transparent; position:relative; border:none; -webkit-appearance:none; cursor:pointer; font-size:0; line-height:0; letter-spacing:-1px}
+    .header-search-submit button svg {display:block; width:20px; height:20px; position:absolute; right:10px; top:13px; fill:#0e2a3c; opacity:0.4}
+    .header-search-close {display:none}
+}
+
+.header-cart {float:left; margin:29px 0 0 26px; position:relative}
+.header-cart-link svg {display:block; width:20px; height:20px; fill:#0e2a3c; transition:all 0.2s}
+.header-cart-link:hover svg {fill:#f26c5d}
+
+.header-fixed .header-cart {margin:19px 0 0 26px}
+
+@media screen and (max-width:1119px) {
+    .header-cart {float:none; margin:0; position:absolute; left:99px; top:25px}
+    .header-cart-link svg {width:30px; height:30px}
+}
+
+.header-user {float:left; margin:29px 0 0 26px; position:relative}
+.header-user-link svg {display:block; width:20px; height:20px; fill:#0e2a3c; transition:all 0.2s}
+.header-user-link:hover svg {fill:#f26c5d}
+
+.header-fixed .header-user {margin:19px 0 0 26px}
+
+@media screen and (max-width:1119px) {
+    .header-user {float:none; margin:0; position:absolute; left:23px; top:25px}
+    .header-user-link svg {width:30px; height:30px}
 }
 
 .mobile-menu-link {display:none}
@@ -1971,9 +2060,9 @@ footer {height:361px; position:relative; margin:-361px 0 0 0; border-top:1px sol
 .package-item-descr ul li {margin:10px 0; padding:0 0 0 34px}
 .package-item-descr ul li::before {background:url(../images/package-item-descr-ul.svg) no-repeat; width:24px; height:24px; left:0; top:0; border-radius:0}
 .package-item-descr-links {margin:20px 0}
-.package-item-descr-link {margin:10px 0; font-weight:500; color:#414141}
+.package-item-descr-link {margin:10px 0; color:#414141}
 .package-item-descr-link a {font-weight:normal}
-.package-item-descr-link span {font-weight:300}
+.package-item-descr-link span {font-weight:500}
 .package-item-descr > *:first-child {margin-top:0}
 .package-item-descr > *:last-child {margin-bottom:0}
 .package-item-order {min-width:241px; max-width:241px}
