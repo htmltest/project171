@@ -2111,11 +2111,17 @@ footer {height:361px; position:relative; margin:-361px 0 0 0; border-top:1px sol
 .testimonials-item-author-content {margin:0 0 0 20px}
 .testimonials-item-author-name {font-weight:500; font-size:18px; line-height:22px; color:#0E2A3C}
 .fonts-loaded .testimonials-item-author-name {font-family:FiraSans, sans-serif}
-.testimonials-item-author-post {margin:5px 0 0 0; color:#0E2A3C}
+.testimonials-item-author-info {margin:5px 0 0 0; display:flex; align-items:center}
+.testimonials-item-author-post {color:#0E2A3C}
+.testimonials-item-author-country {margin:0 0 0 10px; display:flex; align-items:center; color:#848A93}
+.testimonials-item-author-country::before {content:"|"; margin:0 10px 0 0; color:#DEDEDE}
+.testimonials-item-author-country img {display:block; width:22px; margin:0 10px 0 0}
 
 @media screen and (max-width:1119px) {
     .testimonials {margin:20px 0 0 0}
     .testimonials-item {margin:20px 0 0 0}
     .testimonials-item-text {font-size:16px; line-height:24px}
-    .testimonials-item-author-post {font-size:16px; line-height:24px}
+    .testimonials-item-author-info {display:block; font-size:16px; line-height:24px}
+    .testimonials-item-author-country {margin:0}
+    .testimonials-item-author-country::before {display:none}
 }
