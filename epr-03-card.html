@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="js/nouislider/nouislider.css" />
         <link rel="stylesheet" href="js/mcustomscrollbar/jquery.mCustomScrollbar.css" />
         <link rel="stylesheet" href="js/select2/select2.css" />
+        <link rel="stylesheet" href="js/air-datepicker/air-datepicker.css">
 
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width" />
@@ -102,10 +103,10 @@
                 <!-- container -->
                 <div class="container">
 
-                    <div class="breadcrumbs"><a href="#">e-PR</a><span></span>Каталог СМИ</div>
-                    <div class="back-mobile"><a href="#"><span><svg><use xlink:href="images/sprite.svg#back-mobile"></use></svg></span>Главная</a></div>
+                    <div class="breadcrumbs"><a href="#">E-PR online</a><span></span><a href="#">Media catalog</a><span></span>Bloomberg</div>
+                    <div class="back-mobile"><a href="#"><span><svg><use xlink:href="images/sprite.svg#back-mobile"></use></svg></span>E-PR online</a></div>
 
-                    <h1 class="catalogue-card-header"><span>Разместить пресс-релиз на</span> Коммерсант</h1>
+                    <h1 class="catalogue-card-header"><span>Post article on</span> Bloomberg<em>Articul: 812</em></h1>
 
                     <!-- catalogue card -->
                     <div class="catalogue-card">
@@ -123,177 +124,79 @@
                         </div>
 
                         <div class="catalogue-card-price">
-                            <div class="catalogue-card-price-title">Стоимость Публикации</div>
-                            <div class="catalogue-card-price-item">
-                                <div class="catalogue-card-price-item-title">Новость</div>
-                                <div class="catalogue-card-price-item-info"><a href="#"><svg><use xlink:href="images/sprite.svg#icon-info"></use></svg></a></div>
-                                <div class="catalogue-card-price-item-cost">от $599</div>
+                            <div class="catalogue-card-price-title">Publication</div>
+                            <div class="catalogue-card-price-item checked" data-cost="2800">
+                                <div class="catalogue-card-price-item-inner">
+                                    <div class="catalogue-card-price-item-content">
+                                        <div class="catalogue-card-price-item-title">Publication cost</div>
+                                        <div class="catalogue-card-price-item-info">The cost of&nbsp;publication is&nbsp;subject to&nbsp;change during the processing of&nbsp;your order.</div>
+                                    </div>
+                                    <div class="catalogue-card-price-item-cost">from $2800</div>
+                                </div>
                             </div>
-                            <div class="catalogue-card-price-item">
-                                <div class="catalogue-card-price-item-title">Рекламная статья</div>
-                                <div class="catalogue-card-price-item-info"><a href="#"><svg><use xlink:href="images/sprite.svg#icon-info"></use></svg></a></div>
-                                <div class="catalogue-card-price-item-cost">от $2.599</div>
+                            <div class="catalogue-card-price-item checked" data-cost="250">
+                                <div class="catalogue-card-price-checkbox">
+                                    <label><input type="checkbox" name="article" checked><span></span></label>
+                                </div>
+                                <div class="catalogue-card-price-item-inner">
+                                    <div class="catalogue-card-price-item-content">
+                                        <div class="catalogue-card-price-item-title">Article writing cost</div>
+                                        <div class="catalogue-card-price-item-info">The cost of&nbsp;writing an&nbsp;Article can be&nbsp;specified when processing your order</div>
+                                    </div>
+                                    <div class="catalogue-card-price-item-cost">$250</div>
+                                </div>
                             </div>
-                            <div class="catalogue-card-price-item">
-                                <div class="catalogue-card-price-item-title">Интервью</div>
-                                <div class="catalogue-card-price-item-info"><a href="#"><svg><use xlink:href="images/sprite.svg#icon-info"></use></svg></a></div>
-                                <div class="catalogue-card-price-item-cost">от $1.199</div>
+                            <div class="catalogue-card-price-summ">
+                                <div class="catalogue-card-price-summ-title">Total</div>
+                                <div class="catalogue-card-price-summ-value">$<span>2800</span></div>
                             </div>
-                            <div class="catalogue-card-price-whatsapp"><a href="https://wa.me/13213000111"><svg><use xlink:href="images/sprite.svg#icon-whatsapp"></use></svg>ORDER</a></div>
+                            <div class="catalogue-card-price-ctrl">
+                                <div class="catalogue-card-price-favourite"><a href="#"><svg><use xlink:href="images/sprite.svg#icon-favourite-catalogue"></use></svg><svg><use xlink:href="images/sprite.svg#icon-favourite-catalogue-active"></use></svg></a></div>
+                                <div class="catalogue-card-price-order"><a href="#" class="btn btn-blue">order now</a></div>
+                                <div class="catalogue-card-price-cart"><a href="windows/cart.html" class="btn window-link"><span><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg>Add to order</span><span><svg><use xlink:href="images/sprite.svg#icon-cart-in"></use></svg>In order</span></a></div>
+                            </div>
                         </div>
 
                         <!-- catalogue card info -->
                         <div class="catalogue-card-info">
                             <div class="catalogue-card-info-row">
-                                <div class="catalogue-card-info-title">Сайт</div>
-                                <div class="catalogue-card-info-value catalogue-card-info-value-url"><a href="#" target="_blank">kommersant.ru</a></div>
+                                <div class="catalogue-card-info-title">Website</div>
+                                <div class="catalogue-card-info-value catalogue-card-info-value-url"><a href="#" target="_blank">www.bloomberg.com</a></div>
                             </div>
                             <div class="catalogue-card-info-row">
-                                <div class="catalogue-card-info-title">Язык</div>
+                                <div class="catalogue-card-info-title">Language</div>
                                 <div class="catalogue-card-info-value">
                                     <div class="catalogue-card-info-country">
-                                        <div class="catalogue-card-info-country-flag"><img src="files/flags/Turkey.png" alt="" /></div>
-                                        <div class="catalogue-card-info-country-title">Турецкий</div>
+                                        <div class="catalogue-card-info-country-flag"><img src="files/flags/United-Kingdom.png" alt="" /></div>
+                                        <div class="catalogue-card-info-country-title">English</div>
                                     </div>
                                 </div>
                             </div>
                             <div class="catalogue-card-info-row">
-                                <div class="catalogue-card-info-title">Страна</div>
+                                <div class="catalogue-card-info-title">Country</div>
                                 <div class="catalogue-card-info-value">
                                     <div class="catalogue-card-info-country">
-                                        <div class="catalogue-card-info-country-flag"><img src="files/flags/Russia.png" alt="" /></div>
-                                        <div class="catalogue-card-info-country-title">Россия</div>
+                                        <div class="catalogue-card-info-country-flag"><img src="files/flags/United-States-of-America.png" alt="" /></div>
+                                        <div class="catalogue-card-info-country-title">USA</div>
                                     </div>
                                 </div>
                             </div>
                             <div class="catalogue-card-info-row">
-                                <div class="catalogue-card-info-title">Тип публикации</div>
+                                <div class="catalogue-card-info-title">Category</div>
                                 <div class="catalogue-card-info-value catalogue-card-info-value-links">
-                                    <span><a href="#">Новость</a> /</span>
-                                    <span><a href="#">Рекламная статья</a></span>
+                                    <span><a href="#">News</a> /</span>
+                                    <span><a href="#">Advertising</a></span>
                                 </div>
                             </div>
                             <div class="catalogue-card-info-row">
-                                <div class="catalogue-card-info-title">Тематика</div>
-                                <div class="catalogue-card-info-value catalogue-card-info-value-links">
-                                    <span><a href="#">Бизнес</a> /</span>
-                                    <span><a href="#">Мода</a> /</span>
-                                    <span><a href="#">Производство</a> /</span>
-                                    <span><a href="#">События</a> /</span>
-                                    <span><a href="#">Бизнес</a> /</span>
-                                    <span><a href="#">Мода</a> /</span>
-                                    <span><a href="#">Производство</a> /</span>
-                                    <span><a href="#">События</a> /</span>
-                                </div>
+                                <div class="catalogue-card-info-title">Total visits per month</div>
+                                <div class="catalogue-card-info-value">55 700 000</div>
                             </div>
-                            <div class="catalogue-card-info-row">
-                                <div class="catalogue-card-info-title">Прогноз посещаемости сайта</div>
-                                <div class="catalogue-card-info-value">1 232 K</div>
-                            </div>
-                            <div class="catalogue-card-info-row">
-                                <div class="catalogue-card-info-title">Тираж печатного издания</div>
-                                <div class="catalogue-card-info-value">100 000 экз.</div>
-                            </div>
-
-                            <div class="catalogue-card-descr">Медиахолдинг PROfashion основан в 2006 году. В него входит порядка 15 проектов, в том числе печатные издания, онлайн-портал, консалтинговое агентство и коммуникационное агентство. Также медиахолдинг является учредителем Русской ассоциации участников fashion-индустрии (РАФИ). Своими задачами PROfashion считает предоставление актуальной информации и аналитики рынка российским специалистам в сфере моды и легпрома, а также создание рабочей площадки для налаживания постоянных контактов между всеми участниками модной индустрии</div>
                         </div>
                         <!-- catalogue card info END -->
 
                     </div>
                     <!-- catalogue card END -->
-
-                    <!-- catalogue card tabs -->
-                    <div class="catalogue-card-tabs">
-
-                        <div class="catalogue-card-tabs-menu"></div>
-
-                        <div class="catalogue-card-tabs-container">
-
-                            <div class="catalogue-card-tab active">
-                                <div class="catalogue-card-tab-title"><span>Посещаемость сайта</span><svg><use xlink:href="images/sprite.svg#catalogue-card-tab-title"></use></svg></div>
-                                <div class="catalogue-card-tab-container">
-
-                                    <div class="catalogue-card-visits-chart">
-                                        <canvas id="catalogue-card-visits-chart"></canvas>
-                                        <script src="js/Chart.min.js"></script>
-                                        <script>
-                                            var config = {
-                                                type: 'line',
-                                                data: {
-                                                    labels: ['Ноябрь', 'Январь', 'Март', 'Май', 'Июль', 'Сентябрь', 'Ноябрь', 'Январь', 'Март', 'Май', 'Июль', 'Сентябрь', 'Ноябрь', 'Январь', 'Март', 'Май', 'Июль'],
-                                                    datasets: [{
-                                                        label: '',
-                                                        data: [27, 28, 24, 23, 30, 31, 28, 29, 28, 36, 38, 45, 55, 49, 55, 56, 70],
-                                                        backgroundColor: 'rgba(255, 255, 255, 0)',
-                                                        borderColor: '#aaa',
-                                                        borderWidth: 3,
-                                                       lineTension: 0
-                                                    }]
-                                                },
-                                                options: {
-                                                    responsive: true,
-                                                    legend: {
-                                                        display: false
-                                                    },
-                                                    tooltips: {
-                                                        enabled: false
-                                                    },
-                                                    scales: {
-                                                        xAxes: [{
-                                                            display: true,
-                                                            gridLines: {
-                                                                display: false
-                                                            }
-                                                        }],
-                                                        yAxes: [{
-                                                            display: true,
-                                                        }]
-                                                    },
-                                                    title: {
-                                                        display: false
-                                                    }
-                                                }
-                                            };
-
-                                            var ctx = document.getElementById('catalogue-card-visits-chart').getContext('2d');
-                                            new Chart(ctx, config);
-                                        </script>
-                                    </div>
-
-                                    <div class="catalogue-card-visits-info">
-                                        <div class="catalogue-card-visits-info-row">
-                                            <div class="catalogue-card-visits-info-title">Среднее время на&nbsp;сайте:</div>
-                                            <div class="catalogue-card-visits-info-value">00:05:02</div>
-                                        </div>
-                                        <div class="catalogue-card-visits-info-row">
-                                            <div class="catalogue-card-visits-info-title">Просмотры страниц:</div>
-                                            <div class="catalogue-card-visits-info-value">12</div>
-                                        </div>
-                                        <div class="catalogue-card-visits-info-row">
-                                            <div class="catalogue-card-visits-info-title">Показатель отказов:</div>
-                                            <div class="catalogue-card-visits-info-value">88%</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="catalogue-card-tab">
-                                <div class="catalogue-card-tab-title"><span>География распространения</span><svg><use xlink:href="images/sprite.svg#catalogue-card-tab-title"></use></svg></div>
-                                <div class="catalogue-card-tab-container">
-                                    География распространения
-                                </div>
-                            </div>
-
-                            <div class="catalogue-card-tab">
-                                <div class="catalogue-card-tab-title"><span>Целевая аудитория</span><svg><use xlink:href="images/sprite.svg#catalogue-card-tab-title"></use></svg></div>
-                                <div class="catalogue-card-tab-container">
-                                    Целевая аудитория
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!-- catalogue card tabs END -->
 
                 </div>
                 <!-- container END -->
@@ -405,6 +308,7 @@
         <script src="js/masonry.pkgd.min.js"></script>
         <script src="js/select2/select2.min.js"></script>
         <script src="js/select2/ru.js"></script>
+        <script src="js/air-datepicker/air-datepicker.js"></script>
         <script src="js/tools.js"></script>
 
     </body>

@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="js/nouislider/nouislider.css" />
         <link rel="stylesheet" href="js/mcustomscrollbar/jquery.mCustomScrollbar.css" />
         <link rel="stylesheet" href="js/select2/select2.css" />
+        <link rel="stylesheet" href="js/air-datepicker/air-datepicker.css">
 
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width" />
@@ -49,6 +50,12 @@
 
                                 <div class="header-user">
                                     <a href="#" class="header-user-link"><svg><use xlink:href="images/sprite.svg#icon-user"></use></svg></a>
+                                    <div class="header-user-menu">
+                                        <ul>
+                                            <li><a href="#">Authorization</a></li>
+                                            <li><a href="#">Registration</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
 
@@ -102,21 +109,27 @@
                 <!-- container -->
                 <div class="container">
 
+                    <div class="breadcrumbs"><a href="#">E-PR online</a><span></span>Sign in</div>
+                    <div class="back-mobile"><a href="#"><span><svg><use xlink:href="images/sprite.svg#back-mobile"></use></svg></span>E-PR Online</a></div>
+
                     <!-- auth -->
                     <div class="auth">
 
-                        <h1>Войти в систему</h1>
+                        <h1>Sign in</h1>
 
                         <form action="#" method="post">
-                            <div class="form-input"><span>Логин</span><input type="text" name="login" value="" class="required" /></div>
-                            <div class="form-input"><span>Пароль</span><input type="password" name="password" value="" class="required" /></div>
-                            <div class="form-checkbox form-policy"><label><input type="checkbox" name="remember" /><span>Запомнить меня на этом компьютере</span></label></div>
-                            <div class="form-submit"><button type="submit" class="btn">Войти</button></div>
-                            <div class="forgot-auth"><a href="#">Забыли пароль?</a><a href="#">Регистрация</a></div>
-                            <div class="forgot-help">
-                                <div class="forgot-help-title">или напишите нам</div>
-                                <div class="forgot-help-btn"><a href="#" class="btn btn-blue">обратная связь</a></div>
+                            <div class="auth-menu">
+                                <a href="#">Forgot password?</a>
+                                <span>|</span>
+                                <a href="#">Create an account</a>
                             </div>
+                            <div class="form-input"><span>Email</span><input type="text" name="email" value="" class="required email" /></div>
+                            <div class="form-input">
+                                <span>Password</span>
+                                <input type="password" name="password" value="" class="required" />
+                                <a href="#" class="form-input-password-view"><svg><use xlink:href="images/sprite.svg#password-view"></use></svg><svg><use xlink:href="images/sprite.svg#password-notview"></use></svg></a>
+                            </div>
+                            <div class="form-submit"><button type="submit" class="btn">Sign in</button></div>
                         </form>
 
                     </div>
@@ -232,6 +245,7 @@
         <script src="js/masonry.pkgd.min.js"></script>
         <script src="js/select2/select2.min.js"></script>
         <script src="js/select2/ru.js"></script>
+        <script src="js/air-datepicker/air-datepicker.js"></script>
         <script src="js/tools.js"></script>
 
     </body>
