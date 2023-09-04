@@ -1014,6 +1014,10 @@ $(document).ready(function() {
         });
         curCalendar.data('dp', dp);
     });
+    
+    $('.packs-contacts').each(function() {
+        $('html').addClass('packs-page');
+    });
 
 });
 
