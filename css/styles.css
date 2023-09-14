@@ -892,11 +892,18 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
 .catalogue-filter-item input {display:none}
 .catalogue-filter-item span {display:block; padding:0 0 0 30px; white-space:nowrap; position:relative; overflow:hidden; width:100%}
 .catalogue-filter-item-country span {padding:0 0 0 70px}
-.catalogue-filter-item-bestseller span {padding:0 0 0 63px}
+.catalogue-filter-item-bestseller span {padding:0 0 0 52px}
 .catalogue-filter-item-country span em {display:block; position:absolute; left:40px; top:50%; width:21px; text-align:center; line-height:0; font-style:normal; transform:translateY(-50%)}
 .catalogue-filter-item-country span em img {display:block; width:21px}
-.catalogue-filter-item-bestseller span em {width:18px}
-.catalogue-filter-item-bestseller span em img {width:18px}
+.catalogue-filter-item-bestseller span em {width:17px; height:17px; left:30px}
+.catalogue-filter-item-bestseller span em img {width:17px; height:17px}
+.catalogue-filter-item-hint {display:inline-block; vertical-align:middle; margin:-2px 0 0 5px; position:relative; width:20px; height:20px}
+.catalogue-filter-item-hint svg {display:block; width:20px; height:20px; fill:#848A93; transition:fill 0.2s}
+.catalogue-filter-item-hint:hover svg {fill:#6362b0}
+.catalogue-filter-item-hint i {display:none}
+.catalogue-filter-item-hint-window {position:absolute; width:20px; height:20px; pointer-events:none}
+.catalogue-filter-item-hint-window-inner {position:absolute; left:50%; bottom:100%; margin:0 0 10px -115px; width:230px; border:1px solid #C4C4C4; background:#FFFFFF; z-index:2; padding:9px; font-weight:normal; font-style:normal; font-size:13px; line-height:20px; color:#646464; box-shadow:10px 10px 60px rgba(105, 105, 105, 0.12); white-space:normal}
+.catalogue-filter-item-hint-window-inner::before {content:""; position:absolute; left:50%; bottom:-6px; width:12px; height:12px; margin:0 0 0 -6px; background:#FFFFFF; border-left:1px solid #C4C4C4; border-bottom:1px solid #C4C4C4; transform:rotate(-45deg)}
 .catalogue-filter-item span::before {content:""; display:block; width:20px; height:20px; position:absolute; left:0; top:0; border:1px solid #d7d7d7; border-radius:5px; background:url(../images/checkbox.svg) no-repeat -999px -999px}
 .catalogue-filter-item input:checked+span::before {background-color:#f26c5d; border-color:#f26c5d; background-position:center}
 .catalogue-filter-item strong {display:block; position:absolute; right:0; top:0; font-weight:300; color:#8b8b8b}
@@ -955,6 +962,7 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .catalogue-filter-group-params-item em {display:none}
     .catalogue-filter-group-params-item a {display:block; position:absolute; right:0; top:0; width:33px; bottom:0}
     .catalogue-filter-group-params-item a svg {display:block; position:absolute; right:9px; width:20px; height:20px; top:50%; margin-top:-10px}
+    .catalogue-filter-group-params-item .catalogue-filter-item-hint i {display:none}
     .catalogue-filter-group {position:relative}
     .catalogue-filter-group:first-child {border-top:1px solid #e9e9e9}
     .catalogue-filter-group-container {display:none}
@@ -978,8 +986,11 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .catalogue-filter-item-country span em {left:48px; width:36px}
     .catalogue-filter-item-country span em img {width:36px}
     .catalogue-filter-item-bestseller span {padding:0 0 0 71px}
-    .catalogue-filter-item-bestseller span em {left:42px; width:21px}
-    .catalogue-filter-item-bestseller span em img {width:21px}
+    .catalogue-filter-item-bestseller span em {left:38px; width:28px; top:0; transform:none}
+    .catalogue-filter-item-bestseller span em img {width:28px; height:28px}
+    .catalogue-filter-item-hint {display:block; margin:3px 0 0 0; width:auto; height:auto; white-space:normal; font-weight:normal; font-size:13px; line-height:20px; color:#646464}
+    .catalogue-filter-item-hint svg {display:none}
+    .catalogue-filter-item-hint i {display:block; font-style:normal}
     .catalogue-filter-item span::before {width:28px; height:28px; border:1px solid #d7d7d7; background-size:20px 14px}
     .catalogue-filter-item strong {top:0; font-weight:normal; color:#959595; font-size:18px; line-height:25px}
     .catalogue-filter-group.open-mobile .catalogue-filter-group-apply {display:block; position:absolute; left:0; bottom:0; right:0; height:87px; background:#fff; padding:20px 20px 0 20px}
@@ -3067,6 +3078,6 @@ h1.packs-title strong span:nth-child(6) {color:#EB4132}
     .packs-contacts h2 {font-size:20px; line-height:24px}
     .packs-contacts-list {margin:0 -5px}
     .packs-contacts-item {min-width:50%; max-width:50%; padding:20px 5px 0 5px}
-    
+
     .packs-page footer {margin-top:0}
 }

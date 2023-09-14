@@ -1014,9 +1014,21 @@ $(document).ready(function() {
         });
         curCalendar.data('dp', dp);
     });
-    
+
     $('.packs-contacts').each(function() {
         $('html').addClass('packs-page');
+    });
+
+    $('body').on('mouseenter', '.catalogue-filter-item-hint', function() {
+        $('.catalogue-filter-item-hint-window').remove();
+        if ($(window).width() > 1119) {
+            var curHint = $(this);
+            $('body').append('<div class="catalogue-filter-item-hint-window" style="left:' + curHint.offset().left + 'px; top:' + curHint.offset().top + 'px"><div class="catalogue-filter-item-hint-window-inner">' + curHint.find('i').html() + '</div></div>');
+        }
+    });
+
+    $('body').on('mouseleave', '.catalogue-filter-item-hint', function() {
+        $('.catalogue-filter-item-hint-window').remove();
     });
 
 });
