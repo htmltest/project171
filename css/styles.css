@@ -3081,3 +3081,40 @@ h1.packs-title strong span:nth-child(6) {color:#EB4132}
 
     .packs-page footer {margin-top:0}
 }
+
+.subscriptions-title {margin:50px 0 0 0; font-size:34px; line-height:51px}
+.subscriptions-subtitle {color:#0E2A3C; font-weight:normal; font-size:20px; line-height:30px}
+.fonts-loaded .subscriptions-subtitle {font-family:FiraSans, sans-serif}
+
+@media screen and (max-width:1119px) {
+    .subscriptions-title {margin:20px 0 0 0; font-weight:500; font-size:24px; line-height:34px}
+    .subscriptions-subtitle {margin:10px 0 0 0; font-size:18px; line-height:27px}
+}
+
+.subscriptions-group {margin:40px 0}
+.subscriptions-group-title {position:relative; display:flex; justify-content:center}
+.subscriptions-group-title::before {content:""; position:absolute; left:0; top:50%; right:0; height:1px; background:#E3E7F2}
+.subscriptions-group-title span {display:flex; align-items:center; padding:0 20px; background:#FFFFFF; padding:0 20px; font-weight:500; font-size:30px; line-height:36px; color:#979797; position:relative}
+.fonts-loaded .subscriptions-group-title span {font-family:FiraSans, sans-serif}
+.subscriptions-group-title span svg {display:block; width:30px; height:30px; margin:0 10px 0 0; fill:#979797}
+
+@media screen and (max-width:1119px) {
+    .subscriptions-group {margin:30px 0 40px 0}
+}
+
+.subscriptions-group-advanced .subscriptions-group-title span {color:#D8AF7F}
+.subscriptions-group-advanced .subscriptions-group-title span svg {fill:#D8AF7F}
+
+.subscriptions-group .packs-item-props {border-top-color:#E3E7F2}
+.subscriptions-group .packs-item-props strong {font-weight:500}
+
+.subscriptions-group .packs-item-basic .packs-item-title {color:#0E2A3C}
+.subscriptions-group .packs-item-basic .packs-item-price {color:#0E2A3C}
+.subscriptions-group .packs-item-basic .packs-item-props {border-top-color:#E3E7F2}
+.subscriptions-group .packs-item-basic .packs-item-props strong {color:#0E2A3C}
+
+.subscriptions-group .packs-item-standart .packs-item-props {border-top-color:#E3E7F2}
+.subscriptions-group .packs-item-pro .packs-item-props {border-top-color:#E3E7F2}
+.subscriptions-group .packs-item-optium .packs-item-props {border-top-color:#E3E7F2}
+.subscriptions-group .packs-item-premium .packs-item-props {border-top-color:#E3E7F2}
+.subscriptions-group .packs-item-maximum .packs-item-props {border-top-color:#E3E7F2}
