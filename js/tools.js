@@ -885,6 +885,9 @@ $(document).ready(function() {
 
     $('body').on('click', '.order-media-window-ctrl-add .btn', function(e) {
         $('.order-media-window-ctrl-add-popup').toggleClass('open');
+        if ($('.order-media-window-ctrl-add-popup').hasClass('open')) {
+            updateMediaList();
+        }
         e.preventDefault();
     });
 
@@ -925,19 +928,31 @@ $(document).ready(function() {
     });
 
     $('body').on('keyup blur change', '.order-media-window-ctrl-add-popup-search input', function(e) {
-        var curValue = $(this).val().toLowerCase();
-        $('.order-media-window-ctrl-add-popup-item').each(function() {
-            var curItem = $(this);
-
-            var curTitle = curItem.find('.order-media-window-ctrl-add-popup-item-title').html();
-            var curIndex = curItem.text().toLowerCase().indexOf(curValue);
-            if (curIndex == -1) {
-                curItem.addClass('hidden');
-            } else {
-                curItem.removeClass('hidden');
-            }
-        });
+        updateMediaList();
     });
+
+    function updateMediaList() {
+        $('.order-media-window-ctrl-add-popup-list-inner').addClass('loading');
+        var curValue = $('.order-media-window-ctrl-add-popup-search input').val();
+        $.ajax({
+            type: 'POST',
+            url: $('.order-media-window-ctrl-add-popup').attr('data-url'),
+            dataType: 'html',
+            data: 'search=' + curValue,
+            cache: false
+        }).done(function(html) {
+            $('.order-media-window-ctrl-add-popup-list-inner').html(html);
+            $('.order-media-window-ctrl-add-popup-item').each(function() {
+                var curItem = $(this);
+                var curID = curItem.attr('data-id');
+                if ($('.order-media-window-item[data-id="' + curID + '"]').length == 1) {
+                    curItem.addClass('active');
+                }
+            });
+            $('.order-media-window-ctrl-add-popup-list-inner').removeClass('loading');
+        });
+
+    }
 
     $('body').on('click', '.support-tickets-ctrl-filters .btn', function(e) {
         $('html').toggleClass('support-filters-open');
@@ -1029,6 +1044,12 @@ $(document).ready(function() {
 
     $('body').on('mouseleave', '.catalogue-filter-item-hint', function() {
         $('.catalogue-filter-item-hint-window').remove();
+    });
+    
+    $('.order-detail-new-message textarea').keydown(function(e) {
+        if ((e.ctrlKey || e.metaKey) && (e.keyCode == 13 || e.keyCode == 10)) {
+            $('.order-detail-new-message form').trigger('submit');
+        }
     });
 
 });

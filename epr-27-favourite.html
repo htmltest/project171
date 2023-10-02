@@ -55,7 +55,7 @@
 
                             <nav class="nav">
                                 <ul>
-                                    <li class="active"><a href="#">Media Catalog</a></li>
+                                    <li><a href="#">Media Catalog</a></li>
                                     <li>
                                         <a href="#">Why Us<svg class="nav-arrow"><use xlink:href="images/sprite.svg#nav-arrow"></use></svg><svg class="nav-arrow-mobile"><use xlink:href="images/sprite.svg#nav-arrow-mobile"></use></svg></a>
                                         <ul>
@@ -103,247 +103,24 @@
                 <!-- container -->
                 <div class="container">
 
-                    <div class="breadcrumbs"><a href="#">E-PR online</a><span></span>Media catalog</div>
+                    <div class="breadcrumbs"><a href="#">E-PR online</a><span></span>Favorite</div>
                     <div class="back-mobile"><a href="#"><span><svg><use xlink:href="images/sprite.svg#back-mobile"></use></svg></span>E-PR online</a></div>
 
                     <div class="catalogue-header">
-                        <h1>Media catalog</h1>
-                        <div class="catalogue-header-status">Media <span class="catalogue-header-status-from">15</span> to <span class="catalogue-header-status-to">30</span> of <span class="catalogue-header-status-count">800</span></div>
+                        <h1>Favorite</h1>
                     </div>
 
-                    <div class="catalogue-ctrl-mobile">
-                        <a href="#" class="btn catalogue-ctrl-mobile-filter"><svg><use xlink:href="images/sprite.svg#catalogue-filter-mobile"></use></svg>Filter</a>
-                        <a href="#" class="btn catalogue-ctrl-mobile-search"><svg><use xlink:href="images/sprite.svg#icon-search"></use></svg>Search</a>
+                    <div class="catalogue-ctrl-mobile catalogue-ctrl-mobile-favourite">
                         <a href="#" class="btn catalogue-ctrl-mobile-sort"><svg><use xlink:href="images/sprite.svg#catalogue-sort-mobile"></use></svg><span>Sort</span></a>
                     </div>
 
                     <!-- catalogue -->
-                    <div class="catalogue">
+                    <div class="catalogue catalogue-favourite">
 
                         <!-- catalogue filter -->
                         <div class="catalogue-filter">
-                            <div class="catalogue-filter-header">
-                                <a href="#" class="catalogue-filter-close"><svg><use xlink:href="images/sprite.svg#catalogue-filter-close"></use></svg></a>
-                                <div class="catalogue-filter-header-title">Filter</div>
-                            </div>
-                            <div class="catalogue-search">
-                                <form action="ajax/epr-02-catalogue-real.html" method="post">
-                                    <div class="catalogue-search-input"><input type="text" name="search" value="" placeholder="Search" /></div>
-                                    <div class="catalogue-search-submit"><button type="submit"><svg><use xlink:href="images/sprite.svg#icon-search"></use></svg></button></div>
-                                </form>
-                            </div>
                             <form action="ajax/epr-02-catalogue.html" method="post" class="catalogue-filter-form">
-                                <!-- catalogue filter group -->
-                                <div class="catalogue-filter-group open">
-                                    <div class="catalogue-filter-group-header">
-                                        <a href="#" class="catalogue-filter-group-header-link">Best Seller<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></a>
-                                        <div class="catalogue-filter-group-params"></div>
-                                        <a href="#" class="catalogue-filter-group-params-remove"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-params-remove"></use></svg></a>
-                                    </div>
-                                    <a href="#" class="catalogue-filter-group-reset">Clear</a>
-                                    <a href="#" class="catalogue-filter-group-close"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-close"></use></svg></a>
-                                    <div class="catalogue-filter-group-container">
-                                        <div class="catalogue-filter-item catalogue-filter-item-country catalogue-filter-item-bestseller"><label><input type="checkbox" name="favourite" /><span><em><img src="images/catalogue-filter-bestseller.svg" alt="" /></em>View All<b class="catalogue-filter-item-hint"><svg><use xlink:href="images/sprite.svg#catalogue-filter-item-hint"></use></svg><i>Most popular media<br> (Frequently bought by our clients)</i></b></span><strong>91</strong></label></div>
-                                        <div class="catalogue-filter-group-all"><a href="#"><span>more <em></em></span><span>hide</span></a></div>
-                                    </div>
-                                    <div class="catalogue-filter-group-apply"><a href="#" class="btn">Apply</a></div>
-                                </div>
-                                <!-- catalogue filter group END -->
-
-                                <!-- catalogue filter group -->
-                                <div class="catalogue-filter-group open">
-                                    <div class="catalogue-filter-group-header">
-                                        <a href="#" class="catalogue-filter-group-header-link">Special<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></a>
-                                        <div class="catalogue-filter-group-params"></div>
-                                        <a href="#" class="catalogue-filter-group-params-remove"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-params-remove"></use></svg></a>
-                                    </div>
-                                    <a href="#" class="catalogue-filter-group-reset">Clear</a>
-                                    <a href="#" class="catalogue-filter-group-close"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-close"></use></svg></a>
-                                    <div class="catalogue-filter-group-container">
-                                        <div class="catalogue-filter-item catalogue-filter-item-country catalogue-filter-item-bestseller"><label><input type="checkbox" name="forbes" /><span><em><img src="images/catalogue-filter-forbes.svg" alt="" /></em>Forbes<b class="catalogue-filter-item-hint"><svg><use xlink:href="images/sprite.svg#catalogue-filter-item-hint"></use></svg><i>All Forbes sites from different countries worldwide</i></b></span><strong>48</strong></label></div>
-                                        <div class="catalogue-filter-item catalogue-filter-item-country catalogue-filter-item-bestseller"><label><input type="checkbox" name="applenews" /><span><em><img src="images/catalogue-filter-applenews.svg" alt="" /></em>Apple News<b class="catalogue-filter-item-hint"><svg><use xlink:href="images/sprite.svg#catalogue-filter-item-hint"></use></svg><i>Media that iPhone users access through their subscriptions</i></b></span><strong>2</strong></label></div>
-                                        <div class="catalogue-filter-group-all"><a href="#"><span>more <em></em></span><span>hide</span></a></div>
-                                    </div>
-                                    <div class="catalogue-filter-group-apply"><a href="#" class="btn">Apply</a></div>
-                                </div>
-                                <!-- catalogue filter group END -->
-
-                                <!-- catalogue filter group -->
-                                <div class="catalogue-filter-group open">
-                                    <div class="catalogue-filter-group-header">
-                                        <a href="#" class="catalogue-filter-group-header-link">Country<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></a>
-                                        <div class="catalogue-filter-group-params"></div>
-                                        <a href="#" class="catalogue-filter-group-params-remove"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-params-remove"></use></svg></a>
-                                    </div>
-                                    <a href="#" class="catalogue-filter-group-reset">Clear</a>
-                                    <a href="#" class="catalogue-filter-group-close"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-close"></use></svg></a>
-                                    <div class="catalogue-filter-group-container">
-                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label><input type="checkbox" name="country1" /><span><em><img src="files/flags/Russia.png" alt="" /></em>Russia</span><strong>13</strong></label></div>
-                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label><input type="checkbox" name="country2" checked="checked" /><span><em><img src="files/flags/United-Kingdom.png" alt="" /></em>England</span><strong>44</strong></label></div>
-                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label><input type="checkbox" name="country3" /><span><em><img src="files/flags/Spain.png" alt="" /></em>Spain</span><strong>9</strong></label></div>
-                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label><input type="checkbox" name="country4" /><span><em><img src="files/flags/Ukraine.png" alt="" /></em>Ukraine</span><strong>3</strong></label></div>
-                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label><input type="checkbox" name="country5" checked="checked" /><span><em><img src="files/flags/Belarus.png" alt="" /></em>Belarus</span><strong>1</strong></label></div>
-                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label><input type="checkbox" name="country6" /><span><em><img src="files/flags/France.png" alt="" /></em>France</span><strong>57</strong></label></div>
-                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label><input type="checkbox" name="country7" /><span><em><img src="files/flags/Turkey.png" alt="" /></em>Turkey</span><strong>33</strong></label></div>
-                                        <div class="catalogue-filter-group-all"><a href="#"><span>more <em></em></span><span>hide</span></a></div>
-                                    </div>
-                                    <div class="catalogue-filter-group-apply"><a href="#" class="btn">Apply</a></div>
-                                </div>
-                                <!-- catalogue filter group END -->
-
-                                <!-- catalogue filter group -->
-                                <div class="catalogue-filter-group">
-                                    <div class="catalogue-filter-group-header">
-                                        <a href="#" class="catalogue-filter-group-header-link">Language<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></a>
-                                        <div class="catalogue-filter-group-params"></div>
-                                        <a href="#" class="catalogue-filter-group-params-remove"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-params-remove"></use></svg></a>
-                                    </div>
-                                    <a href="#" class="catalogue-filter-group-reset">Clear</a>
-                                    <a href="#" class="catalogue-filter-group-close"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-close"></use></svg></a>
-                                    <div class="catalogue-filter-group-container">
-                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label><input type="checkbox" name="language1" /><span><em><img src="files/flags/Russia.png" alt="" /></em>Русский</span><strong>13</strong></label></div>
-                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label><input type="checkbox" name="language2" /><span><em><img src="files/flags/United-Kingdom.png" alt="" /></em>Английский</span><strong>44</strong></label></div>
-                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label><input type="checkbox" name="language3" /><span><em><img src="files/flags/Spain.png" alt="" /></em>Испанский</span><strong>9</strong></label></div>
-                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label><input type="checkbox" name="language4" /><span><em><img src="files/flags/Ukraine.png" alt="" /></em>Украинский</span><strong>3</strong></label></div>
-                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label><input type="checkbox" name="language5" /><span><em><img src="files/flags/Belarus.png" alt="" /></em>Белорусский</span><strong>1</strong></label></div>
-                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label><input type="checkbox" name="language6" /><span><em><img src="files/flags/France.png" alt="" /></em>Французский</span><strong>57</strong></label></div>
-                                        <div class="catalogue-filter-item catalogue-filter-item-country"><label><input type="checkbox" name="language7" /><span><em><img src="files/flags/Turkey.png" alt="" /></em>Турецкий</span><strong>33</strong></label></div>
-                                        <div class="catalogue-filter-group-all"><a href="#"><span>more <em></em></span><span>hide</span></a></div>
-                                    </div>
-                                    <div class="catalogue-filter-group-apply"><a href="#" class="btn">Apply</a></div>
-                                </div>
-                                <!-- catalogue filter group END -->
-
-                                <!-- catalogue filter group -->
-                                <div class="catalogue-filter-group open">
-                                    <div class="catalogue-filter-group-header">
-                                        <a href="#" class="catalogue-filter-group-header-link">Category<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></a>
-                                        <div class="catalogue-filter-group-params"></div>
-                                        <a href="#" class="catalogue-filter-group-params-remove"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-params-remove"></use></svg></a>
-                                    </div>
-                                    <a href="#" class="catalogue-filter-group-reset">Clear</a>
-                                    <a href="#" class="catalogue-filter-group-close"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-close"></use></svg></a>
-                                    <div class="catalogue-filter-group-container">
-                                        <div class="catalogue-filter-item"><label><input type="checkbox" name="theme1" /><span>Спорт</span><strong>4</strong></label></div>
-                                        <div class="catalogue-filter-item"><label><input type="checkbox" name="theme2" /><span>Бизнес</span><strong>91</strong></label></div>
-                                        <div class="catalogue-filter-item"><label><input type="checkbox" name="theme3" checked="checked" /><span>ИТ</span><strong>3</strong></label></div>
-                                        <div class="catalogue-filter-item"><label><input type="checkbox" name="theme4" /><span>Политика</span><strong>44</strong></label></div>
-                                        <div class="catalogue-filter-item"><label><input type="checkbox" name="theme5" /><span>Мода</span><strong>12</strong></label></div>
-                                        <div class="catalogue-filter-group-all"><a href="#"><span>more <em></em></span><span>hide</span></a></div>
-                                    </div>
-                                    <div class="catalogue-filter-group-apply"><a href="#" class="btn">Apply</a></div>
-                                </div>
-                                <!-- catalogue filter group END -->
-
-                                <!-- catalogue filter group -->
-                                <div class="catalogue-filter-group">
-                                    <div class="catalogue-filter-group-header">
-                                        <a href="#" class="catalogue-filter-group-header-link">Тип издания<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></a>
-                                        <div class="catalogue-filter-group-params"></div>
-                                        <a href="#" class="catalogue-filter-group-params-remove"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-params-remove"></use></svg></a>
-                                    </div>
-                                    <a href="#" class="catalogue-filter-group-reset">Clear</a>
-                                    <a href="#" class="catalogue-filter-group-close"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-close"></use></svg></a>
-                                    <div class="catalogue-filter-group-container">
-                                        <div class="catalogue-filter-item"><label><input type="checkbox" name="type1" /><span>Онлайн издание</span><strong>91</strong></label></div>
-                                        <div class="catalogue-filter-item"><label><input type="checkbox" name="type2" /><span>Газета</span><strong>2</strong></label></div>
-                                        <div class="catalogue-filter-group-all"><a href="#"><span>more <em></em></span><span>hide</span></a></div>
-                                    </div>
-                                    <div class="catalogue-filter-group-apply"><a href="#" class="btn">Apply</a></div>
-                                </div>
-                                <!-- catalogue filter group END -->
-
-                                <!-- catalogue filter group -->
-                                <div class="catalogue-filter-group open">
-                                    <div class="catalogue-filter-group-header">
-                                        <a href="#" class="catalogue-filter-group-header-link">Тип публикации<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></a>
-                                        <div class="catalogue-filter-group-params"></div>
-                                        <a href="#" class="catalogue-filter-group-params-remove"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-params-remove"></use></svg></a>
-                                    </div>
-                                    <a href="#" class="catalogue-filter-group-reset">Clear</a>
-                                    <a href="#" class="catalogue-filter-group-close"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-close"></use></svg></a>
-                                    <div class="catalogue-filter-group-container">
-                                        <div class="catalogue-filter-item"><label><input type="checkbox" name="publication1" /><span>Онлайн издание</span><strong>91</strong></label></div>
-                                        <div class="catalogue-filter-item"><label><input type="checkbox" name="publication2" /><span>Газета</span><strong>2</strong></label></div>
-                                        <div class="catalogue-filter-item"><label><input type="checkbox" name="publication3" /><span>Медиа</span><strong>21</strong></label></div>
-                                        <div class="catalogue-filter-group-all"><a href="#"><span>more <em></em></span><span>hide</span></a></div>
-                                    </div>
-                                    <div class="catalogue-filter-group-apply"><a href="#" class="btn">Apply</a></div>
-                                </div>
-                                <!-- catalogue filter group END -->
-
-                                <!-- catalogue filter group -->
-                                <div class="catalogue-filter-group open">
-                                    <div class="catalogue-filter-group-header">
-                                        <a href="#" class="catalogue-filter-group-header-link">Тираж<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></a>
-                                        <div class="catalogue-filter-group-params"></div>
-                                        <a href="#" class="catalogue-filter-group-params-remove"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-params-remove"></use></svg></a>
-                                    </div>
-                                    <a href="#" class="catalogue-filter-group-reset">Clear</a>
-                                    <a href="#" class="catalogue-filter-group-close"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-close"></use></svg></a>
-                                    <div class="catalogue-filter-group-container">
-                                        <div class="catalogue-filter-slider">
-                                            <div class="form-slider">
-                                                <input type="hidden" name="pressrunFrom" value="790" class="form-slider-from" />
-                                                <input type="hidden" name="pressrunTo" value="30000" class="form-slider-to" />
-                                                <div class="form-slider-range">
-                                                    <div class="form-slider-range-inner"></div>
-                                                </div>
-                                                <div class="form-slider-params">
-                                                    <div class="form-slider-unit">экз.</div>
-                                                    <div class="form-slider-min">0</div>
-                                                    <div class="form-slider-max">50000</div>
-                                                    <div class="form-slider-step">1000</div>
-                                                </div>
-                                                <div class="form-slider-hints">
-                                                    <div class="form-slider-hints-from">от <span></span></div>
-                                                    <div class="form-slider-hints-to">до <span></span></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="catalogue-filter-group-apply"><a href="#" class="btn">Apply</a></div>
-                                </div>
-                                <!-- catalogue filter group END -->
-
-                                <!-- catalogue filter group -->
-                                <div class="catalogue-filter-group">
-                                    <div class="catalogue-filter-group-header">
-                                        <a href="#" class="catalogue-filter-group-header-link">Посещаемость<svg><use xlink:href="images/sprite.svg#catalogue-filter-arrow"></use></svg></a>
-                                        <div class="catalogue-filter-group-params"></div>
-                                        <a href="#" class="catalogue-filter-group-params-remove"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-params-remove"></use></svg></a>
-                                    </div>
-                                    <a href="#" class="catalogue-filter-group-reset">Clear</a>
-                                    <a href="#" class="catalogue-filter-group-close"><svg><use xlink:href="images/sprite.svg#catalogue-filter-group-close"></use></svg></a>
-                                    <div class="catalogue-filter-group-container">
-                                        <div class="catalogue-filter-slider">
-                                            <div class="form-slider">
-                                                <input type="hidden" name="trafficFrom" value="10000" class="form-slider-from" />
-                                                <input type="hidden" name="trafficTo" value="30000" class="form-slider-to" />
-                                                <div class="form-slider-range">
-                                                    <div class="form-slider-range-inner"></div>
-                                                </div>
-                                                <div class="form-slider-params">
-                                                    <div class="form-slider-unit">тыс</div>
-                                                    <div class="form-slider-min">0</div>
-                                                    <div class="form-slider-max">50000</div>
-                                                    <div class="form-slider-step">1000</div>
-                                                </div>
-                                                <div class="form-slider-hints">
-                                                    <div class="form-slider-hints-from">от <span></span></div>
-                                                    <div class="form-slider-hints-to">до <span></span></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="catalogue-filter-group-apply"><a href="#" class="btn">Apply</a></div>
-                                </div>
-                                <!-- catalogue filter group END -->
                             </form>
-
-                            <div class="catalogue-filter-reset"><a href="#">Clear</a></div>
-
-                            <div class="catalogue-filter-apply"><a href="#" class="btn">Apply</a></div>
                         </div>
                         <!-- catalogue filter END -->
 
@@ -559,10 +336,6 @@
                                                             <div class="catalogue-item-info-title"><em>Total visits per month</em><span>Visits:</span></div>
                                                             <div class="catalogue-item-info-value">60 000 000</div>
                                                         </div>
-                                                        <div class="catalogue-item-info-item catalogue-item-info-item-dr">
-                                                            <div class="catalogue-item-info-title">DR</div>
-                                                            <div class="catalogue-item-info-value">36</div>
-                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="catalogue-item-price">$350</div>
@@ -624,10 +397,6 @@
                                                             <div class="catalogue-item-info-title"><em>Total visits per month</em><span>Visits:</span></div>
                                                             <div class="catalogue-item-info-value">60 000 000</div>
                                                         </div>
-                                                        <div class="catalogue-item-info-item catalogue-item-info-item-dr">
-                                                            <div class="catalogue-item-info-title">DR</div>
-                                                            <div class="catalogue-item-info-value">100</div>
-                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="catalogue-item-price">$350</div>
@@ -682,10 +451,6 @@
                                                         <div class="catalogue-item-info-item">
                                                             <div class="catalogue-item-info-title"><em>Total visits per month</em><span>Visits:</span></div>
                                                             <div class="catalogue-item-info-value">60 000 000</div>
-                                                        </div>
-                                                        <div class="catalogue-item-info-item catalogue-item-info-item-dr">
-                                                            <div class="catalogue-item-info-title">DR</div>
-                                                            <div class="catalogue-item-info-value">487</div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -750,10 +515,6 @@
                                                             <div class="catalogue-item-info-title"><em>Total visits per month</em><span>Visits:</span></div>
                                                             <div class="catalogue-item-info-value">60 000 000</div>
                                                         </div>
-                                                        <div class="catalogue-item-info-item catalogue-item-info-item-dr">
-                                                            <div class="catalogue-item-info-title">DR</div>
-                                                            <div class="catalogue-item-info-value">501</div>
-                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="catalogue-item-price">$350</div>
@@ -808,10 +569,6 @@
                                                         <div class="catalogue-item-info-item">
                                                             <div class="catalogue-item-info-title"><em>Total visits per month</em><span>Visits:</span></div>
                                                             <div class="catalogue-item-info-value">60 000 000</div>
-                                                        </div>
-                                                        <div class="catalogue-item-info-item catalogue-item-info-item-dr">
-                                                            <div class="catalogue-item-info-title">DR</div>
-                                                            <div class="catalogue-item-info-value">987</div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -876,10 +633,6 @@
                                                             <div class="catalogue-item-info-title"><em>Total visits per month</em><span>Visits:</span></div>
                                                             <div class="catalogue-item-info-value">60 000 000</div>
                                                         </div>
-                                                        <div class="catalogue-item-info-item catalogue-item-info-item-dr">
-                                                            <div class="catalogue-item-info-title">DR</div>
-                                                            <div class="catalogue-item-info-value">2</div>
-                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="catalogue-item-price">$350</div>
@@ -934,10 +687,6 @@
                                                         <div class="catalogue-item-info-item">
                                                             <div class="catalogue-item-info-title"><em>Total visits per month</em><span>Visits:</span></div>
                                                             <div class="catalogue-item-info-value">60 000 000</div>
-                                                        </div>
-                                                        <div class="catalogue-item-info-item catalogue-item-info-item-dr">
-                                                            <div class="catalogue-item-info-title">DR</div>
-                                                            <div class="catalogue-item-info-value">36</div>
                                                         </div>
                                                     </div>
                                                 </div>
