@@ -1042,6 +1042,7 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
 .catalogue-container {margin:0 0 0 275px; position:relative}
 .catalogue-favourite .catalogue-container {margin:0}
 .catalogue-content {float:left; width:100%; padding:23px 0 0 0; position:relative}
+.catalogue-container.loading .catalogue-content {min-height:200px}
 .catalogue-container.loading .catalogue-content::after {content:""; display:block; position:absolute; left:0; top:0; right:0; bottom:0; background:rgba(255, 255, 255, 0.5) url(../images/loading.gif) no-repeat center}
 
 @media screen and (max-width:1119px) {
@@ -3193,3 +3194,5 @@ h1.packs-title strong span:nth-child(6) {color:#EB4132}
 .window-success-icon img {display:block; width:100px; margin:0 auto}
 .window-success-title {margin:10px 0 0 0; font-size:20px; line-height:30px; font-weight:normal; color:#2F2F2F}
 .window-success-text {font-size:16px; line-height:24px; font-weight:300; color:#2F2F2F}
+
+.ai-form .form-input textarea {min-height:120px}

@@ -1052,6 +1052,32 @@ $(document).ready(function() {
         }
     });
 
+    $('.ai-form form').each(function() {
+        var curForm = $(this);
+        var validator = curForm.validate();
+        if (validator) {
+            validator.destroy();
+        }
+        curForm.validate({
+            ignore: '',
+            submitHandler: function(form) {
+                $('.catalogue-container').addClass('loading');
+                $.ajax({
+                    type: 'POST',
+                    url: curForm.attr('action'),
+                    contentType: false,
+                    processData: false,
+                    dataType: 'html',
+                    data: curForm.serialize(),
+                    cache: false
+                }).done(function(html) {
+                    $('.catalogue-list').html(html);
+                    $('.catalogue-container').removeClass('loading');
+                });
+            }
+        });
+    });
+
 });
 
 $(window).on('load resize', function() {
@@ -1088,7 +1114,6 @@ function initForm(curForm) {
     curForm.find('.form-input textarea').each(function() {
         $(this).css({'height': this.scrollHeight, 'overflow-y': 'hidden'});
         $(this).on('input', function() {
-            console.log(this.scrollHeight);
             this.style.height = 'auto';
             this.style.height = (this.scrollHeight) + 'px';
         });
