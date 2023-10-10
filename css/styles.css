@@ -91,6 +91,15 @@ blockquote {margin:40px 0; padding:0 0 0 20px; font-size:16px; line-height:24px;
     .form-label {margin:40px 0 9px 0; font-size:22px; line-height:33px}
 }
 
+.form-row {margin:15px 0 15px -15px; display:flex}
+.form-row-field {min-width:50%; max-width:50%; padding:0 0 0 15px}
+.form-row-field .form-input {margin:0}
+
+@media screen and (max-width:1119px) {
+    .form-row {margin:15px 0; display:block}
+    .form-row-field {min-width:0; max-width:none; padding:0; margin:15px 0}
+}
+
 .form-input {position:relative; margin:15px 0}
 .form-input > span {position:absolute; left:20px; top:18px; font-size:16px; line-height:24px; font-weight:normal; color:#808080; transition:all 0.2s; pointer-events:none; z-index:1}
 .form-input > span em {color:#df8e8e; font-style:normal}
@@ -154,7 +163,7 @@ label.error {display:block; font-size:12px; line-height:18px; color:#df8e8e; mar
 .form-checkbox input.error+span::before,
 .form-checkbox input.error+label.error+span::before {border-color:#ffa7a7}
 .form-checkbox input:checked+span::before,
-.form-checkbox input:checked+label.error+span::before {background-position:center; background-color:#f26c5d}
+.form-checkbox input:checked+label.error+span::before {background-position:center; background-color:#f26c5d; border-color:#f26c5d}
 .form-checkbox label.error {position:absolute; left:0; bottom:0; white-space:nowrap}
 
 .form-file {margin:20px 0}
@@ -2108,6 +2117,8 @@ footer {height:361px; position:relative; margin:-361px 0 0 0; border-top:1px sol
     .package-item-list-item {padding:0 20px; max-width:33.33%}
 }
 
+.testimonials-header {margin:50px 0 0 0; display:flex; align-items:center; justify-content:space-between}
+.testimonials-header h1 {margin:0}
 .testimonials {margin:40px 0 0 0}
 .testimonials-item {margin:40px 0 0 0; border:1px solid #E3E7F2; padding:20px}
 .testimonials-item-text {color:#414141}
@@ -3136,3 +3147,49 @@ h1.packs-title strong span:nth-child(6) {color:#EB4132}
 .subscriptions-group .packs-item-optium .packs-item-props {border-top-color:#E3E7F2}
 .subscriptions-group .packs-item-premium .packs-item-props {border-top-color:#E3E7F2}
 .subscriptions-group .packs-item-maximum .packs-item-props {border-top-color:#E3E7F2}
+
+.window-review {width:800px}
+.window-review-title {padding:18px 68px 18px 20px; background:#FEEEDB; font-weight:bold; font-size:20px; line-height:24px; color:#0E2A3C}
+.fonts-loaded .window-review-title {font-family:FiraSans, sans-serif}
+.window-review+.window-close {right:20px; top:16px}
+.window-review form {margin:0; padding:0}
+.window-review .window-general-container {padding:20px}
+.window-review .window-catalogue-link {display:flex; padding:16px 20px; align-items:center; justify-content:flex-end}
+.window-review .window-catalogue-link .btn-reset {padding:0; border:none; color:#0E2A3C; font-weight:300; text-decoration:none; margin:0 40px 0 0}
+.window-review .window-catalogue-link .btn {font-size:14px; padding:13px 40px; font-weight:500}
+
+@media screen and (max-width:1119px) {
+    .window-review {width:440px}
+}
+
+.window-review .personal-profile-avatar {margin:0 0 20px 0; width:160px; height:160px}
+.window-review .personal-profile-avatar-new {height:42px}
+
+.window-review .form-input {margin:20px 0}
+.window-review .form-row {margin:20px 0 20px -20px}
+.window-review .form-row-field {padding:0 0 0 20px}
+.window-review .form-row-field .form-input {margin:0}
+
+@media screen and (max-width:1119px) {
+    .window-review .form-row {margin:20px 0}
+    .window-review .form-row-field {margin:20px 0; padding:0}
+}
+
+.window-review-group-title {margin:20px 0 15px 0; color:#2F2F2F; font-size:16px; line-height:24px}
+
+.window-review .form-checkbox {margin:15px 0; font-size:16px; line-height:24px}
+.window-review .form-checkbox a {color:#414141; text-decoration:underline}
+.window-review .form-radio {margin:15px 0; font-size:16px; line-height:24px}
+.window-review .form-input textarea {min-height:120px}
+.window-review hr {margin:20px 0; padding:0; height:1px; border:none; background:#E5E5E5}
+
+.window-success {width:440px}
+.window-success+.window-close {right:20px; top:16px}
+.window-success .window-general-container {padding:20px}
+.window-success .window-catalogue-link {display:flex; padding:16px 20px; align-items:center; justify-content:center}
+.window-success .window-catalogue-link .btn {font-size:14px; padding:13px 40px; font-weight:500}
+
+.window-success-content {padding:20px 0; text-align:center}
+.window-success-icon img {display:block; width:100px; margin:0 auto}
+.window-success-title {margin:10px 0 0 0; font-size:20px; line-height:30px; font-weight:normal; color:#2F2F2F}
+.window-success-text {font-size:16px; line-height:24px; font-weight:300; color:#2F2F2F}

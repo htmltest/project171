@@ -744,7 +744,7 @@ $(document).ready(function() {
         }
     });
 
-    $('.personal-profile-avatar-new input').on('change', function(e) {
+    $('body').on('change', '.personal-profile-avatar-new input', function(e) {
         var file = this.files[0];
         if (typeof(file) != 'undefined') {
             var reader = new FileReader;
@@ -1045,7 +1045,7 @@ $(document).ready(function() {
     $('body').on('mouseleave', '.catalogue-filter-item-hint', function() {
         $('.catalogue-filter-item-hint-window').remove();
     });
-    
+
     $('.order-detail-new-message textarea').keydown(function(e) {
         if ((e.ctrlKey || e.metaKey) && (e.keyCode == 13 || e.keyCode == 10)) {
             $('.order-detail-new-message form').trigger('submit');
@@ -1236,6 +1236,15 @@ function initForm(curForm) {
                         });
                     });
                 });
+            } else if (curForm.hasClass('window-form')) {
+                var formData = new FormData(form);
+
+                if (curForm.find('[type=file]').length != 0) {
+                    var file = curForm.find('[type=file]')[0].files[0];
+                    formData.append('file', file);
+                }
+
+                windowOpen(curForm.attr('action'), formData);
             } else {
                 form.submit();
             }

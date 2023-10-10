@@ -1,0 +1,72 @@
+<div class="window-review">
+    <div class="window-review-title">Send a review</div>
+    <form action="windows/success.html" method="post" class="window-form">
+        <div class="window-general-container">
+            <div class="personal-profile-avatar personal-profile-avatar-editable">
+                <img src="images/manager-avatar.svg" alt="">
+                <canvas id="photo-editor" width="160" height="160"></canvas>
+                <div class="personal-profile-avatar-new"><input type="file" name="file" /><svg><use xlink:href="images/sprite.svg#icon-camera"></use></svg></div>
+            </div>
+            <script src="js/exif.js"></script>
+            <div class="form-row">
+                <div class="form-row-field">
+                    <div class="form-input"><span>Name</span><input type="text" name="firstname" value="" class="required" /></div>
+                </div>
+                <div class="form-row-field">
+                    <div class="form-input"><span>Last Name</span><input type="text" name="lastname" value="" class="required" /></div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-row-field">
+                    <div class="form-input focus-always"><span>Phone</span><input type="text" name="phone" value="" class="required" id="phone" /></div>
+                    <link rel="stylesheet" href="js/intlTelInput/intlTelInput.css" />
+                    <script src="js/intlTelInput/intlTelInput.min.js"></script>
+                    <script>
+                        var input = document.querySelector("#phone");
+                        window.intlTelInput(input, {
+                            utilsScript: 'js/intlTelInput/utils.js'
+                        });
+                    </script>
+                </div>
+                <div class="form-row-field">
+                    <div class="form-input"><span>Email</span><input type="text" name="email" value="" class="required email" /></div>
+                </div>
+            </div>
+            <div class="window-review-group-title">Please tick boxes to show what this is about</div>
+            <div class="form-checkbox">
+                <label><input type="checkbox" name="types[compliment]" /><span>This is a Compliment</span></label>
+            </div>
+            <div class="form-checkbox">
+                <label><input type="checkbox" name="types[suggestion]" /><span>This is a Suggestion for improvement</span></label>
+            </div>
+            <div class="form-checkbox">
+                <label><input type="checkbox" name="types[feedback]" /><span>This is Feedback</span></label>
+            </div>
+            <div class="form-checkbox">
+                <label><input type="checkbox" name="types[confidential]" /><span>This is Confidential</span></label>
+            </div>
+            <div class="form-checkbox">
+                <label><input type="checkbox" name="types[enquiry]" /><span>This is Enquiry</span></label>
+            </div>
+            <div class="form-checkbox">
+                <label><input type="checkbox" name="types[raised]" /><span>This has been raised before</span></label>
+            </div>
+            <div class="form-input"><span>Business name</span><input type="text" name="businessname" value="" class="required" /></div>
+            <div class="form-input"><span>Details — Details of your compliment, suggested improvement or feedback</span><textarea name="details" cols="1" rows="1"></textarea></div>
+            <div class="form-input"><span>Suggested improvement action or solution</span><textarea name="suggested" cols="1" rows="1"></textarea></div>
+            <div class="window-review-group-title">Do you wish to receive a response on the progress?</div>
+            <div class="form-radio">
+                <label><input type="radio" name="receive" value="yes" /><span>Yes</span></label>
+            </div>
+            <div class="form-radio">
+                <label><input type="radio" name="receive" value="no" /><span>No</span></label>
+            </div>
+            <hr>
+            <div class="form-checkbox"><label><input type="checkbox" name="policy" class="required" /><span>I agree to the <a href="#">Rules of the site</a>, <a href="#">Privacy policy</a> and <a href="#">Refund Policy</a></span></label></div>
+        </div>
+        <div class="window-catalogue-link">
+            <input type="reset" value="Clear" class="btn-reset">
+            <input type="submit" value="Send a review" class="btn">
+        </div>
+    </form>
+</div>
