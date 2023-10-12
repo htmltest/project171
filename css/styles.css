@@ -1227,11 +1227,11 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .catalogue-item-info-category .catalogue-item-info-item {display:block}
     .catalogue-item-info-category .catalogue-item-info-value {margin:5px 0 0 0}
     .catalogue-item-price {margin:0; font-size:24px; line-height:36px; position:absolute; left:16px; bottom:16px}
+    .catalogue-item-request .catalogue-item-price {position:relative; left:auto; bottom:auto; margin:16px 0 0 0}
     .catalogue-item-cart {left:auto; right:16px; bottom:16px; width:40px; height:36px; font-size:0; line-height:0; letter-spacing:0}
     .catalogue-item-cart span {height:36px}
     .catalogue-item-cart svg {margin:0}
-    .catalogue-item-whatsapp {left:auto; right:16px; bottom:16px; height:36px}
-    .catalogue-item-whatsapp span {display:none}
+    .catalogue-item-whatsapp {width:auto; right:20px}
     .catalogue-item-favourite {right:68px; bottom:22px}
 
     .catalogue-item-special-hint {left:auto; right:50%; transform:none; margin-right:-13px}
