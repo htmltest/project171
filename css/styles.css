@@ -1230,7 +1230,8 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .catalogue-item-cart {left:auto; right:16px; bottom:16px; width:40px; height:36px; font-size:0; line-height:0; letter-spacing:0}
     .catalogue-item-cart span {height:36px}
     .catalogue-item-cart svg {margin:0}
-    .catalogue-item-whatsapp {left:auto; right:16px; bottom:16px; left:16px; width:auto; height:36px; font-size:16px; line-height:24px; padding:0}
+    .catalogue-item-whatsapp {left:auto; right:16px; bottom:16px; height:36px}
+    .catalogue-item-whatsapp span {display:none}
     .catalogue-item-favourite {right:68px; bottom:22px}
 
     .catalogue-item-special-hint {left:auto; right:50%; transform:none; margin-right:-13px}
