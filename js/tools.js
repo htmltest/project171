@@ -1,12 +1,5 @@
 $(document).ready(function() {
 
-    $.validator.addMethod('phoneRU',
-        function(phone_number, element) {
-            return this.optional(element) || phone_number.match(/^\+7 \(\d{3}\) \d{3}\-\d{2}\-\d{2}$/);
-        },
-        'Ошибка заполнения'
-    );
-
     $('body').on('focus', '.form-input input, .form-input textarea', function() {
         $(this).parents().filter('.form-input').addClass('focus');
     });
@@ -113,7 +106,11 @@ $(document).ready(function() {
     });
 
     $('body').on('click', '[data-href]', function(e) {
-        window.open($(this).attr('data-href'), '_blank');
+        if ($(this).parents().filter('.personal-orders-item-header-id').length == 1) {
+            window.location = $(this).attr('data-href');
+        } else {
+            window.open($(this).attr('data-href'), '_blank');
+        }
         e.preventDefault();
     });
 
@@ -787,6 +784,8 @@ $(document).ready(function() {
                     var img = new Image();
                     img.onload = function() {
                         context.clearRect(0, 0, canvas.width, canvas.height);
+                        context.fillStyle = '#FFFFFF';
+                        context.fillRect(0, 0, canvas.width, canvas.height);
                         var imgWidth  = img.width;
                         var imgHeight = img.height;
                         var newWidth  = 200;
@@ -1109,8 +1108,6 @@ function initForm(curForm) {
         }
     });
 
-    curForm.find('input.phoneRU').mask('+7 (000) 000-00-00');
-
     curForm.find('.form-input textarea').each(function() {
         $(this).css({'height': this.scrollHeight, 'overflow-y': 'hidden'});
         $(this).on('input', function() {
@@ -1175,6 +1172,26 @@ function initForm(curForm) {
         if (curSelect.find('option:selected').legnth > 0 || curSelect.find('option').legnth == 1 || curSelect.find('option:first').html() != '') {
             curSelect.trigger({type: 'select2:select'})
         }
+    });
+
+    curForm.find('.form-input .phoneNumber').each(function() {
+        $(this).keypress(function(evt) {
+            var charCode = (evt.which) ? evt.which : evt.keyCode
+            if (charCode > 31 && (charCode < 43 || charCode > 57) && charCode != 45 && charCode != 40 && charCode != 41) {
+                return false;
+            }
+            return true;
+        });
+    });
+
+    curForm.find('.form-input .email').each(function() {
+        $(this).keypress(function(evt) {
+            var charCode = (evt.which) ? evt.which : evt.keyCode
+            if (charCode > 31 && (charCode < 43 || charCode > 57) && (charCode < 65 || charCode > 90) && (charCode < 97 || charCode > 122) && charCode != 45 && charCode != 95 && charCode != 64) {
+                return false;
+            }
+            return true;
+        });
     });
 
     curForm.validate({
