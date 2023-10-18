@@ -2408,7 +2408,8 @@ footer {height:361px; position:relative; margin:-361px 0 0 0; border-top:1px sol
 .fonts-loaded .personal-orders-item-content-item {font-family:FiraSans, sans-serif}
 .personal-orders-item-content-item .warning {color:#F26C5D}
 .personal-orders-item-content-item-media {flex-grow:1; display:flex; align-items:center}
-.personal-orders-item-content-item-media img {display:block; max-width:100%; max-height:23px; margin:0 10px 0 0}
+.personal-orders-item-content-item-media span {display:flex; max-width:72px; min-width:72px; min-height:42px; padding:3px; background:#FFFFFF; align-items:center; justify-content:center; margin:0 10px 0 0}
+.personal-orders-item-content-item-media img {display:block; width:100%}
 .personal-orders-item-content-item-link {min-width:177px; max-width:177px; text-align:left}
 .personal-orders-item-content-item-link svg {display:inline-block; vertical-align:middle; margin:-2px 0 0 6px; width:18px; height:18px; fill:#F26C5D}
 .personal-orders-item-content-item-publication {min-width:177px; max-width:177px; text-align:right}
@@ -2436,7 +2437,8 @@ footer {height:361px; position:relative; margin:-361px 0 0 0; border-top:1px sol
     .personal-orders-item-content-item {border-top:none; padding:0; margin:20px 0 0 0; align-items:flex-start}
     .personal-orders-item-content-item:first-child {margin:0}
     .personal-orders-item-content-item-media {font-size:12px; line-height:18px; color:#848A93; font-weight:normal; display:block}
-    .personal-orders-item-content-item-media img {margin:0 0 2px 0}
+    .personal-orders-item-content-item-media span {display:block; min-width:0; max-width:none; margin:0 0 2px 0; background:none; padding:0; min-height:0}
+    .personal-orders-item-content-item-media img {width:auto}
     .personal-orders-item-content-item-with-link {position:relative; padding:0 0 28px 0}
     .personal-orders-item-content-item-link {position:absolute; left:0; bottom:0; min-width:0; max-width:none}
     .personal-orders-item-content-item-publication {min-width:82px; max-width:82px}
