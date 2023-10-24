@@ -32,6 +32,10 @@ window.onload = function() {
             var FiraSans400 = new FontFaceObserver('FiraSans', {
                 weight: 'normal'
             });
+            var FiraSans400i = new FontFaceObserver('FiraSans', {
+                weight: 'normal',
+                style: 'italic',
+            });
             var FiraSans500 = new FontFaceObserver('FiraSans', {
                 weight: '500'
             });
@@ -57,6 +61,7 @@ window.onload = function() {
                 Inter500.load(),
                 FiraSans300.load(),
                 FiraSans400.load(),
+                FiraSans400i.load(),
                 FiraSans600.load(),
                 FiraSans700.load(),
                 FiraSans800.load(),
