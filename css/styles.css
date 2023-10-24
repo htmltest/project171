@@ -2195,8 +2195,11 @@ footer {height:361px; position:relative; margin:-361px 0 0 0; border-top:1px sol
 
 .order-cart-anonce {margin:10px 0 0 0; font-size:12px; line-height:18px; color:#848A93}
 .order-cart {margin:20px 0 0 0}
-.order-cart-item {border-top:1px solid #ECECEC; padding:10px 0; position:relative}
+.order-cart-item {border-top:1px solid #ECECEC; padding:10px 0; position:relative; display:flex; align-items:center}
 .fonts-loaded .order-cart-item {font-family:FiraSans, sans-serif}
+.order-cart-item-logo {min-width:70px; max-width:70px; min-height:48px; display:flex; align-items:center}
+.order-cart-item-logo img {display:block; width:100%}
+.order-cart-item-inner {width:100%; margin:0 0 0 20px}
 .order-cart-item-header {display:flex; align-items:center; font-weight:normal; font-size:18px; line-height:27px; color:#0E2A3C; position:relative}
 .order-cart-item-header-title {flex-grow:1; display:flex; align-items:center}
 .order-cart-item-header-title a {display:block; margin:0 0 0 10px}
@@ -2220,7 +2223,10 @@ footer {height:361px; position:relative; margin:-361px 0 0 0; border-top:1px sol
 
 @media screen and (max-width:1119px) {
     .order-cart {margin:25px 0 0 0}
-    .order-cart-item {padding:20px 0}
+    .order-cart-item {padding:20px 0; display:block}
+    .order-cart-item-logo {min-width:0; max-width:none; margin:0 0 0 24px}
+    .order-cart-item-logo img {display:block; width:auto; height:48px}
+    .order-cart-item-inner {margin:10px 0 0 0; width:auto}
     .order-cart-item-header {padding:0 0 0 24px}
     .order-cart-item-article {margin:10px 0 0 0}
     .order-cart-item-article-inner {font-size:15px; line-height:23px}
@@ -3311,8 +3317,6 @@ h1.packs-title strong span:nth-child(6) {color:#EB4132}
     .order-processed-list-summ {margin:0 -20px; padding:0 20px 13px 20px; border-bottom:1px solid #EFEFEF; font-size:20px; line-height:30px}
 }
 
-.about {margin:50px 0 0 0; font-size:16px; line-height:24px; color:#414141}
-.about h1 {margin:0 0 20px 0; font-size:34px; line-height:51px}
 .about-values {margin:80px 0 0 0}
 .about-values h2 {margin:0; font-size:30px; line-height:36px; font-weight:500}
 .about-values-list {display:flex; margin:0 -10px; flex-wrap:wrap}
@@ -3332,8 +3336,6 @@ h1.packs-title strong span:nth-child(6) {color:#EB4132}
 .about-blockquote-author-post {color:#0E2A3C}
 
 @media screen and (max-width:1119px) {
-    .about {margin:20px 0 0 0}
-    .about h1 {font-size:24px; line-height:34px}
     .about-values h2 {font-size:24px; line-height:29px}
     .about-values-list {display:block; margin:20px 0 0 0}
     .about-values-item {display:block; min-width:0; max-width:none; padding:0; margin:20px 0 0 0}
