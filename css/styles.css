@@ -2248,6 +2248,8 @@ footer {height:361px; position:relative; margin:-361px 0 0 0; border-top:1px sol
 .order-step-content .form-input textarea::-webkit-input-placeholder {opacity:1; color:#808080; font-weight:300}
 .order-step-content .form-input textarea::-moz-placeholder {opacity:1; color:#808080; font-weight:300}
 .order-step-content .form-input textarea:-ms-input-placeholder {opacity:1; color:#808080; font-weight:300}
+.order .form-submit .btn {position:relative}
+.order.loading .form-submit .btn::after {content:""; position:absolute; left:50%; top:50%; width:40px; height:40px; margin:-20px 0 0 -20px; background:url(../images/loading.gif) no-repeat; background-size:40px 40px}
 
 .order-step-account {margin:20px 0 0 0; border:1px solid #E3E7F2; padding:20px}
 .order-step-account form {margin:0; padding:0}

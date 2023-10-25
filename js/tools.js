@@ -684,6 +684,29 @@ $(document).ready(function() {
 
     $('.order').each(function() {
         updateOrder();
+
+        var curForm = $(this);
+        var validator = curForm.validate();
+        if (validator) {
+            validator.destroy();
+        }
+        curForm.validate({
+            ignore: '',
+            submitHandler: function(form) {
+                $('.order').addClass('loading');
+                $('.form-submit .btn').prop('disabled', true);
+                $.ajax({
+                    type: 'POST',
+                    url: curForm.attr('action'),
+                    contentType: false,
+                    processData: false,
+                    dataType: 'html',
+                    data: curForm.serialize(),
+                    cache: false
+                }).done(function(html) {
+                });
+            }
+        });
     });
 
     $('body').on('click', '.order-cart-item-remove', function(e) {
