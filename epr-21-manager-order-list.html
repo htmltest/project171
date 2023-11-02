@@ -188,71 +188,109 @@
                         <div class="support-tickets-ctrl">
                             <div class="support-tickets-ctrl-filters-selected"></div>
                             <div class="support-tickets-ctrl-filters">
-                                <a href="#" class="btn btn-blue"><svg><use xlink:href="images/sprite.svg#support-tickets-ctrl-filters"></use></svg>filter</a>
+                                <a href="#" class="btn btn-blue support-tickets-ctrl-filters-link"><svg><use xlink:href="images/sprite.svg#support-tickets-ctrl-filters"></use></svg>filter</a>
                                 <div class="support-tickets-ctrl-filters-window">
-                                    <form action="#" method="post">
+                                    <div class="support-tickets-ctrl-filters-window-title"><a href="#"><svg><use xlink:href="images/sprite.svg#support-filters-close"></use></svg></a>Filter</div>
+                                    <form action="ajax/manager-order-list.html" method="post">
                                         <div class="support-tickets-ctrl-filters-window-item">
-                                            <div class="support-tickets-filters-select">
-                                                <div class="support-tickets-filters-select-current"><span>Status</span><strong></strong><svg><use xlink:href="images/sprite.svg#form-select-arrow"></use></svg></div>
-                                                <div class="support-tickets-filters-select-list">
-                                                    <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="status" value="new"><span><em class="status status-new"></em>New<svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
-                                                    <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="status" value="processing"><span><em class="status status-processing"></em>Processing<svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
-                                                    <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="status" value="payment"><span><em class="status status-payment"></em>Payment<svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
-                                                    <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="status" value="paid"><span><em class="status status-paid"></em>Paid<svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
-                                                    <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="status" value="execution"><span><em class="status status-execution"></em>On execution<svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
-                                                    <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="status" value="completed"><span><em class="status status-completed"></em>Completed<svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
-                                                    <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="status" value="rejected"><span><em class="status status-rejected"></em>Rejected<svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="support-tickets-ctrl-filters-window-item">
-                                            <div class="form-input form-input-date"><span>Date</span><input type="text" name="date" value="" id="filter-date"></div>
-                                        </div>
-                                        <div class="support-tickets-ctrl-filters-window-item">
-                                            <div class="support-tickets-filters-select">
-                                                <div class="support-tickets-filters-select-current"><span>Search by client</span><strong></strong><svg><use xlink:href="images/sprite.svg#form-select-arrow"></use></svg></div>
-                                                <div class="support-tickets-filters-select-list">
-                                                    <div class="support-tickets-filters-select-search"><input type="text" name="search_client" value="" placeholder="Search"><svg><use xlink:href="images/sprite.svg#icon-search"></use></svg></div>
-                                                    <div class="support-tickets-filters-select-list-inner">
-                                                        <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="client" value="1"><span><strong class="support-tickets-filters-select-item-client-name">Daniels Davidson</strong><svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
-                                                        <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="client" value="2"><span><strong class="support-tickets-filters-select-item-client-name">Carrington Carroll</strong><svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
-                                                        <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="client" value="3"><span><strong class="support-tickets-filters-select-item-client-name">Eddington Edwards</strong><svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
-                                                        <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="client" value="4"><span><strong class="support-tickets-filters-select-item-client-name">Jason Featherstonehaugh</strong><svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                            <div class="support-tickets-ctrl-filters-window-item-title">Status</div>
+                                            <div class="support-tickets-ctrl-filters-window-item-selected"></div>
+                                            <div class="support-tickets-ctrl-filters-window-item-content">
+                                                <div class="support-tickets-ctrl-filters-window-item-content-inner">
+                                                    <div class="support-tickets-ctrl-filters-window-item-close"><svg><use xlink:href="images/sprite.svg#support-filters-close"></use></svg></div>
+                                                    <div class="support-tickets-filters-select">
+                                                        <div class="support-tickets-filters-select-current"><span>Status</span><strong></strong><svg><use xlink:href="images/sprite.svg#form-select-arrow"></use></svg></div>
+                                                        <div class="support-tickets-filters-select-list">
+                                                            <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="status" value="all"><span><em class="status status-all"></em>All statuses<svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                            <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="status" value="new"><span><em class="status status-new"></em>New<svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                            <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="status" value="processing"><span><em class="status status-processing"></em>Processing<svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                            <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="status" value="payment"><span><em class="status status-payment"></em>Payment<svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                            <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="status" value="paid"><span><em class="status status-paid"></em>Paid<svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                            <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="status" value="execution"><span><em class="status status-execution"></em>On execution<svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                            <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="status" value="completed"><span><em class="status status-completed"></em>Completed<svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                            <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="status" value="rejected"><span><em class="status status-rejected"></em>Rejected<svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                        </div>
                                                     </div>
+                                                    <div class="support-tickets-ctrl-filters-window-item-content-apply"><a href="#" class="btn">Apply</a></div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="support-tickets-ctrl-filters-window-item">
-                                            <div class="support-tickets-filters-select">
-                                                <div class="support-tickets-filters-select-current"><span>Search by manager</span><strong></strong><svg><use xlink:href="images/sprite.svg#form-select-arrow"></use></svg></div>
-                                                <div class="support-tickets-filters-select-list">
-                                                    <div class="support-tickets-filters-select-search"><input type="text" name="search_manager" value="" placeholder="Search"><svg><use xlink:href="images/sprite.svg#icon-search"></use></svg></div>
-                                                    <div class="support-tickets-filters-select-list-inner">
-                                                        <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="manager" value="1"><span><strong class="support-tickets-filters-select-item-manager-avatar"><img src="files/manager-avatar-1.jpg" alt=""></strong><strong class="support-tickets-filters-select-item-manager-name">Carrington Carroll</strong><svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
-                                                        <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="manager" value="2"><span><strong class="support-tickets-filters-select-item-manager-avatar"><img src="files/manager-avatar-2.jpg" alt=""></strong><strong class="support-tickets-filters-select-item-manager-name">Daniels Davidson</strong><svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
-                                                        <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="manager" value="3"><span><strong class="support-tickets-filters-select-item-manager-avatar"><img src="files/manager-avatar-3.jpg" alt=""></strong><strong class="support-tickets-filters-select-item-manager-name">Eddington Edwards</strong><svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
-                                                        <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="manager" value="4"><span><strong class="support-tickets-filters-select-item-manager-avatar"><img src="files/manager-avatar-4.jpg" alt=""></strong><strong class="support-tickets-filters-select-item-manager-name">Faber Fane</strong><svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
-                                                    </div>
+                                            <div class="support-tickets-ctrl-filters-window-item-title">Date</div>
+                                            <div class="support-tickets-ctrl-filters-window-item-selected"></div>
+                                            <div class="support-tickets-ctrl-filters-window-item-content">
+                                                <div class="support-tickets-ctrl-filters-window-item-content-inner">
+                                                    <div class="support-tickets-ctrl-filters-window-item-close"><svg><use xlink:href="images/sprite.svg#support-filters-close"></use></svg></div>
+                                                    <div class="form-input form-input-date"><span>Date</span><input type="text" name="date" value="" id="filter-date"></div>
+                                                    <div class="support-tickets-ctrl-filters-window-item-content-apply"><a href="#" class="btn">Apply</a></div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="support-tickets-ctrl-filters-window-item">
-                                            <div class="support-tickets-filters-select">
-                                                <div class="support-tickets-filters-select-current"><span>Search by media</span><strong></strong><svg><use xlink:href="images/sprite.svg#form-select-arrow"></use></svg></div>
-                                                <div class="support-tickets-filters-select-list">
-                                                    <div class="support-tickets-filters-select-search"><input type="text" name="search_media" value="" placeholder="Search"><svg><use xlink:href="images/sprite.svg#icon-search"></use></svg></div>
-                                                    <div class="support-tickets-filters-select-list-inner">
-                                                        <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="media" value="1"><span><strong class="support-tickets-filters-select-item-media-logo"><img src="files/order-media-window-ctrl-add-popup-item-logo-1.png" alt=""></strong><strong class="support-tickets-filters-select-item-media-title">Market watch</strong><svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
-                                                        <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="media" value="2"><span><strong class="support-tickets-filters-select-item-media-logo"><img src="files/order-media-window-ctrl-add-popup-item-logo-2.png" alt=""></strong><strong class="support-tickets-filters-select-item-media-title">Forbes Poland</strong><svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
-                                                        <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="media" value="3"><span><strong class="support-tickets-filters-select-item-media-logo"><img src="files/order-media-window-ctrl-add-popup-item-logo-3.png" alt=""></strong><strong class="support-tickets-filters-select-item-media-title">Asia one</strong><svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
-                                                        <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="media" value="4"><span><strong class="support-tickets-filters-select-item-media-logo"><img src="files/order-media-window-ctrl-add-popup-item-logo-4.png" alt=""></strong><strong class="support-tickets-filters-select-item-media-title">CBS New York</strong><svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
-                                                        <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="media" value="5"><span><strong class="support-tickets-filters-select-item-media-logo"><img src="files/order-media-window-ctrl-add-popup-item-logo-5.png" alt=""></strong><strong class="support-tickets-filters-select-item-media-title">Digital journal</strong><svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
-                                                        <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="media" value="6"><span><strong class="support-tickets-filters-select-item-media-logo"><img src="files/order-media-window-ctrl-add-popup-item-logo-6.png" alt=""></strong><strong class="support-tickets-filters-select-item-media-title">Newsmax</strong><svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
-                                                        <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="media" value="7"><span><strong class="support-tickets-filters-select-item-media-logo"><img src="files/order-media-window-item-logo-1.png" alt=""></strong><strong class="support-tickets-filters-select-item-media-title">Dallas Observer</strong><svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                            <div class="support-tickets-ctrl-filters-window-item-title">Search by manager</div>
+                                            <div class="support-tickets-ctrl-filters-window-item-selected"></div>
+                                            <div class="support-tickets-ctrl-filters-window-item-content">
+                                                <div class="support-tickets-ctrl-filters-window-item-content-inner">
+                                                    <div class="support-tickets-ctrl-filters-window-item-close"><svg><use xlink:href="images/sprite.svg#support-filters-close"></use></svg></div>
+                                                    <div class="support-tickets-filters-select" data-title="Manager:">
+                                                        <div class="support-tickets-filters-select-current"><span>Search by manager</span><strong></strong><svg><use xlink:href="images/sprite.svg#form-select-arrow"></use></svg></div>
+                                                        <div class="support-tickets-filters-select-list">
+                                                            <div class="support-tickets-filters-select-search"><input type="text" name="search_manager" data-url="ajax/filters-manager.html" value="" placeholder="Search"><svg><use xlink:href="images/sprite.svg#icon-search"></use></svg></div>
+                                                            <div class="support-tickets-filters-select-list-inner">
+                                                                <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="manager" value="2"><span><strong class="support-tickets-filters-select-item-manager-avatar"><img src="files/manager-avatar-2.jpg" alt=""></strong><strong class="support-tickets-filters-select-item-manager-name">Daniels Davidson</strong><svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                                <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="manager" value="3"><span><strong class="support-tickets-filters-select-item-manager-avatar"><img src="files/manager-avatar-3.jpg" alt=""></strong><strong class="support-tickets-filters-select-item-manager-name">Eddington Edwards</strong><svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                            </div>
+                                                        </div>
                                                     </div>
+                                                    <div class="support-tickets-ctrl-filters-window-item-content-apply"><a href="#" class="btn">Apply</a></div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="support-tickets-ctrl-filters-window-item">
+                                            <div class="support-tickets-ctrl-filters-window-item-title">Search by client</div>
+                                            <div class="support-tickets-ctrl-filters-window-item-selected"></div>
+                                            <div class="support-tickets-ctrl-filters-window-item-content">
+                                                <div class="support-tickets-ctrl-filters-window-item-content-inner">
+                                                    <div class="support-tickets-ctrl-filters-window-item-close"><svg><use xlink:href="images/sprite.svg#support-filters-close"></use></svg></div>
+                                                    <div class="support-tickets-filters-select" data-title="Client:">
+                                                        <div class="support-tickets-filters-select-current"><span>Search by client</span><strong></strong><svg><use xlink:href="images/sprite.svg#form-select-arrow"></use></svg></div>
+                                                        <div class="support-tickets-filters-select-list">
+                                                            <div class="support-tickets-filters-select-search"><input type="text" name="search_client" data-url="ajax/filters-client.html" value="" placeholder="Search"><svg><use xlink:href="images/sprite.svg#icon-search"></use></svg></div>
+                                                            <div class="support-tickets-filters-select-list-inner">
+                                                                <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="client" value="2"><span><strong class="support-tickets-filters-select-item-client-name">Carrington Carroll</strong><svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                                <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="client" value="3"><span><strong class="support-tickets-filters-select-item-client-name">Eddington Edwards</strong><svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                                <div class="order-media-window-ctrl-add-popup-more">+ more client</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="support-tickets-ctrl-filters-window-item-content-apply"><a href="#" class="btn">Apply</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="support-tickets-ctrl-filters-window-item">
+                                            <div class="support-tickets-ctrl-filters-window-item-title">Search by media</div>
+                                            <div class="support-tickets-ctrl-filters-window-item-selected"></div>
+                                            <div class="support-tickets-ctrl-filters-window-item-content">
+                                                <div class="support-tickets-ctrl-filters-window-item-content-inner">
+                                                    <div class="support-tickets-ctrl-filters-window-item-close"><svg><use xlink:href="images/sprite.svg#support-filters-close"></use></svg></div>
+                                                    <div class="support-tickets-filters-select">
+                                                        <div class="support-tickets-filters-select-current"><span>Search by media</span><strong></strong><svg><use xlink:href="images/sprite.svg#form-select-arrow"></use></svg></div>
+                                                        <div class="support-tickets-filters-select-list">
+                                                            <div class="support-tickets-filters-select-search"><input type="text" name="search_media" data-url="ajax/filters-media.html" value="" placeholder="Search"><svg><use xlink:href="images/sprite.svg#icon-search"></use></svg></div>
+                                                            <div class="support-tickets-filters-select-list-inner">
+                                                                <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="media" value="2"><span><strong class="support-tickets-filters-select-item-media-logo"><img src="files/order-media-window-ctrl-add-popup-item-logo-2.png" alt=""></strong><strong class="support-tickets-filters-select-item-media-title">Forbes Poland</strong><svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                                <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="media" value="3"><span><strong class="support-tickets-filters-select-item-media-logo"><img src="files/order-media-window-ctrl-add-popup-item-logo-3.png" alt=""></strong><strong class="support-tickets-filters-select-item-media-title">Asia one</strong><svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                                <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="media" value="4"><span><strong class="support-tickets-filters-select-item-media-logo"><img src="files/order-media-window-ctrl-add-popup-item-logo-4.png" alt=""></strong><strong class="support-tickets-filters-select-item-media-title">CBS New York</strong><svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                                <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="media" value="5"><span><strong class="support-tickets-filters-select-item-media-logo"><img src="files/order-media-window-ctrl-add-popup-item-logo-5.png" alt=""></strong><strong class="support-tickets-filters-select-item-media-title">Digital journal</strong><svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="support-tickets-ctrl-filters-window-item-content-apply"><a href="#" class="btn">Apply</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="support-tickets-ctrl-filters-window-clear"><a href="#">Clear All</a></div>
+                                        <div class="support-tickets-ctrl-filters-window-apply"><a href="#" class="btn">Apply</a></div>
                                     </form>
                                 </div>
                             </div>
@@ -269,48 +307,18 @@
                             <div class="manager-orders-header manager-orders-header-status">Status</div>
                         </div>
 
-                        <div class="manager-orders-list">
+                        <!-- support tickets container -->
+                        <div class="support-tickets-container">
 
-                            <!-- manager orders item -->
-                            <div class="manager-orders-item new">
-                                <a href="#" class="manager-orders-item-header">
-                                    <div class="manager-orders-item-header-id">0014547</div>
-                                    <div class="manager-orders-item-header-date">06/30/2023</div>
-                                    <div class="manager-orders-item-header-client">Daniels Davidson</div>
-                                    <div class="manager-orders-item-header-order">
-                                        <div class="personal-orders-item-header-order-list">
-                                            <div class="personal-orders-item-header-order-item"><img src="files/personal-orders-item-header-order-01.png" alt=""></div>
-                                            <div class="personal-orders-item-header-order-item"><img src="files/personal-orders-item-header-order-02.png" alt=""></div>
-                                            <div class="personal-orders-item-header-order-item"><img src="files/personal-orders-item-header-order-03.png" alt=""></div>
-                                            <div class="personal-orders-item-header-order-item"><img src="files/personal-orders-item-header-order-04.png" alt=""></div>
-                                            <div class="personal-orders-item-header-order-item"><img src="files/personal-orders-item-header-order-05.png" alt=""></div>
-                                        </div>
-                                    </div>
-                                    <div class="manager-orders-item-header-manager">
-                                        <div class="manager-orders-item-header-manager-name">Johny Nickkelbroker</div>
-                                        <div class="manager-orders-item-header-manager-edit"><svg><use xlink:href="images/sprite.svg#icon-edit"></use></svg></div>
-                                    </div>
-                                    <div class="manager-orders-item-header-cost">$71 350</div>
-                                    <div class="manager-orders-item-header-status"><span class="status status-payment"><svg><use xlink:href="images/sprite.svg#status-payment"></use></svg>Payment</span></div>
-                                    <svg class="manager-orders-item-header-arrow"><use xlink:href="images/sprite.svg#personal-orders-item-header"></use></svg>
-                                </a>
-                                <div class="manager-orders-item-content">
-                                    <div class="manager-orders-item-info">
-                                        <div class="manager-orders-item-info-title">Client</div>
-                                        <div class="manager-orders-item-info-value">Daniels Davidson</div>
-                                    </div>
-                                    <div class="manager-orders-item-info">
-                                        <div class="manager-orders-item-info-title">Manager</div>
-                                        <div class="manager-orders-item-info-value">
-                                            <div class="manager-orders-item-info-manager">
-                                                <div class="manager-orders-item-header-manager-name">Johny Nickkelbroker</div>
-                                                <div class="manager-orders-item-header-manager-edit"><svg><use xlink:href="images/sprite.svg#icon-edit"></use></svg></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="manager-orders-item-info">
-                                        <div class="manager-orders-item-info-title">Order</div>
-                                        <div class="manager-orders-item-info-value manager-orders-item-info-value-order">
+                            <div class="manager-orders-list">
+
+                                <!-- manager orders item -->
+                                <div class="manager-orders-item new">
+                                    <a href="#" class="manager-orders-item-header">
+                                        <div class="manager-orders-item-header-id">0014547</div>
+                                        <div class="manager-orders-item-header-date">06/30/2023</div>
+                                        <div class="manager-orders-item-header-client">Daniels Davidson</div>
+                                        <div class="manager-orders-item-header-order">
                                             <div class="personal-orders-item-header-order-list">
                                                 <div class="personal-orders-item-header-order-item"><img src="files/personal-orders-item-header-order-01.png" alt=""></div>
                                                 <div class="personal-orders-item-header-order-item"><img src="files/personal-orders-item-header-order-02.png" alt=""></div>
@@ -319,135 +327,172 @@
                                                 <div class="personal-orders-item-header-order-item"><img src="files/personal-orders-item-header-order-05.png" alt=""></div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="manager-orders-item-content-btn"><a href="#" class="btn btn-border">To Order<svg><use xlink:href="images/sprite.svg#support-tickets-item-content-btn"></use></svg></a></div>
-                                </div>
-                            </div>
-                            <!-- manager orders item END -->
-
-                            <!-- manager orders item -->
-                            <div class="manager-orders-item new">
-                                <a href="#" class="manager-orders-item-header">
-                                    <div class="manager-orders-item-header-id">0014547</div>
-                                    <div class="manager-orders-item-header-date">09/30/2023</div>
-                                    <div class="manager-orders-item-header-client">Carrington Carroll</div>
-                                    <div class="manager-orders-item-header-order">
-                                        <div class="personal-orders-item-header-order-list">
-                                            <div class="personal-orders-item-header-order-item"><img src="files/personal-orders-item-header-order-04.png" alt=""></div>
-                                            <div class="personal-orders-item-header-order-item"><img src="files/personal-orders-item-header-order-05.png" alt=""></div>
+                                        <div class="manager-orders-item-header-manager">
+                                            <div class="manager-orders-item-header-manager-name">Johny Nickkelbroker</div>
+                                            <div class="manager-orders-item-header-manager-edit"><svg><use xlink:href="images/sprite.svg#icon-edit"></use></svg></div>
                                         </div>
-                                    </div>
-                                    <div class="manager-orders-item-header-manager">
-                                        <div class="manager-orders-item-header-manager-select">Set manager<svg><use xlink:href="images/sprite.svg#manager-orders-item-header-manager-select"></use></svg></div>
-                                    </div>
-                                    <div class="manager-orders-item-header-cost">$1200</div>
-                                    <div class="manager-orders-item-header-status"><span class="status status-new"><svg><use xlink:href="images/sprite.svg#status-new"></use></svg>New</span></div>
-                                    <svg class="manager-orders-item-header-arrow"><use xlink:href="images/sprite.svg#personal-orders-item-header"></use></svg>
-                                </a>
-                                <div class="manager-orders-item-content">
-                                    <div class="manager-orders-item-info">
-                                        <div class="manager-orders-item-info-title">Client</div>
-                                        <div class="manager-orders-item-info-value">Carrington Carroll</div>
-                                    </div>
-                                    <div class="manager-orders-item-info">
-                                        <div class="manager-orders-item-info-title">Manager</div>
-                                        <div class="manager-orders-item-info-value">
-                                            <div class="manager-orders-item-info-manager">
-                                                <div class="manager-orders-item-header-manager-select">Set manager<svg><use xlink:href="images/sprite.svg#manager-orders-item-header-manager-select"></use></svg></div>
+                                        <div class="manager-orders-item-header-cost">$71 350</div>
+                                        <div class="manager-orders-item-header-status"><span class="status status-payment"><svg><use xlink:href="images/sprite.svg#status-payment"></use></svg>Payment</span></div>
+                                        <svg class="manager-orders-item-header-arrow"><use xlink:href="images/sprite.svg#personal-orders-item-header"></use></svg>
+                                    </a>
+                                    <div class="manager-orders-item-content">
+                                        <div class="manager-orders-item-info">
+                                            <div class="manager-orders-item-info-title">Client</div>
+                                            <div class="manager-orders-item-info-value">Daniels Davidson</div>
+                                        </div>
+                                        <div class="manager-orders-item-info">
+                                            <div class="manager-orders-item-info-title">Manager</div>
+                                            <div class="manager-orders-item-info-value">
+                                                <div class="manager-orders-item-info-manager">
+                                                    <div class="manager-orders-item-header-manager-name">Johny Nickkelbroker</div>
+                                                    <div class="manager-orders-item-header-manager-edit"><svg><use xlink:href="images/sprite.svg#icon-edit"></use></svg></div>
+                                                </div>
                                             </div>
                                         </div>
+                                        <div class="manager-orders-item-info">
+                                            <div class="manager-orders-item-info-title">Order</div>
+                                            <div class="manager-orders-item-info-value manager-orders-item-info-value-order">
+                                                <div class="personal-orders-item-header-order-list">
+                                                    <div class="personal-orders-item-header-order-item"><img src="files/personal-orders-item-header-order-01.png" alt=""></div>
+                                                    <div class="personal-orders-item-header-order-item"><img src="files/personal-orders-item-header-order-02.png" alt=""></div>
+                                                    <div class="personal-orders-item-header-order-item"><img src="files/personal-orders-item-header-order-03.png" alt=""></div>
+                                                    <div class="personal-orders-item-header-order-item"><img src="files/personal-orders-item-header-order-04.png" alt=""></div>
+                                                    <div class="personal-orders-item-header-order-item"><img src="files/personal-orders-item-header-order-05.png" alt=""></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="manager-orders-item-content-btn"><a href="#" class="btn btn-border">To Order<svg><use xlink:href="images/sprite.svg#support-tickets-item-content-btn"></use></svg></a></div>
                                     </div>
-                                    <div class="manager-orders-item-info">
-                                        <div class="manager-orders-item-info-title">Order</div>
-                                        <div class="manager-orders-item-info-value manager-orders-item-info-value-order">
+                                </div>
+                                <!-- manager orders item END -->
+
+                                <!-- manager orders item -->
+                                <div class="manager-orders-item new">
+                                    <a href="#" class="manager-orders-item-header">
+                                        <div class="manager-orders-item-header-id">0014547</div>
+                                        <div class="manager-orders-item-header-date">09/30/2023</div>
+                                        <div class="manager-orders-item-header-client">Carrington Carroll</div>
+                                        <div class="manager-orders-item-header-order">
                                             <div class="personal-orders-item-header-order-list">
                                                 <div class="personal-orders-item-header-order-item"><img src="files/personal-orders-item-header-order-04.png" alt=""></div>
                                                 <div class="personal-orders-item-header-order-item"><img src="files/personal-orders-item-header-order-05.png" alt=""></div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="manager-orders-item-content-btn"><a href="#" class="btn btn-border">To Order<svg><use xlink:href="images/sprite.svg#support-tickets-item-content-btn"></use></svg></a></div>
-                                </div>
-                            </div>
-                            <!-- manager orders item END -->
-
-                            <!-- manager orders item -->
-                            <div class="manager-orders-item">
-                                <a href="#" class="manager-orders-item-header">
-                                    <div class="manager-orders-item-header-id">0014547</div>
-                                    <div class="manager-orders-item-header-date">09/12/2023</div>
-                                    <div class="manager-orders-item-header-client">Eddington Edwards</div>
-                                    <div class="manager-orders-item-header-order">Bloomberg</div>
-                                    <div class="manager-orders-item-header-manager">
-                                        <div class="manager-orders-item-header-manager-name">Matthew Steven</div>
-                                        <div class="manager-orders-item-header-manager-edit"><svg><use xlink:href="images/sprite.svg#icon-edit"></use></svg></div>
-                                    </div>
-                                    <div class="manager-orders-item-header-cost">$1600</div>
-                                    <div class="manager-orders-item-header-status"><span class="status status-execution"><svg><use xlink:href="images/sprite.svg#status-execution"></use></svg>On execution</span></div>
-                                    <svg class="manager-orders-item-header-arrow"><use xlink:href="images/sprite.svg#personal-orders-item-header"></use></svg>
-                                </a>
-                                <div class="manager-orders-item-content">
-                                    <div class="manager-orders-item-info">
-                                        <div class="manager-orders-item-info-title">Client</div>
-                                        <div class="manager-orders-item-info-value">Eddington Edwards</div>
-                                    </div>
-                                    <div class="manager-orders-item-info">
-                                        <div class="manager-orders-item-info-title">Manager</div>
-                                        <div class="manager-orders-item-info-value">
-                                            <div class="manager-orders-item-info-manager">
-                                                <div class="manager-orders-item-header-manager-name">Matthew Steven</div>
-                                                <div class="manager-orders-item-header-manager-edit"><svg><use xlink:href="images/sprite.svg#icon-edit"></use></svg></div>
+                                        <div class="manager-orders-item-header-manager">
+                                            <div class="manager-orders-item-header-manager-select">Set manager<svg><use xlink:href="images/sprite.svg#manager-orders-item-header-manager-select"></use></svg></div>
+                                        </div>
+                                        <div class="manager-orders-item-header-cost">$1200</div>
+                                        <div class="manager-orders-item-header-status"><span class="status status-new"><svg><use xlink:href="images/sprite.svg#status-new"></use></svg>New</span></div>
+                                        <svg class="manager-orders-item-header-arrow"><use xlink:href="images/sprite.svg#personal-orders-item-header"></use></svg>
+                                    </a>
+                                    <div class="manager-orders-item-content">
+                                        <div class="manager-orders-item-info">
+                                            <div class="manager-orders-item-info-title">Client</div>
+                                            <div class="manager-orders-item-info-value">Carrington Carroll</div>
+                                        </div>
+                                        <div class="manager-orders-item-info">
+                                            <div class="manager-orders-item-info-title">Manager</div>
+                                            <div class="manager-orders-item-info-value">
+                                                <div class="manager-orders-item-info-manager">
+                                                    <div class="manager-orders-item-header-manager-select">Set manager<svg><use xlink:href="images/sprite.svg#manager-orders-item-header-manager-select"></use></svg></div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="manager-orders-item-info">
-                                        <div class="manager-orders-item-info-title">Order</div>
-                                        <div class="manager-orders-item-info-value manager-orders-item-info-value-order">Bloomberg</div>
-                                    </div>
-                                    <div class="manager-orders-item-content-btn"><a href="#" class="btn btn-border">To Order<svg><use xlink:href="images/sprite.svg#support-tickets-item-content-btn"></use></svg></a></div>
-                                </div>
-                            </div>
-                            <!-- manager orders item END -->
-
-                            <!-- manager orders item -->
-                            <div class="manager-orders-item archive">
-                                <a href="#" class="manager-orders-item-header">
-                                    <div class="manager-orders-item-header-id">0014547</div>
-                                    <div class="manager-orders-item-header-date">06/30/2023</div>
-                                    <div class="manager-orders-item-header-client">Jason Featherstonehaugh</div>
-                                    <div class="manager-orders-item-header-order">Digital Journal, StreetInsider</div>
-                                    <div class="manager-orders-item-header-manager">
-                                        <div class="manager-orders-item-header-manager-name">Matthew Steven</div>
-                                        <div class="manager-orders-item-header-manager-edit"><svg><use xlink:href="images/sprite.svg#icon-edit"></use></svg></div>
-                                    </div>
-                                    <div class="manager-orders-item-header-cost">$300</div>
-                                    <div class="manager-orders-item-header-status"><span class="status status-completed"><svg><use xlink:href="images/sprite.svg#status-completed"></use></svg>Completed</span></div>
-                                    <svg class="manager-orders-item-header-arrow"><use xlink:href="images/sprite.svg#personal-orders-item-header"></use></svg>
-                                </a>
-                                <div class="manager-orders-item-content">
-                                    <div class="manager-orders-item-info">
-                                        <div class="manager-orders-item-info-title">Client</div>
-                                        <div class="manager-orders-item-info-value">Jason Featherstonehaugh</div>
-                                    </div>
-                                    <div class="manager-orders-item-info">
-                                        <div class="manager-orders-item-info-title">Manager</div>
-                                        <div class="manager-orders-item-info-value">
-                                            <div class="manager-orders-item-info-manager">
-                                                <div class="manager-orders-item-header-manager-name">Matthew Steven</div>
-                                                <div class="manager-orders-item-header-manager-edit"><svg><use xlink:href="images/sprite.svg#icon-edit"></use></svg></div>
+                                        <div class="manager-orders-item-info">
+                                            <div class="manager-orders-item-info-title">Order</div>
+                                            <div class="manager-orders-item-info-value manager-orders-item-info-value-order">
+                                                <div class="personal-orders-item-header-order-list">
+                                                    <div class="personal-orders-item-header-order-item"><img src="files/personal-orders-item-header-order-04.png" alt=""></div>
+                                                    <div class="personal-orders-item-header-order-item"><img src="files/personal-orders-item-header-order-05.png" alt=""></div>
+                                                </div>
                                             </div>
                                         </div>
+                                        <div class="manager-orders-item-content-btn"><a href="#" class="btn btn-border">To Order<svg><use xlink:href="images/sprite.svg#support-tickets-item-content-btn"></use></svg></a></div>
                                     </div>
-                                    <div class="manager-orders-item-info">
-                                        <div class="manager-orders-item-info-title">Order</div>
-                                        <div class="manager-orders-item-info-value manager-orders-item-info-value-order">Digital Journal, StreetInsider</div>
-                                    </div>
-                                    <div class="manager-orders-item-content-btn"><a href="#" class="btn btn-border">To Order<svg><use xlink:href="images/sprite.svg#support-tickets-item-content-btn"></use></svg></a></div>
                                 </div>
+                                <!-- manager orders item END -->
+
+                                <!-- manager orders item -->
+                                <div class="manager-orders-item">
+                                    <a href="#" class="manager-orders-item-header">
+                                        <div class="manager-orders-item-header-id">0014547</div>
+                                        <div class="manager-orders-item-header-date">09/12/2023</div>
+                                        <div class="manager-orders-item-header-client">Eddington Edwards</div>
+                                        <div class="manager-orders-item-header-order">Bloomberg</div>
+                                        <div class="manager-orders-item-header-manager">
+                                            <div class="manager-orders-item-header-manager-name">Matthew Steven</div>
+                                            <div class="manager-orders-item-header-manager-edit"><svg><use xlink:href="images/sprite.svg#icon-edit"></use></svg></div>
+                                        </div>
+                                        <div class="manager-orders-item-header-cost">$1600</div>
+                                        <div class="manager-orders-item-header-status"><span class="status status-execution"><svg><use xlink:href="images/sprite.svg#status-execution"></use></svg>On execution</span></div>
+                                        <svg class="manager-orders-item-header-arrow"><use xlink:href="images/sprite.svg#personal-orders-item-header"></use></svg>
+                                    </a>
+                                    <div class="manager-orders-item-content">
+                                        <div class="manager-orders-item-info">
+                                            <div class="manager-orders-item-info-title">Client</div>
+                                            <div class="manager-orders-item-info-value">Eddington Edwards</div>
+                                        </div>
+                                        <div class="manager-orders-item-info">
+                                            <div class="manager-orders-item-info-title">Manager</div>
+                                            <div class="manager-orders-item-info-value">
+                                                <div class="manager-orders-item-info-manager">
+                                                    <div class="manager-orders-item-header-manager-name">Matthew Steven</div>
+                                                    <div class="manager-orders-item-header-manager-edit"><svg><use xlink:href="images/sprite.svg#icon-edit"></use></svg></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="manager-orders-item-info">
+                                            <div class="manager-orders-item-info-title">Order</div>
+                                            <div class="manager-orders-item-info-value manager-orders-item-info-value-order">Bloomberg</div>
+                                        </div>
+                                        <div class="manager-orders-item-content-btn"><a href="#" class="btn btn-border">To Order<svg><use xlink:href="images/sprite.svg#support-tickets-item-content-btn"></use></svg></a></div>
+                                    </div>
+                                </div>
+                                <!-- manager orders item END -->
+
+                                <!-- manager orders item -->
+                                <div class="manager-orders-item archive">
+                                    <a href="#" class="manager-orders-item-header">
+                                        <div class="manager-orders-item-header-id">0014547</div>
+                                        <div class="manager-orders-item-header-date">06/30/2023</div>
+                                        <div class="manager-orders-item-header-client">Jason Featherstonehaugh</div>
+                                        <div class="manager-orders-item-header-order">Digital Journal, StreetInsider</div>
+                                        <div class="manager-orders-item-header-manager">
+                                            <div class="manager-orders-item-header-manager-name">Matthew Steven</div>
+                                            <div class="manager-orders-item-header-manager-edit"><svg><use xlink:href="images/sprite.svg#icon-edit"></use></svg></div>
+                                        </div>
+                                        <div class="manager-orders-item-header-cost">$300</div>
+                                        <div class="manager-orders-item-header-status"><span class="status status-completed"><svg><use xlink:href="images/sprite.svg#status-completed"></use></svg>Completed</span></div>
+                                        <svg class="manager-orders-item-header-arrow"><use xlink:href="images/sprite.svg#personal-orders-item-header"></use></svg>
+                                    </a>
+                                    <div class="manager-orders-item-content">
+                                        <div class="manager-orders-item-info">
+                                            <div class="manager-orders-item-info-title">Client</div>
+                                            <div class="manager-orders-item-info-value">Jason Featherstonehaugh</div>
+                                        </div>
+                                        <div class="manager-orders-item-info">
+                                            <div class="manager-orders-item-info-title">Manager</div>
+                                            <div class="manager-orders-item-info-value">
+                                                <div class="manager-orders-item-info-manager">
+                                                    <div class="manager-orders-item-header-manager-name">Matthew Steven</div>
+                                                    <div class="manager-orders-item-header-manager-edit"><svg><use xlink:href="images/sprite.svg#icon-edit"></use></svg></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="manager-orders-item-info">
+                                            <div class="manager-orders-item-info-title">Order</div>
+                                            <div class="manager-orders-item-info-value manager-orders-item-info-value-order">Digital Journal, StreetInsider</div>
+                                        </div>
+                                        <div class="manager-orders-item-content-btn"><a href="#" class="btn btn-border">To Order<svg><use xlink:href="images/sprite.svg#support-tickets-item-content-btn"></use></svg></a></div>
+                                    </div>
+                                </div>
+                                <!-- manager orders item END -->
+
                             </div>
-                            <!-- manager orders item END -->
 
                         </div>
+                        <!-- support tickets container END -->
+
                     </div>
                     <!-- manager orders END -->
 

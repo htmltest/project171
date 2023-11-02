@@ -187,15 +187,103 @@
 
                         <!-- support tickets ctrl -->
                         <div class="support-tickets-ctrl">
-                            <div class="support-tickets-ctrl-filters-selected">
-                                <div class="support-tickets-ctrl-filters-selected-item">
-                                    <div class="support-tickets-ctrl-filters-selected-item-title">Changed by:</div>
-                                    <div class="support-tickets-ctrl-filters-selected-item-value">Daniels Davidson</div>
-                                    <a href="#" class="support-tickets-ctrl-filters-selected-item-remove"><svg><use xlink:href="images/sprite.svg#support-tickets-ctrl-filters-selected-item-remove"></use></svg></a>
-                                </div>
-                            </div>
+                            <div class="support-tickets-ctrl-filters-selected"></div>
                             <div class="support-tickets-ctrl-filters">
-                                <a href="#" class="btn btn-blue"><svg><use xlink:href="images/sprite.svg#support-tickets-ctrl-filters"></use></svg>filter</a>
+                                <a href="#" class="btn btn-blue support-tickets-ctrl-filters-link"><svg><use xlink:href="images/sprite.svg#support-tickets-ctrl-filters"></use></svg>filter</a>
+                                <div class="support-tickets-ctrl-filters-window">
+                                    <div class="support-tickets-ctrl-filters-window-title"><a href="#"><svg><use xlink:href="images/sprite.svg#support-filters-close"></use></svg></a>Filter</div>
+                                    <form action="ajax/manager-support-tickets.html" method="post">
+                                        <div class="support-tickets-ctrl-filters-window-item support-tickets-ctrl-filters-window-item-narrow">
+                                            <div class="support-tickets-ctrl-filters-window-item-title">Subject</div>
+                                            <div class="support-tickets-ctrl-filters-window-item-selected"></div>
+                                            <div class="support-tickets-ctrl-filters-window-item-content">
+                                                <div class="support-tickets-ctrl-filters-window-item-content-inner">
+                                                    <div class="support-tickets-ctrl-filters-window-item-close"><svg><use xlink:href="images/sprite.svg#support-filters-close"></use></svg></div>
+                                                    <div class="support-tickets-filters-select">
+                                                        <div class="support-tickets-filters-select-current"><span>Subject</span><strong></strong><svg><use xlink:href="images/sprite.svg#form-select-arrow"></use></svg></div>
+                                                        <div class="support-tickets-filters-select-list">
+                                                            <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="subject" value="payment"><span>Payment and checkout<svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                            <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="subject" value="writint"><span>Article writing<svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="support-tickets-ctrl-filters-window-item-content-apply"><a href="#" class="btn">Apply</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="support-tickets-ctrl-filters-window-item support-tickets-ctrl-filters-window-item-narrow">
+                                            <div class="support-tickets-ctrl-filters-window-item-title">Changed by</div>
+                                            <div class="support-tickets-ctrl-filters-window-item-selected"></div>
+                                            <div class="support-tickets-ctrl-filters-window-item-content">
+                                                <div class="support-tickets-ctrl-filters-window-item-content-inner">
+                                                    <div class="support-tickets-ctrl-filters-window-item-close"><svg><use xlink:href="images/sprite.svg#support-filters-close"></use></svg></div>
+                                                    <div class="support-tickets-filters-select" data-title="Changed by:">
+                                                        <div class="support-tickets-filters-select-current"><span>Changed by</span><strong></strong><svg><use xlink:href="images/sprite.svg#form-select-arrow"></use></svg></div>
+                                                        <div class="support-tickets-filters-select-list">
+                                                            <div class="support-tickets-filters-select-search"><input type="text" name="search_manager" data-url="ajax/filters-manager.html" value="" placeholder="Search"><svg><use xlink:href="images/sprite.svg#icon-search"></use></svg></div>
+                                                            <div class="support-tickets-filters-select-list-inner">
+                                                                <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="manager" value="2"><span><strong class="support-tickets-filters-select-item-manager-avatar"><img src="files/manager-avatar-2.jpg" alt=""></strong><strong class="support-tickets-filters-select-item-manager-name">Daniels Davidson</strong><svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                                <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="manager" value="3"><span><strong class="support-tickets-filters-select-item-manager-avatar"><img src="files/manager-avatar-3.jpg" alt=""></strong><strong class="support-tickets-filters-select-item-manager-name">Eddington Edwards</strong><svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="support-tickets-ctrl-filters-window-item-content-apply"><a href="#" class="btn">Apply</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="support-tickets-ctrl-filters-window-item support-tickets-ctrl-filters-window-item-narrow">
+                                            <div class="support-tickets-ctrl-filters-window-item-title">Status</div>
+                                            <div class="support-tickets-ctrl-filters-window-item-selected"></div>
+                                            <div class="support-tickets-ctrl-filters-window-item-content">
+                                                <div class="support-tickets-ctrl-filters-window-item-content-inner">
+                                                    <div class="support-tickets-ctrl-filters-window-item-close"><svg><use xlink:href="images/sprite.svg#support-filters-close"></use></svg></div>
+                                                    <div class="support-tickets-filters-select">
+                                                        <div class="support-tickets-filters-select-current"><span>Status</span><strong></strong><svg><use xlink:href="images/sprite.svg#form-select-arrow"></use></svg></div>
+                                                        <div class="support-tickets-filters-select-list">
+                                                            <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="status" value="got"><span><em class="status status-execution"></em>Got Response<svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                            <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="status" value="waiting"><span><em class="status status-processing"></em>Waiting Response<svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                            <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="status" value="closed"><span><em class="status status-completed"></em>Ticket Closed<svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="support-tickets-ctrl-filters-window-item-content-apply"><a href="#" class="btn">Apply</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="support-tickets-ctrl-filters-window-item support-tickets-ctrl-filters-window-item-narrow">
+                                            <div class="support-tickets-ctrl-filters-window-item-title">Date</div>
+                                            <div class="support-tickets-ctrl-filters-window-item-selected"></div>
+                                            <div class="support-tickets-ctrl-filters-window-item-content">
+                                                <div class="support-tickets-ctrl-filters-window-item-content-inner">
+                                                    <div class="support-tickets-ctrl-filters-window-item-close"><svg><use xlink:href="images/sprite.svg#support-filters-close"></use></svg></div>
+                                                    <div class="form-input form-input-date"><span>Date</span><input type="text" name="date" value="" id="filter-date"></div>
+                                                    <div class="support-tickets-ctrl-filters-window-item-content-apply"><a href="#" class="btn">Apply</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="support-tickets-ctrl-filters-window-item support-tickets-ctrl-filters-window-item-narrow">
+                                            <div class="support-tickets-ctrl-filters-window-item-title">Client</div>
+                                            <div class="support-tickets-ctrl-filters-window-item-selected"></div>
+                                            <div class="support-tickets-ctrl-filters-window-item-content">
+                                                <div class="support-tickets-ctrl-filters-window-item-content-inner">
+                                                    <div class="support-tickets-ctrl-filters-window-item-close"><svg><use xlink:href="images/sprite.svg#support-filters-close"></use></svg></div>
+                                                    <div class="support-tickets-filters-select" data-title="Client:">
+                                                        <div class="support-tickets-filters-select-current"><span>Client</span><strong></strong><svg><use xlink:href="images/sprite.svg#form-select-arrow"></use></svg></div>
+                                                        <div class="support-tickets-filters-select-list">
+                                                            <div class="support-tickets-filters-select-search"><input type="text" name="search_client" data-url="ajax/filters-client.html" value="" placeholder="Search"><svg><use xlink:href="images/sprite.svg#icon-search"></use></svg></div>
+                                                            <div class="support-tickets-filters-select-list-inner">
+                                                                <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="client" value="2"><span><strong class="support-tickets-filters-select-item-client-name">Carrington Carroll</strong><svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                                <div class="support-tickets-filters-select-item"><label><input type="checkbox" name="client" value="3"><span><strong class="support-tickets-filters-select-item-client-name">Eddington Edwards</strong><svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                                <div class="order-media-window-ctrl-add-popup-more">+ more client</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="support-tickets-ctrl-filters-window-item-content-apply"><a href="#" class="btn">Apply</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="support-tickets-ctrl-filters-window-clear support-tickets-ctrl-filters-window-clear-narrow"><a href="#">Clear All</a></div>
+                                        <div class="support-tickets-ctrl-filters-window-apply"><a href="#" class="btn">Apply</a></div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                         <!-- support tickets ctrl END -->
@@ -208,98 +296,105 @@
                             <div class="support-tickets-header-changed">changed</div>
                             <div class="support-tickets-header-messages">messages</div>
                         </div>
-                        <div class="support-tickets-list">
-                            <div class="support-tickets-item new">
-                                <a href="#" class="support-tickets-item-header">
-                                    <div class="support-tickets-item-ticket">54868541</div>
-                                    <div class="support-tickets-item-subject">Payment and checkout<span>Carrington Carroll</span></div>
-                                    <div class="support-tickets-item-status"><div class="status status-response">Got Response</div></div>
-                                    <div class="support-tickets-item-changedby">E-PR Support Team</div>
-                                    <div class="support-tickets-item-changed">06/29/2023 &nbsp;11:07 a.m.</div>
-                                    <div class="support-tickets-item-messages">12</div>
-                                    <svg class="support-tickets-item-arrow"><use xlink:href="images/sprite.svg#personal-orders-item-header"></use></svg>
-                                </a>
-                                <div class="support-tickets-item-content">
-                                    <div class="support-tickets-item-info support-tickets-item-info-subject">
-                                        <div class="support-tickets-item-info-title">Subject</div>
-                                        <div class="support-tickets-item-info-value">Payment and checkout</div>
+
+                        <!-- support tickets container -->
+                        <div class="support-tickets-container">
+
+                            <div class="support-tickets-list">
+                                <div class="support-tickets-item new">
+                                    <a href="#" class="support-tickets-item-header">
+                                        <div class="support-tickets-item-ticket">54868541</div>
+                                        <div class="support-tickets-item-subject">Payment and checkout<span>Carrington Carroll</span></div>
+                                        <div class="support-tickets-item-status"><div class="status status-response">Got Response</div></div>
+                                        <div class="support-tickets-item-changedby">E-PR Support Team</div>
+                                        <div class="support-tickets-item-changed">06/29/2023 &nbsp;11:07 a.m.</div>
+                                        <div class="support-tickets-item-messages">12</div>
+                                        <svg class="support-tickets-item-arrow"><use xlink:href="images/sprite.svg#personal-orders-item-header"></use></svg>
+                                    </a>
+                                    <div class="support-tickets-item-content">
+                                        <div class="support-tickets-item-info support-tickets-item-info-subject">
+                                            <div class="support-tickets-item-info-title">Subject</div>
+                                            <div class="support-tickets-item-info-value">Payment and checkout</div>
+                                        </div>
+                                        <div class="support-tickets-item-info">
+                                            <div class="support-tickets-item-info-title">Client</div>
+                                            <div class="support-tickets-item-info-value">Carrington Carroll</div>
+                                        </div>
+                                        <div class="support-tickets-item-info">
+                                            <div class="support-tickets-item-info-title">Changed by</div>
+                                            <div class="support-tickets-item-info-value">E-PR Support Team</div>
+                                        </div>
+                                        <div class="support-tickets-item-info">
+                                            <div class="support-tickets-item-info-title">Messages</div>
+                                            <div class="support-tickets-item-info-value">12</div>
+                                        </div>
+                                        <div class="support-tickets-item-content-btn"><a href="#" class="btn btn-border">To inquiry<svg><use xlink:href="images/sprite.svg#support-tickets-item-content-btn"></use></svg></a></div>
                                     </div>
-                                    <div class="support-tickets-item-info">
-                                        <div class="support-tickets-item-info-title">Client</div>
-                                        <div class="support-tickets-item-info-value">Carrington Carroll</div>
+                                </div>
+                                <div class="support-tickets-item new">
+                                    <a href="#" class="support-tickets-item-header">
+                                        <div class="support-tickets-item-ticket">54868541</div>
+                                        <div class="support-tickets-item-subject">Article writing<span>Eddington Edwards</span></div>
+                                        <div class="support-tickets-item-status"><div class="status status-waiting">Waiting Response</div></div>
+                                        <div class="support-tickets-item-changedby">E-PR Support Team</div>
+                                        <div class="support-tickets-item-changed">06/29/2023 &nbsp;11:07 a.m.</div>
+                                        <div class="support-tickets-item-messages">7</div>
+                                        <svg class="support-tickets-item-arrow"><use xlink:href="images/sprite.svg#personal-orders-item-header"></use></svg>
+                                    </a>
+                                    <div class="support-tickets-item-content">
+                                        <div class="support-tickets-item-info support-tickets-item-info-subject">
+                                            <div class="support-tickets-item-info-title">Subject</div>
+                                            <div class="support-tickets-item-info-value">Article writing</div>
+                                        </div>
+                                        <div class="support-tickets-item-info">
+                                            <div class="support-tickets-item-info-title">Client</div>
+                                            <div class="support-tickets-item-info-value">Eddington Edwards</div>
+                                        </div>
+                                        <div class="support-tickets-item-info">
+                                            <div class="support-tickets-item-info-title">Changed by</div>
+                                            <div class="support-tickets-item-info-value">E-PR Support Team</div>
+                                        </div>
+                                        <div class="support-tickets-item-info">
+                                            <div class="support-tickets-item-info-title">Messages</div>
+                                            <div class="support-tickets-item-info-value">7</div>
+                                        </div>
+                                        <div class="support-tickets-item-content-btn"><a href="#" class="btn btn-border">To inquiry<svg><use xlink:href="images/sprite.svg#support-tickets-item-content-btn"></use></svg></a></div>
                                     </div>
-                                    <div class="support-tickets-item-info">
-                                        <div class="support-tickets-item-info-title">Changed by</div>
-                                        <div class="support-tickets-item-info-value">E-PR Support Team</div>
+                                </div>
+                                <div class="support-tickets-item closed">
+                                    <a href="#" class="support-tickets-item-header">
+                                        <div class="support-tickets-item-ticket">54868541</div>
+                                        <div class="support-tickets-item-subject">Article writing<span>Eddington Edwards</span></div>
+                                        <div class="support-tickets-item-status"><div class="status status-closed">Ticket Closed</div></div>
+                                        <div class="support-tickets-item-changedby">Eddington Edwards</div>
+                                        <div class="support-tickets-item-changed">06/29/2023 &nbsp;11:07 a.m.</div>
+                                        <div class="support-tickets-item-messages">112</div>
+                                        <svg class="support-tickets-item-arrow"><use xlink:href="images/sprite.svg#personal-orders-item-header"></use></svg>
+                                    </a>
+                                    <div class="support-tickets-item-content">
+                                        <div class="support-tickets-item-info support-tickets-item-info-subject">
+                                            <div class="support-tickets-item-info-title">Subject</div>
+                                            <div class="support-tickets-item-info-value">Article writing</div>
+                                        </div>
+                                        <div class="support-tickets-item-info">
+                                            <div class="support-tickets-item-info-title">Client</div>
+                                            <div class="support-tickets-item-info-value">Eddington Edwards</div>
+                                        </div>
+                                        <div class="support-tickets-item-info">
+                                            <div class="support-tickets-item-info-title">Changed by</div>
+                                            <div class="support-tickets-item-info-value">Eddington Edwards</div>
+                                        </div>
+                                        <div class="support-tickets-item-info">
+                                            <div class="support-tickets-item-info-title">Messages</div>
+                                            <div class="support-tickets-item-info-value">112</div>
+                                        </div>
+                                        <div class="support-tickets-item-content-btn"><a href="#" class="btn btn-border">To inquiry<svg><use xlink:href="images/sprite.svg#support-tickets-item-content-btn"></use></svg></a></div>
                                     </div>
-                                    <div class="support-tickets-item-info">
-                                        <div class="support-tickets-item-info-title">Messages</div>
-                                        <div class="support-tickets-item-info-value">12</div>
-                                    </div>
-                                    <div class="support-tickets-item-content-btn"><a href="#" class="btn btn-border">To inquiry<svg><use xlink:href="images/sprite.svg#support-tickets-item-content-btn"></use></svg></a></div>
                                 </div>
                             </div>
-                            <div class="support-tickets-item new">
-                                <a href="#" class="support-tickets-item-header">
-                                    <div class="support-tickets-item-ticket">54868541</div>
-                                    <div class="support-tickets-item-subject">Article writing<span>Eddington Edwards</span></div>
-                                    <div class="support-tickets-item-status"><div class="status status-waiting">Waiting Response</div></div>
-                                    <div class="support-tickets-item-changedby">E-PR Support Team</div>
-                                    <div class="support-tickets-item-changed">06/29/2023 &nbsp;11:07 a.m.</div>
-                                    <div class="support-tickets-item-messages">7</div>
-                                    <svg class="support-tickets-item-arrow"><use xlink:href="images/sprite.svg#personal-orders-item-header"></use></svg>
-                                </a>
-                                <div class="support-tickets-item-content">
-                                    <div class="support-tickets-item-info support-tickets-item-info-subject">
-                                        <div class="support-tickets-item-info-title">Subject</div>
-                                        <div class="support-tickets-item-info-value">Article writing</div>
-                                    </div>
-                                    <div class="support-tickets-item-info">
-                                        <div class="support-tickets-item-info-title">Client</div>
-                                        <div class="support-tickets-item-info-value">Eddington Edwards</div>
-                                    </div>
-                                    <div class="support-tickets-item-info">
-                                        <div class="support-tickets-item-info-title">Changed by</div>
-                                        <div class="support-tickets-item-info-value">E-PR Support Team</div>
-                                    </div>
-                                    <div class="support-tickets-item-info">
-                                        <div class="support-tickets-item-info-title">Messages</div>
-                                        <div class="support-tickets-item-info-value">7</div>
-                                    </div>
-                                    <div class="support-tickets-item-content-btn"><a href="#" class="btn btn-border">To inquiry<svg><use xlink:href="images/sprite.svg#support-tickets-item-content-btn"></use></svg></a></div>
-                                </div>
-                            </div>
-                            <div class="support-tickets-item closed">
-                                <a href="#" class="support-tickets-item-header">
-                                    <div class="support-tickets-item-ticket">54868541</div>
-                                    <div class="support-tickets-item-subject">Article writing<span>Eddington Edwards</span></div>
-                                    <div class="support-tickets-item-status"><div class="status status-closed">Ticket Closed</div></div>
-                                    <div class="support-tickets-item-changedby">Eddington Edwards</div>
-                                    <div class="support-tickets-item-changed">06/29/2023 &nbsp;11:07 a.m.</div>
-                                    <div class="support-tickets-item-messages">112</div>
-                                    <svg class="support-tickets-item-arrow"><use xlink:href="images/sprite.svg#personal-orders-item-header"></use></svg>
-                                </a>
-                                <div class="support-tickets-item-content">
-                                    <div class="support-tickets-item-info support-tickets-item-info-subject">
-                                        <div class="support-tickets-item-info-title">Subject</div>
-                                        <div class="support-tickets-item-info-value">Article writing</div>
-                                    </div>
-                                    <div class="support-tickets-item-info">
-                                        <div class="support-tickets-item-info-title">Client</div>
-                                        <div class="support-tickets-item-info-value">Eddington Edwards</div>
-                                    </div>
-                                    <div class="support-tickets-item-info">
-                                        <div class="support-tickets-item-info-title">Changed by</div>
-                                        <div class="support-tickets-item-info-value">Eddington Edwards</div>
-                                    </div>
-                                    <div class="support-tickets-item-info">
-                                        <div class="support-tickets-item-info-title">Messages</div>
-                                        <div class="support-tickets-item-info-value">112</div>
-                                    </div>
-                                    <div class="support-tickets-item-content-btn"><a href="#" class="btn btn-border">To inquiry<svg><use xlink:href="images/sprite.svg#support-tickets-item-content-btn"></use></svg></a></div>
-                                </div>
-                            </div>
+
                         </div>
+                        <!-- support tickets container END -->
 
                         <div class="personal-orders-pager">
 
