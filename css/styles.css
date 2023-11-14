@@ -1287,14 +1287,14 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .catalogue-item-url {font-size:14px; line-height:21px}
     .catalogue-item-info {margin:0}
     .catalogue-item-info-inner {margin:0}
-    .catalogue-item-info-item {float:none; margin:8px 0 0 0; padding:0; display:flex; align-items:center}
+    .catalogue-item-info-item {float:none; margin:8px 0 0 0; padding:0; display:flex; align-items:flex-start}
     .catalogue-item-info-item::before {display:none}
-    .catalogue-item-info-title {font-size:10px; line-height:10px; min-width:70px; max-width:70px}
+    .catalogue-item-info-title {font-size:10px; line-height:15px; min-width:70px; max-width:70px}
     .catalogue-item-info-title span {display:inline}
     .catalogue-item-info-title em {display:none}
     .catalogue-item-info-value {font-weight:300; color:#414141; line-height:15px}
-    .catalogue-item-info-flags {margin:0 0 0 -10px}
-    .catalogue-item-info-flags img {height:15px; margin:0 0 0 10px}
+    .catalogue-item-info-flags {margin:-5px 0 0 -10px}
+    .catalogue-item-info-flags img {height:15px; margin:5px 0 0 10px}
     .catalogue-item-info-category {display:block}
     .catalogue-item-info-category .catalogue-item-info-item {display:block; line-height:15px}
     .catalogue-item-info-category .catalogue-item-info-title {display:inline; margin:0 5px 0 0}
