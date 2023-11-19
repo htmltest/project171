@@ -2757,6 +2757,7 @@ footer {height:361px; position:relative; margin:-361px 0 0 0; border-top:1px sol
 .support-tickets-ctrl-filters {position:relative}
 .support-tickets-ctrl-filters .btn {padding:10px 20px; white-space:nowrap; display:flex; align-items:center}
 .support-tickets-ctrl-filters .btn svg {display:block; width:18px; height:18px; fill:#0E2A3C; margin:0 10px 0 0}
+.support-tickets-ctrl-filters .btn span {display:none}
 .support-tickets-ctrl-filters-window {display:none; position:absolute; z-index:19; right:0; top:100%; margin:5px 0 0 0; padding:20px; width:866px; border-radius:4px; border:1px solid #EFEFEF; background:#FFFFFF; box-shadow:0px 0px 30px 0px rgba(0, 0, 0, 0.1)}
 .support-filters-open .support-tickets-ctrl-filters-window {display:block}
 .support-tickets-ctrl-filters-window form {margin:-20px -10px 0 -10px; padding:0; display:flex; align-items:flex-end; flex-wrap:wrap}
@@ -2778,31 +2779,30 @@ footer {height:361px; position:relative; margin:-361px 0 0 0; border-top:1px sol
 .support-tickets-filters-select.open .support-tickets-filters-select-current svg {transform:rotate(-180deg)}
 .support-tickets-filters-select-list {display:none; position:absolute; left:0; top:100%; right:0; margin-top:5px; z-index:99; background:#FFFFFF; border:1px solid #E5E5E5; box-shadow:0px 0px 20px 0px rgba(0, 0, 0, 0.1)}
 .support-tickets-filters-select.open .support-tickets-filters-select-list {display:block}
-.support-tickets-filters-select-list-inner {position:relative; max-height:336px; overflow:auto; margin:0 3px 0 0}
+.support-tickets-filters-select-list-inner {position:relative; max-height:336px; overflow:auto}
 .support-tickets-filters-select-list-inner::-webkit-scrollbar-thumb {background:#848A93; border-radius:2px}
 .support-tickets-filters-select-list-inner::-webkit-scrollbar {width:2px; height:2px; background:transparent}
 .support-tickets-filters-select-list-inner.loading {min-height:50px}
 .support-tickets-filters-select-list-inner.loading::after {content:""; display:block; position:absolute; left:50%; top:50%; width:50px; height:50px; margin:-25px 0 0 -25px; background:rgba(255, 255, 255, 0.5) url(../images/loading.gif) no-repeat center; background-size:100%}
 .support-tickets-filters-select-item {border-top:1px solid #E5E5E5}
 .support-tickets-filters-select-item.hidden {display:none}
-.support-tickets-filters-select-list-inner .support-tickets-filters-select-item {margin:0 3px 0 0}
 .support-tickets-filters-select-item:first-child {border-top:none}
 .support-tickets-filters-select-item label {display:block; cursor:pointer}
 .support-tickets-filters-select-item label input {display:none}
 .support-tickets-filters-select-item label span {display:flex; padding:12px 20px; font-size:15px; line-height:20px; color:#414141; position:relative; transition:background 0.2s; align-items:center}
-.support-tickets-filters-select-list-inner .support-tickets-filters-select-item label span {padding-top:10px; padding-bottom:10px}
 .support-tickets-filters-select-item label input:checked+span,
 .support-tickets-filters-select-item label span:hover {background:#F6FAFE}
 .support-tickets-filters-select-item label span em {display:block; min-width:20px; max-width:20px; height:20px; border-radius:20px; padding:0; margin:0 8px 0 0}
 .support-tickets-filters-select-item label span svg {position:absolute; right:20px; top:50%; margin:-12px 0 0 0; width:24px; height:24px; fill:#0E2A3C; opacity:0; transition:opacity 0.2s}
 .support-tickets-filters-select-item label input:checked+span svg {opacity:1}
 .support-tickets-filters-select-item-client-name {display:block; width:100%; white-space:nowrap; position:relative; font-weight:300; overflow:hidden; text-overflow:ellipsis}
-.support-tickets-filters-select-item-manager-avatar {display:block; min-width:42px; max-width:42px; margin:-2px 10px -2px 0}
+.support-tickets-filters-select-item-manager-avatar {display:block; min-width:30px; max-width:30px; margin:-5px 10px -5px 0}
 .support-tickets-filters-select-item-manager-avatar img {display:block; width:100%; border-radius:50%}
 .support-tickets-filters-select-item-manager-name {display:block; width:100%; white-space:nowrap; position:relative; font-weight:300; overflow:hidden; text-overflow:ellipsis}
-.support-tickets-filters-select-item-media-logo {display:block; min-width:60px; max-width:60px; height:24px; display:flex; align-items:center; justify-content:center; margin:4px 8px 4px 0}
+.support-tickets-filters-select-item-media-logo {display:block; min-width:60px; max-width:60px; height:24px; display:flex; align-items:center; justify-content:center; margin:-2px 8px -2px 0}
 .support-tickets-filters-select-item-media-logo img {display:block; max-height:100%}
 .support-tickets-filters-select-item-media-title {display:block; width:100%; white-space:nowrap; position:relative; font-weight:300; overflow:hidden; text-overflow:ellipsis}
+.support-tickets-filters-select-list .order-media-window-ctrl-add-popup-more {border-top:1px solid #E5E5E5; padding:10px}
 .support-tickets-filters-select-search {position:relative; border-bottom:1px solid #9A9A9A}
 .support-tickets-filters-select-search input {position:relative; border:none; font:300 15px/20px Arial, sans-serif; color:#0E2A3C; vertical-align:top; margin:0; padding:18px 48px 18px 20px; width:100%; height:56px; box-sizing:border-box; outline:none; border-radius:0; background:#FFFFFF; -webkit-appearance:none}
 .fonts-loaded .support-tickets-filters-select-search input {font-family:Inter, sans-serif}
@@ -2824,6 +2824,7 @@ footer {height:361px; position:relative; margin:-361px 0 0 0; border-top:1px sol
 .support-tickets-ctrl-filters-window-item-title {display:none}
 .support-tickets-ctrl-filters-window-item-close {display:none}
 .support-tickets-ctrl-filters-window-item-selected {display:none}
+.support-tickets-ctrl-filters-window-item-content-bg {display:none}
 .support-tickets-ctrl-filters-window-item-content-apply {display:none}
 .support-tickets-ctrl-filters-window-apply {display:none}
 
@@ -2833,6 +2834,8 @@ footer {height:361px; position:relative; margin:-361px 0 0 0; border-top:1px sol
     .support-tickets-ctrl-new .btn {padding:15px 20px; font-size:13px; line-height:20px}
     .support-tickets-ctrl-filters-selected {display:none}
     .support-tickets-ctrl-filters .btn {padding:15px 20px; font-size:13px; line-height:20px}
+    .support-tickets-ctrl-filters .btn span {display:none; margin:0 0 0 10px; min-width:18px; height:18px; padding:0 5px; text-align:center; font-size:12px; line-height:18px; color:#FFFFFF; border-radius:9px; background:#f26c5d}
+    .support-tickets-ctrl-filters .btn span.visible {display:block}
 
     .support-tickets-ctrl-filters-window {position:fixed; z-index:88; left:0; top:0; right:0; bottom:0; margin:0; padding:0; width:auto; border-radius:0; border:none; box-shadow:none; overflow:auto; flex-direction:column}
     .support-filters-open .support-tickets-ctrl-filters-window {display:flex}
@@ -2855,9 +2858,10 @@ footer {height:361px; position:relative; margin:-361px 0 0 0; border-top:1px sol
     .support-tickets-ctrl-filters-window-item-selected {display:block; margin:-10px 0 0 10px; display:flex; padding:0 0 10px 0; flex-wrap:wrap}
     .support-tickets-ctrl-filters-window-item-selected .support-tickets-ctrl-filters-selected-item {margin:10px 0 0 10px; white-space:nowrap}
     .support-tickets-ctrl-filters-window-item-selected .support-tickets-ctrl-filters-selected-item:first-child {margin:10px 0 0 10px}
-    .support-tickets-ctrl-filters-window-item-content {display:none; position:fixed; left:0; top:0; right:0; bottom:0; overflow:auto; background:rgba(0, 0, 0, 0.6); z-index:89; align-items:flex-end}
+    .support-tickets-ctrl-filters-window-item-content {display:none; position:fixed; left:0; top:0; right:0; bottom:0; overflow:hidden; z-index:89; align-items:flex-end; padding:60px 0 0 0}
     .support-tickets-ctrl-filters-window-item.open .support-tickets-ctrl-filters-window-item-content {display:flex}
-    .support-tickets-ctrl-filters-window-item-content-inner {background:#FFFFFF; width:100%; border-radius:10px 10px 0 0; padding:20px; position:relative; margin:60px 0 0 0}
+    .support-tickets-ctrl-filters-window-item-content-bg {display:block; position:absolute; left:0; top:0; right:0; bottom:0; background:rgba(0, 0, 0, 0.6)}
+    .support-tickets-ctrl-filters-window-item-content-inner {display:flex; flex-direction:column; max-height:100%; background:#FFFFFF; width:100%; border-radius:10px 10px 0 0; padding:20px; position:relative}
     .support-tickets-ctrl-filters-window-item-close {display:block; position:absolute; right:20px; top:-40px; cursor:pointer}
     .support-tickets-ctrl-filters-window-item-close svg {display:block; width:20px; height:20px; fill:#FFFFFF}
 
@@ -2866,8 +2870,15 @@ footer {height:361px; position:relative; margin:-361px 0 0 0; border-top:1px sol
     .support-tickets-filters-select.full .support-tickets-filters-select-current span {top:auto; font-size:26px; line-height:36px}
     .support-tickets-filters-select-current strong {display:none}
     .support-tickets-filters-select-current svg {display:none}
-    .support-tickets-filters-select-list {display:block; position:relative; left:auto; top:auto; right:auto; margin-top:20px; z-index:auto; background:none; border:none; box-shadow:none}
-    .support-tickets-filters-select-list-inner {max-height:248px; margin:0 3px 0 0}
+    .support-tickets-filters-select-list {display:block; position:relative; left:auto; top:auto; right:auto; margin-top:20px; z-index:auto; background:none; border:none; box-shadow:none; max-height:calc(100vh - 252px); overflow:auto}
+    .support-tickets-filters-select-list::-webkit-scrollbar-thumb {background:#848A93; border-radius:2px}
+    .support-tickets-filters-select-list::-webkit-scrollbar {width:2px; height:2px; background:transparent}
+    .support-tickets-filters-select-list-inner {max-height:none; margin:0; overflow:visible}
+
+    .support-tickets-filters-select-item label span {font-size:20px; line-height:30px}
+    .support-tickets-filters-select-item label span em {min-width:30px; max-width:30px; height:30px; border-radius:30px}
+    .support-tickets-filters-select-item-manager-avatar {min-width:40px; max-width:40px}
+    .support-tickets-filters-select-item-media-logo {height:34px}
 
     .support-tickets-ctrl-filters-window-item .form-input {margin:0}
     .support-tickets-ctrl-filters-window-item .form-input > span {position:relative; left:auto; top:auto; font-size:26px; line-height:36px; color:#2C2C2C; font-weight:normal; margin:0 0 20px 0; display:block}

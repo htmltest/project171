@@ -1080,6 +1080,10 @@ $(document).ready(function() {
         $(this).parents().filter('.support-tickets-ctrl-filters-window-item').removeClass('open');
     });
 
+    $('.support-tickets-ctrl-filters-window-item-content-bg').click(function(e) {
+        $(this).parents().filter('.support-tickets-ctrl-filters-window-item').removeClass('open');
+    });
+
     $('.support-tickets-ctrl-filters-window-item-content-apply .btn').click(function(e) {
         $(this).parents().filter('.support-tickets-ctrl-filters-window-item').removeClass('open');
         e.preventDefault();
@@ -1835,11 +1839,15 @@ function recalcMediaWindow() {
 function updateFilterTickets() {
     var newHTML = '';
     var filterID = -1;
+    var countFilters = 0;
     $('.support-tickets-ctrl-filters-window-item').each(function() {
         var newItemHTML = '';
         $(this).find('.support-tickets-filters-select').each(function() {
             var curSelect = $(this);
             curSelect.find('input').removeAttr('data-filterID');
+            if (curSelect.find('input:checked').length > 0) {
+                countFilters++;
+            }
             curSelect.find('input:checked').each(function() {
                 var curInput = $(this);
                 filterID++;
@@ -1865,6 +1873,8 @@ function updateFilterTickets() {
             var curInput = $(this);
             curInput.find('input').removeAttr('data-filterID');
             if (curInput.find('input').val() != '') {
+                countFilters++;
+
                 newHTML += '<div class="support-tickets-ctrl-filters-selected-item">';
                 newItemHTML += '<div class="support-tickets-ctrl-filters-selected-item">';
                 var curValue = curInput.find('input').val();
@@ -1880,6 +1890,12 @@ function updateFilterTickets() {
         });
         $(this).find('.support-tickets-ctrl-filters-window-item-selected').html(newItemHTML);
     });
+    $('.support-tickets-ctrl-filters-link span').html(countFilters);
+    if (countFilters > 0) {
+        $('.support-tickets-ctrl-filters-link span').addClass('visible');
+    } else {
+        $('.support-tickets-ctrl-filters-link span').removeClass('visible');
+    }
     $('.support-tickets-ctrl-filters-selected').html(newHTML);
 }
 
