@@ -1394,6 +1394,16 @@ function initForm(curForm) {
         });
     });
 
+    curForm.find('.form-input .nametext').each(function() {
+        $(this).keypress(function(evt) {
+            var charCode = (evt.which) ? evt.which : evt.keyCode
+            if (!((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || charCode == 46)) {
+                return false;
+            }
+            return true;
+        });
+    });
+
     curForm.find('.form-input .email').each(function() {
         $(this).keypress(function(evt) {
             var charCode = (evt.which) ? evt.which : evt.keyCode
