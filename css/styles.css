@@ -443,6 +443,8 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .nav-contacts-email svg {display:block; width:24px; height:24px; fill:none; stroke:#f26c5d; position:absolute; left:2px; top:1px}
     .nav-contacts-address {position:relative; padding:0 0 0 39px; margin:20px 0 0 0}
     .nav-contacts-address svg {display:block; width:24px; height:24px; fill:none; stroke:#f26c5d; position:absolute; left:2px; top:-1px}
+    .nav-contacts-phone {position:relative; padding:0 0 0 39px; margin:20px 0 0 0}
+    .nav-contacts-phone svg {display:block; width:24px; height:24px; fill:none; position:absolute; left:2px; top:0px}
 }
 
 .header-right {float:right}
@@ -1814,6 +1816,7 @@ footer {height:361px; position:relative; margin:-361px 0 0 0; border-top:1px sol
 .footer-contacts-item:first-child {margin:0}
 .footer-contacts-item a {color:rgba(31, 31, 31, 0.7); text-decoration:none}
 .footer-contacts-item a:hover {color:rgba(31, 31, 31, 1)}
+.footer-contacts-item a svg {display:none}
 
 @media screen and (max-width:1119px) {
     .footer-menu {float:none; width:auto; border-top:1px solid #e3e3e3; margin:0 -20px}
@@ -1834,6 +1837,7 @@ footer {height:361px; position:relative; margin:-361px 0 0 0; border-top:1px sol
     .footer-contacts-item {color:rgba(31, 31, 31, 0.9); margin:26px 0 0 0}
     .footer-contacts-item:first-child {margin:0}
     .footer-contacts-item a {color:rgba(31, 31, 31, 0.9)}
+    .footer-contacts-item a svg {display:inline-block; vertical-align:middle; margin:-4px 10px 0 0; fill:none; width:33px; height:33px}
 }
 
 .footer-left {float:left}
