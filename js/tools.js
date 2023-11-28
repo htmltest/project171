@@ -1,5 +1,12 @@
 $(document).ready(function() {
 
+    $.validator.addMethod('passwordField',
+        function(value, element) {
+            return this.optional(element) || value.match(/^(?=.*[A-Za-z])(?=.*[\d@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/);
+        },
+        'Please enter a valid password'
+    );
+
     $('body').on('focus', '.form-input input, .form-input textarea', function() {
         $(this).parents().filter('.form-input').addClass('focus');
     });
@@ -1064,6 +1071,15 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $(document).click(function(e) {
+        if ($(e.target).parents().filter('.support-tickets-ctrl-filters').length == 0 && $(e.target).parents().filter('.air-datepicker-global-container').length == 0) {
+            if ($('html').hasClass('support-filters-open')) {
+                $('html').removeClass('support-filters-open');
+                $('meta[name="viewport"]').attr('content', 'width=device-width');
+            }
+        }
+    });
+
     $('.support-tickets-ctrl-filters-window-title a').click(function(e) {
         $('html').removeClass('support-filters-open');
         $('meta[name="viewport"]').attr('content', 'width=device-width');
@@ -1397,7 +1413,7 @@ function initForm(curForm) {
     curForm.find('.form-input .nametext').each(function() {
         $(this).keypress(function(evt) {
             var charCode = (evt.which) ? evt.which : evt.keyCode
-            if (!((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || charCode == 46)) {
+            if (!((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || charCode == 46 || charCode == 32)) {
                 return false;
             }
             return true;
