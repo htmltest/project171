@@ -2411,6 +2411,7 @@ footer {height:361px; position:relative; margin:-361px 0 0 0; border-top:1px sol
 .personal-profile-avatar-new svg {display:block; width:24px; height:24px; fill:#FFFFFF; opacity:0.5; transition:fill 0.2s}
 .personal-profile-avatar-new:hover svg {opacity:1}
 .personal-profile-avatar canvas {position:absolute; left:0; top:0; border-radius:50%}
+label.error.img-error {text-align:left}
 
 @media screen and (max-width:1119px) {
     .personal-profile {margin:30px 0 0 0; display:block}

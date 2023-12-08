@@ -843,11 +843,13 @@ $(document).ready(function() {
     });
 
     $('body').on('change', '.personal-profile-avatar-new input', function(e) {
+        var curBlockAvatar = $(this).parents().filter('.personal-profile-avatar');
         var file = this.files[0];
         if (typeof(file) != 'undefined') {
             var reader = new FileReader;
             reader.onload = function(event) {
                 if (file.type.match("image.*")) {
+                    curBlockAvatar.parent().find('label.img-error').remove();
                     var exifOrientation = 0;
                     EXIF.getData(file, function () {
                         switch (this.exifdata.Orientation) {
@@ -911,6 +913,9 @@ $(document).ready(function() {
                         context.translate(0, 0);
                     };
                     img.src = dataUri;
+                } else {
+                    curBlockAvatar.parent().find('label.img-error').remove();
+                    curBlockAvatar.after('<label class="error img-error">' + curBlockAvatar.attr('data-error') + '</label>');
                 }
             }
             reader.readAsDataURL(file);
