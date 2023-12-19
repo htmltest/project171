@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>e-PR</title>
+
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/slick/slick.css" />
+        <link rel="stylesheet" href="js/nouislider/nouislider.css" />
+        <link rel="stylesheet" href="js/mcustomscrollbar/jquery.mCustomScrollbar.css" />
+        <link rel="stylesheet" href="js/select2/select2.css" />
+        <link rel="stylesheet" href="js/air-datepicker/air-datepicker.css">
+
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="wrapper-inner">
+
+                <header>
+                    <div class="container">
+                        <div class="header-inner">
+                            <div class="logo"><a href="#"><img src="images/logo.png"></a></div>
+
+                            <a href="#" class="mobile-menu-link"><svg><use xlink:href="images/sprite.svg#mobile-menu-link"></use></svg></a>
+
+                            <div class="header-right">
+                                <div class="header-favourite">
+                                    <a href="#" class="header-favourite-link"><svg><use xlink:href="images/sprite.svg#icon-favourite"></use></svg></a>
+                                </div>
+
+                                <div class="header-search">
+                                    <a href="#" class="header-search-link"><svg><use xlink:href="images/sprite.svg#icon-search"></use></svg></a>
+                                    <div class="header-search-form">
+                                        <form action="#" method="post">
+                                            <div class="header-search-input"><input type="text" name="search" value="" placeholder="Поиск" /></div>
+                                            <div class="header-search-submit"><button type="submit"><svg><use xlink:href="images/sprite.svg#icon-search"></use></svg></button></div>
+                                        </form>
+                                        <a href="#" class="header-search-close"><svg><use xlink:href="images/sprite.svg#header-search-close"></use></svg></a>
+                                    </div>
+                                </div>
+
+                                <div class="header-cart active">
+                                    <a href="#" class="header-cart-link"><svg><use xlink:href="images/sprite.svg#icon-cart"></use></svg></a>
+                                    <div class="header-cart-window">
+                                        <div class="header-cart-window-list">
+                                            <div class="header-cart-window-list-inner">
+                                                <div class="header-cart-window-list-item">
+                                                    <div class="header-cart-window-list-item-header">
+                                                        <div class="header-cart-window-list-item-header-title">Dallas Observer</div>
+                                                        <div class="header-cart-window-list-item-header-cost">$350</div>
+                                                    </div>
+                                                    <div class="header-cart-window-list-item-article">
+                                                        <div class="header-cart-window-list-item-article-title">Article writing cost</div>
+                                                        <div class="header-cart-window-list-item-article-cost">$250</div>
+                                                    </div>
+                                                </div>
+                                                <div class="header-cart-window-list-item">
+                                                    <div class="header-cart-window-list-item-header">
+                                                        <div class="header-cart-window-list-item-header-title">Forbes Poland</div>
+                                                        <div class="header-cart-window-list-item-header-cost">$350</div>
+                                                    </div>
+                                                    <div class="header-cart-window-list-item-article">
+                                                        <div class="header-cart-window-list-item-article-title">Article writing cost</div>
+                                                        <div class="header-cart-window-list-item-article-cost">$250</div>
+                                                    </div>
+                                                </div>
+                                                <div class="header-cart-window-list-item">
+                                                    <div class="header-cart-window-list-item-header">
+                                                        <div class="header-cart-window-list-item-header-title">CBS New York</div>
+                                                        <div class="header-cart-window-list-item-header-cost">$350</div>
+                                                    </div>
+                                                    <div class="header-cart-window-list-item-article">
+                                                        <div class="header-cart-window-list-item-article-title">Article writing cost</div>
+                                                        <div class="header-cart-window-list-item-article-cost">$250</div>
+                                                    </div>
+                                                </div>
+                                                <div class="header-cart-window-list-item">
+                                                    <div class="header-cart-window-list-item-header">
+                                                        <div class="header-cart-window-list-item-header-title">Dallas Observer Forbes Poland CBS New York</div>
+                                                        <div class="header-cart-window-list-item-header-cost">$350</div>
+                                                    </div>
+                                                    <div class="header-cart-window-list-item-article">
+                                                        <div class="header-cart-window-list-item-article-title">Article writing cost</div>
+                                                        <div class="header-cart-window-list-item-article-cost">$250</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="header-cart-window-summ">
+                                            <div class="header-cart-window-summ-title">Total</div>
+                                            <div class="header-cart-window-summ-value">$1050</div>
+                                        </div>
+                                        <div class="header-cart-window-btn"><a href="#" class="btn">checkout</a></div>
+                                    </div>
+                                </div>
+
+                                <div class="header-user active">
+                                    <a href="#" class="header-user-link"><svg><use xlink:href="images/sprite.svg#icon-user"></use></svg></a>
+                                    <div class="header-user-menu">
+                                        <ul>
+                                            <li>
+                                                <div class="header-user-menu-profile">
+                                                    <div class="header-user-menu-profile-avatar"><svg><use xlink:href="images/sprite.svg#header-user-menu-profile"></use></svg></div>
+                                                    <div class="header-user-menu-profile-name">Jason Statham</div>
+                                                </div>
+                                            </li>
+                                            <li><a href="#">Order List<span></span></a></li>
+                                            <li><a href="#">Support</a></li>
+                                            <li><a href="#">Profile</a></li>
+                                            <li><a href="#" class="header-user-menu-logout">Log out<svg><use xlink:href="images/sprite.svg#icon-logout"></use></svg></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <nav class="nav">
+                                <ul>
+                                    <li><a href="#">Media Catalog</a></li>
+                                    <li>
+                                        <a href="#">Why Us<svg class="nav-arrow"><use xlink:href="images/sprite.svg#nav-arrow"></use></svg><svg class="nav-arrow-mobile"><use xlink:href="images/sprite.svg#nav-arrow-mobile"></use></svg></a>
+                                        <ul>
+                                            <li><a href="#">Improve Your SERP Placement</a></li>
+                                            <li><a href="#">Prove Your Reliability</a></li>
+                                            <li><a href="#">Access New Audiences</a></li>
+                                            <li><a href="#">Power Up Your Link Profile</a></li>
+                                            <li><a href="#">Let Others Do the Work for You</a></li>
+                                            <li><a href="#">Cultivate Positivity</a></li>
+                                            <li><a href="#">Get Listed on Wiki</a></li>
+                                            <li><a href="#">Ace Compliance Control</a></li>
+                                            <li><a href="#">Show Up on Their News Feeds</a></li>
+                                            <li><a href="#">Showcase Your Innovations</a></li>
+                                            <li><a href="#">Level-Up Your Amazon Reach</a></li>
+                                            <li><a href="#">Attract Investors</a></li>
+                                            <li><a href="#">Become Eligible for a Talent Visa</a></li>
+                                            <li><a href="#">Highlight Your Philanthropy</a></li>
+                                            <li><a href="#">Throw Successful Fundraisers</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Portfolio</a></li>
+                                    <li><a href="#">News</a></li>
+                                    <li><a href="#">Contacts</a></li>
+                                </ul>
+                                <div class="nav-contacts">
+                                    <div class="nav-contacts-social">
+                                        <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#social-fb"></use></svg></a>
+                                        <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#social-instagram"></use></svg></a>
+                                        <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#social-twitter"></use></svg></a>
+                                        <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#social-linkedin"></use></svg></a>
+                                        <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#social-g10"></use></svg></a>
+                                        <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#social-monogram"></use></svg></a>
+                                        <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#social-telegram"></use></svg></a>
+                                    </div>
+                                    <div class="nav-contacts-content">
+                                        <div class="nav-contacts-email"><svg><use xlink:href="images/sprite.svg#nav-contacts-email"></use></svg><a href="mailto:info@e-pr.online">info@e-pr.online</a></div>
+                                        <div class="nav-contacts-address"><svg><use xlink:href="images/sprite.svg#nav-contacts-address"></use></svg>28 Liberty st., New York, NY, 10005</div>
+                                        <div class="nav-contacts-phone"><svg><use xlink:href="images/sprite.svg#icon-whatsapp"></use></svg><a href="tel:+13213000111">+1 321 3000-111</a></div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- container -->
+                <div class="container">
+
+                    <div class="breadcrumbs"><a href="#">E-PR online</a><span></span>Manager account</div>
+                    <div class="back-mobile"><a href="#"><span><svg><use xlink:href="images/sprite.svg#back-mobile"></use></svg></span>E-PR Online</a></div>
+
+                    <h1>Manager account</h1>
+
+                    <div class="personal-menu">
+                        <div class="personal-menu-sections">
+                            <div class="personal-menu-section active"><a href="#"><svg><use xlink:href="images/sprite.svg#icon-order-list"></use></svg>Order List</a></div>
+                            <div class="personal-menu-section"><a href="#"><svg><use xlink:href="images/sprite.svg#icon-support"></use></svg>Support</a></div>
+                            <div class="personal-menu-section"><a href="#"><svg><use xlink:href="images/sprite.svg#header-user-menu-profile"></use></svg>Profile</a></div>
+                        </div>
+                        <div class="personal-menu-logout"><a href="#"><svg><use xlink:href="images/sprite.svg#icon-logout"></use></svg>Log out</a></div>
+                    </div>
+
+                    <div class="order-detail-back"><a href="#"><svg><use xlink:href="images/sprite.svg#order-detail-back"></use></svg>Back to Order List</a></div>
+
+                    <div class="order-detail-header">
+                        <div class="order-detail-header-id">Odrer ID 0014547</div>
+                        <div class="order-detail-header-client">Matthew Steven</div>
+                        <div class="order-detail-header-date">dated June 29, 2023</div>
+                        <div class="order-detail-header-status"><span class="status status-execution"><svg><use xlink:href="images/sprite.svg#status-execution"></use></svg>On execution</span></div>
+                    </div>
+
+                    <!-- order detail container -->
+                    <div class="order-detail-container">
+                        <div class="order-detail-menu">
+                            <ul>
+                                <li><a href="#">Order</a></li>
+                                <li class="active"><a href="#">Status Changes</a></li>
+                                <li><a href="#">Messages<span></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="order-detail-tabs">
+                            <div class="order-detail-tab">
+
+                                <div class="order-detail-info">
+                                    <div class="order-detail-info-item">
+                                        <div class="order-detail-info-item-header">
+                                            <div class="order-detail-info-item-header-title">Dallas Observer</div>
+                                            <div class="order-detail-info-item-header-value">$350</div>
+                                        </div>
+                                        <div class="order-detail-info-item-row">
+                                            <div class="order-detail-info-item-row-title">Publication cost</div>
+                                            <div class="order-detail-info-item-row-value">$100</div>
+                                        </div>
+                                        <div class="order-detail-info-item-row">
+                                            <div class="order-detail-info-item-row-title">Article writing cost</div>
+                                            <div class="order-detail-info-item-row-value">$250</div>
+                                        </div>
+                                    </div>
+                                    <div class="order-detail-info-item">
+                                        <div class="order-detail-info-item-header">
+                                            <div class="order-detail-info-item-header-title">Forbes Poland</div>
+                                            <div class="order-detail-info-item-header-value"><span class="hint"><svg><use xlink:href="images/sprite.svg#icon-hint"></use></svg><span class="hint-text">The price has been changed by&nbsp;the manager</span></span></div>
+                                        </div>
+                                        <div class="order-detail-info-item-row">
+                                            <div class="order-detail-info-item-row-title">Publication cost</div>
+                                        </div>
+                                        <div class="order-detail-info-item-row">
+                                            <div class="order-detail-info-item-row-title">Article writing cost</div>
+                                        </div>
+                                    </div>
+                                    <div class="order-detail-info-item">
+                                        <div class="order-detail-info-item-header">
+                                            <div class="order-detail-info-item-header-title">CBS New York</div>
+                                            <div class="order-detail-info-item-header-value">$350</div>
+                                        </div>
+                                        <div class="order-detail-info-item-row">
+                                            <div class="order-detail-info-item-row-title">Publication cost</div>
+                                            <div class="order-detail-info-item-row-value">$100</div>
+                                        </div>
+                                        <div class="order-detail-info-item-row">
+                                            <div class="order-detail-info-item-row-title">Article writing cost</div>
+                                            <div class="order-detail-info-item-row-value">$250</div>
+                                        </div>
+                                    </div>
+                                    <div class="order-detail-info-manager-ctrl">
+                                        <div class="order-detail-info-manager-ctrl-edit"><a href="windows/order-media-window-links.html" class="btn btn-blue window-link"><svg><use xlink:href="images/sprite.svg#icon-edit"></use></svg>Provide links</a></div>
+                                        <div class="order-detail-info-summ">$1050</div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="order-detail-tab active">
+
+                                <div class="order-detail-status-form">
+                                    <form action="#" method="post">
+                                        <div class="order-detail-status-select">
+                                            <div class="order-detail-status-select-current"><span>Set status</span><strong></strong><svg><use xlink:href="images/sprite.svg#form-select-arrow"></use></svg></div>
+                                            <div class="order-detail-status-select-list">
+                                                <div class="order-detail-status-select-item"><label><input type="radio" name="status" value="new"><span><em class="status status-new"></em>New<svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                <div class="order-detail-status-select-item"><label><input type="radio" name="status" value="processing"><span><em class="status status-processing"></em>Processing<svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                <div class="order-detail-status-select-item"><label><input type="radio" name="status" value="payment"><span><em class="status status-payment"></em>Payment<svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                <div class="order-detail-status-select-item"><label><input type="radio" name="status" value="paid"><span><em class="status status-paid"></em>Paid<svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                <div class="order-detail-status-select-item"><label><input type="radio" name="status" value="execution"><span><em class="status status-execution"></em>On execution<svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                <div class="order-detail-status-select-item"><label><input type="radio" name="status" value="completed"><span><em class="status status-completed"></em>Completed<svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                                <div class="order-detail-status-select-item"><label><input type="radio" name="status" value="rejected"><span><em class="status status-rejected"></em>Rejected<svg><use xlink:href="images/sprite.svg#form-select-selected"></use></svg></span></label></div>
+                                            </div>
+                                        </div>
+                                        <div class="order-detail-status-comment">
+                                            <div class="form-input"><span>Text here</span><textarea name="comment" rows="1" cols="1"></textarea></div>
+                                        </div>
+                                        <div class="order-detail-status-ctrl">
+                                            <div class="order-detail-status-ctrl-comment-link"><a href="#"><span>Comment to status change</span><svg><use xlink:href="images/sprite.svg#form-select-arrow"></use></svg></a></div>
+                                            <div class="order-detail-status-ctrl-submit"><input type="submit" value="confirm" class="btn" disabled></div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="order-detail-status-history">
+                                    <div class="order-detail-status-history-headers">
+                                        <div class="order-detail-status-history-header">Date</div>
+                                        <div class="order-detail-status-history-header">Status</div>
+                                        <div class="order-detail-status-history-header">Comment from E-PR</div>
+                                    </div>
+                                    <div class="order-detail-status-history-item">
+                                        <div class="order-detail-status-history-item-date"><div class="order-detail-status-history-item-header-mobile">Date</div>06/29/2023 &nbsp;11:15 a.m.</div>
+                                        <div class="order-detail-status-history-item-status"><div class="order-detail-status-history-item-header-mobile">Status</div>Payment</div>
+                                        <div class="order-detail-status-history-item-comment"><div class="order-detail-status-history-item-header-mobile">Comment from E-PR</div>The manager confirmed the prices and created a “payment page”.</div>
+                                    </div>
+                                    <div class="order-detail-status-history-item">
+                                        <div class="order-detail-status-history-item-date"><div class="order-detail-status-history-item-header-mobile">Date</div>06/29/2023 &nbsp;11:07 a.m.</div>
+                                        <div class="order-detail-status-history-item-status"><div class="order-detail-status-history-item-header-mobile">Status</div>Processing</div>
+                                        <div class="order-detail-status-history-item-comment"><div class="order-detail-status-history-item-header-mobile">Comment from E-PR</div>In the table, this status should be highlighted as much as possible</div>
+                                    </div>
+                                    <div class="order-detail-status-history-item">
+                                        <div class="order-detail-status-history-item-date"><div class="order-detail-status-history-item-header-mobile">Date</div>06/29/2023 &nbsp;10:55 a.m.</div>
+                                        <div class="order-detail-status-history-item-status"><div class="order-detail-status-history-item-header-mobile">Status</div>New</div>
+                                        <div class="order-detail-status-history-item-comment"><div class="order-detail-status-history-item-header-mobile">Comment from E-PR</div>Here we are “hurrying the client to pay faster”.</div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="order-detail-tab">
+
+                                <!-- order detail messages -->
+                                <div class="order-detail-messages">
+                                    <div class="order-detail-message">
+                                        <div class="order-detail-message-text">
+                                            <div class="order-detail-message-text-inner">Hello?<svg class="message-read"><use xlink:href="images/sprite.svg#message-read"></use></svg></div>
+                                        </div>
+                                        <div class="order-detail-message-text">
+                                            <div class="order-detail-message-text-inner">Question to technical support, otherwise I don’t know what to do.<br> When you turn on the computer, it knocks out the error "windows could not be started", while all other functions seem to work. And after that the computer does not respond to pressing the keys!<br> Please tell me what is the problem!<svg class="message-read"><use xlink:href="images/sprite.svg#message-read"></use></svg></div>
+                                        </div>
+                                        <div class="order-detail-message-time">9:12 a.m.</div>
+                                    </div>
+
+                                    <div class="order-detail-message answer">
+                                        <div class="order-detail-message-text">
+                                            <div class="order-detail-message-text-inner">Im fine, thx. What can i help you?</div>
+                                        </div>
+                                        <div class="order-detail-message-time">9:15 a.m.</div>
+                                    </div>
+
+                                    <div class="order-detail-message">
+                                        <div class="order-detail-message-text">
+                                            <div class="order-detail-message-text-inner">
+                                                <div class="order-detail-message-file">
+                                                    <svg><use xlink:href="images/sprite.svg#icon-file"></use></svg>
+                                                    <div class="order-detail-message-file-title"><a href="#" download>Article_new_forbes_newads_re2.doc</a></div>
+                                                    <div class="order-detail-message-file-size">390 kb</div>
+                                                </div>
+                                                What do you think about it?<svg class="message-read"><use xlink:href="images/sprite.svg#message-read"></use></svg>
+                                            </div>
+                                        </div>
+                                        <div class="order-detail-message-time">9:25 a.m.</div>
+                                    </div>
+                                </div>
+                                <!-- order detail messages END -->
+
+                                <!-- order detail new message -->
+                                <div class="order-detail-new-message">
+                                    <form action="#" method="post">
+                                        <div class="form-input"><textarea name="message" rows="1" cols="10" placeholder="Enter your message" class="required"></textarea></div>
+                                        <div class="order-detail-new-message-file"><a href="windows/attach-file.html" class="window-link"><svg><use xlink:href="images/sprite.svg#attach-file"></use></svg></a></div>
+                                        <div class="order-detail-new-message-submit"><button type="submit" class="btn"><svg><use xlink:href="images/sprite.svg#btn-send"></use></svg></button></div>
+                                    </form>
+                                </div>
+                                <!-- order detail new message END -->
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- order detail container END -->
+
+                </div>
+                <!-- container END -->
+
+            </div>
+        </div>
+        <!-- wrapper END -->
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+
+                    <div class="footer-container">
+                        <div class="footer-menu">
+                            <div class="footer-menu-block">
+                                <div class="footer-menu-block-title"><a href="#">Media Catalog</a></div>
+                            </div>
+
+                            <div class="footer-menu-block">
+                                <div class="footer-menu-block-title"><a href="#">Prices</a></div>
+                            </div>
+
+                            <div class="footer-menu-block">
+                                <div class="footer-menu-block-title"><a href="#">Portfolio</a></div>
+                            </div>
+
+                            <div class="footer-menu-block">
+                                <div class="footer-menu-block-title"><a href="#">Why us</a></div>
+                            </div>
+                        </div>
+
+                        <div class="footer-menu">
+                            <div class="footer-menu-block">
+                                <div class="footer-menu-block-title"><a href="#">Reviews</a></div>
+                            </div>
+
+                            <div class="footer-menu-block">
+                                <div class="footer-menu-block-title"><a href="#">News</a></div>
+                            </div>
+                        </div>
+
+                        <div class="footer-menu">
+                            <div class="footer-menu-block-title"><a href="#">Contacts<svg class="footer-menu-block-title-arrow"><use xlink:href="images/sprite.svg#nav-arrow-mobile"></use></svg></a></a></div>
+                            <div class="footer-menu-block-list">
+								<div class="footer-contacts-item"><a href="mailto:info@e-pr.online">info@e-pr.online</a></div>
+								<div class="footer-contacts-item"><a href="tel:+13213000111"><svg><use xlink:href="images/sprite.svg#icon-whatsapp"></use></svg>+1 321 3000-111</a></div>
+								<div class="footer-contacts-item">745 5th Ave #500, New York, NY 10151, USA</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-left">
+                        <div class="footer-logo"><img src="images/logo.png"></div>
+                        <div class="footer-social">
+                            <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#social-fb"></use></svg></a>
+                            <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#social-instagram"></use></svg></a>
+                            <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#social-twitter"></use></svg></a>
+                            <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#social-linkedin"></use></svg></a>
+                            <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#social-g10"></use></svg></a>
+                            <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#social-monogram"></use></svg></a>
+                            <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#social-telegram"></use></svg></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="footer-bottom">
+
+                    <div class="footer-bottom-menu">
+                        <ul>
+                            <li><a href="#">Карта сайта</a></li>
+                            <li><a href="#">Правила сайта</a></li>
+                            <li><a href="#">Политика конфиденциальности</a></li>
+                            <li><a href="#">Договор оферты</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-copyrights">Компания e-PR © 2019—2020</div>
+
+                </div>
+            </div>
+        </footer>
+
+        <a href="#" class="up-link"><svg><use xlink:href="images/sprite.svg#up-link"></use></svg></a>
+
+        <script>
+            var pathTemplate = './';
+        </script>
+        <script src="js/fonts.js"></script>
+
+        <script src="js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/slick/slick.min.js"></script>
+        <script src="js/jquery.mask.min.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/nouislider/nouislider.min.js"></script>
+        <script src="js/nouislider/wNumb.js"></script>
+        <script src="js/mcustomscrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="js/masonry.pkgd.min.js"></script>
+        <script src="js/select2/select2.min.js"></script>
+        <script src="js/air-datepicker/air-datepicker.js"></script>
+        <script src="js/tools.js"></script>
+
+    </body>
+</html>

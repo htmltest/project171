@@ -1059,6 +1059,43 @@ $(document).ready(function() {
 
     }
 
+    $('body').on('keydown', '.order-media-window-item-link-input input', function(e) {
+        if (e.keyCode == 13) {
+            return false;
+        }
+    });
+
+    $('body').on('keyup change', '.order-media-window-item-link-input input', function(e) {
+        var curInput = $(this);
+        var curForm = curInput.parents().filter('.order-media-window-item-link');
+        curForm.find('.order-media-window-item-link-btn-save').removeClass('disabled');
+    });
+
+    $('body').on('click', '.order-media-window-item-link-btn-edit', function(e) {
+        var curForm = $(this).parents().filter('.order-media-window-item-link');
+        var curInput = curForm.find('.order-media-window-item-link-input input');
+        curForm.removeClass('full');
+        curInput.prop('disabled', false);
+        curInput.trigger('focus');
+        curForm.find('.order-media-window-item-link-btn-save').removeClass('disabled');
+        e.preventDefault();
+    });
+
+    $('body').on('click', '.order-media-window-item-link-btn-save', function(e) {
+        var curForm = $(this).parents().filter('.order-media-window-item-link');
+        var curInput = curForm.find('.order-media-window-item-link-input input');
+        if (curInput.valid()) {
+            if (curInput.val() != '') {
+                curForm.addClass('full');
+                curInput.prop('disabled', true);
+                curForm.find('.order-media-window-item-link-btn-save').addClass('disabled');
+            } else {
+                curForm.find('.order-media-window-item-link-btn-save').addClass('disabled');
+            }
+        }
+        e.preventDefault();
+    });
+
     $('body').on('click', '.support-tickets-ctrl-filters-link', function(e) {
         if ($('html').hasClass('support-filters-open')) {
             $('html').removeClass('support-filters-open');
@@ -1740,6 +1777,12 @@ function windowOpen(linkWindow, dataWindow) {
             $('.window-close').html('<svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#order-media-window-close"></use></svg>');
             $('.order-media-window-ctrl-add-popup-search input').attr('autocomplete', 'off');
             recalcMediaWindow();
+        }
+
+        if ($('.order-media-window-links').length == 1) {
+            $('.window').addClass('order-media-window-container');
+            $('.window-close').html('<svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#order-media-window-close"></use></svg>');
+            $('.order-media-window-item-link-input input').attr('autocomplete', 'off');
         }
 
         if ($('.window-attach').length == 1) {

@@ -3101,6 +3101,7 @@ label.error.img-error {text-align:left}
 .order-media-window-item-remove svg {display:block; width:20px; height:20px; fill:#848A93; transition:fill 0.2s}
 .order-media-window-item-remove:hover svg {fill:#0E2A3C}
 .order-media-window-item-logo {margin:0 0 0 20px; min-width:70px; max-width:70px; display:flex; align-items:center; justify-content:center; height:48px; position:relative; overflow:hidden}
+.order-media-window-item-logo:first-child {margin:0}
 .order-media-window-item-logo img {display:block; max-height:100%}
 .order-media-window-item-title {width:100%; margin:0 0 0 20px; font-weight:normal; font-size:18px; line-height:27px; color:#0E2A3C; white-space:nowrap; position:relative; overflow:hidden; text-overflow:ellipsis}
 .fonts-loaded .order-media-window-item-title {font-family:FiraSans, sans-serif}
@@ -3184,8 +3185,41 @@ label.error.img-error {text-align:left}
 .order-media-window-ctrl-add-popup-item.active .order-media-window-ctrl-add-popup-item-remove {display:block}
 .order-media-window-ctrl-add-popup-more {text-align:center; padding:20px; color:#0e2a3c; font-size:14px; line-height:20px; text-align:center; font-weight:normal}
 
-
 .order-media-window-item-template {display:none}
+
+.order-media-window-list-headers {display:flex; font-weight:500; font-size:10px; line-height:15px; text-transform:uppercase; color:#848A93; padding:0 0 5px 0}
+.order-media-window-list-header-media {width:100%}
+.order-media-window-list-header-link {min-width:462px; margin:0 0 0 20px}
+.order-media-window-list-header-punlication {min-width:100px; text-align:right}
+.order-media-window-list-header-article {min-width:100px; text-align:right}
+.order-media-window-list-header-total {min-width:100px; text-align:right}
+.order-media-window-item-link {min-width:462px; margin:0 0 0 20px}
+.order-media-window-item-link-title {display:none}
+.order-media-window-item-link-wrapper {display:flex}
+.order-media-window-item-link-input {width:100%}
+.order-media-window-item-link-input input {position:relative; border:1px solid #E5E5E5; font:14px/24px Arial, sans-serif; color:#000000; vertical-align:top; margin:0; padding:6px 19px; width:100%; height:40px; box-sizing:border-box; outline:none; border-radius:0; background:#FFFFFF; -webkit-appearance:none; transition:border-color 0.2s, background 0.2s}
+.fonts-loaded .order-media-window-item-link-input input {font-family:Inter, sans-serif}
+.order-media-window-item-link.full .order-media-window-item-link-input input {background:#FAFAFA}
+.order-media-window-item-link-input {position:relative}
+.order-media-window-item-link-input input.error {border-color:#FFA7A7; border-width:2px; padding:5px 18px}
+.order-media-window-item-link-input input::-webkit-input-placeholder {opacity:1; color:#808080}
+.order-media-window-item-link-input input::-moz-placeholder {opacity:1; color:#808080}
+.order-media-window-item-link-input input:-ms-input-placeholder {opacity:1; color:#808080}
+.order-media-window-item-link-input label.error {position:absolute; right:0; top:100%}
+.order-media-window-item-link-btns {min-width:100px; max-width:100px; margin:0 0 0 20px}
+.order-media-window-item-link-btns .btn {width:100%; display:flex; align-items:center; padding:0; justify-content:center; height:40px; font-size:13px; line-height:20px}
+.order-media-window-item-link-btns .btn.disabled {pointer-events:none; background:#E3E3E3; cursor:default}
+.order-media-window-item-link-btns .btn svg {display:block; width:20px; height:20px; margin:0 10px 0 0; fil:#0A2A3C}
+.order-media-window-item-link-btns .order-media-window-item-link-btn-edit {display:none}
+.order-media-window-item-link.full .order-media-window-item-link-btns .order-media-window-item-link-btn-save {display:none}
+.order-media-window-item-link.full .order-media-window-item-link-btns .order-media-window-item-link-btn-edit {display:flex}
+
+@media screen and (max-width:1119px) {
+    .order-media-window-list-headers {display:none}
+    .order-media-window-item-link {min-width:100%; margin:10px 0 0 0}
+    .order-media-window-item-link-title {display:block; font-weight:500; font-size:10px; line-height:15px; text-transform:uppercase; color:#848A93; padding:0 0 5px 0}
+    .order-media-window-item-cost-link {margin:30px 0 0 0; min-width:33.33%; max-width:33.33%}
+}
 
 h1.packs-title {font-size:34px; line-height:51px; margin:50px 0 40px 0}
 h1.packs-title strong {font-weight:bold}
